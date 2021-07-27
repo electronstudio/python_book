@@ -1,0 +1,3 @@
+.. |answer2| replace:: ✓
+
+.. |answer| unicode:: U+0020
