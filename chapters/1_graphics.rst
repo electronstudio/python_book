@@ -2,7 +2,7 @@ Drawing graphics
 ================
 
 To create graphics for our games we will use `the Pygame Zero
-library <https://pygame-zero.readthedocs.io>`__\  [1]_. You will find
+library <https://pygame-zero.readthedocs.io>`__. You will find
 the documentation on the website useful!
 
 The smallest square that can be displayed on a monitor is called a
@@ -28,7 +28,7 @@ remember to click ‘Mode’ and select ‘Pygame Zero’ before running your
 program**!
 
 If you are using a different editor, `instructions are
-online <https://pygame-zero.readthedocs.io/en/stable/ide-mode.html>`__\  [2]_
+online <https://pygame-zero.readthedocs.io/en/stable/ide-mode.html>`__.
 
 .. literalinclude:: programs/10_lines_circles.py
    :caption: Lines and circles
@@ -46,7 +46,7 @@ online <https://pygame-zero.readthedocs.io/en/stable/ide-mode.html>`__\  [2]_
 
    Draw your own picture.
 
-   \newpage
+
 
 Moving rectangles
 -----------------
@@ -87,7 +87,7 @@ folder of image files available. ``alien.png`` should already be there,
 but for other images you must add the files yourself.
 
 You could use Microsoft Paint which comes with Windows but I recommend
-you download and install `Krita <https://krita.org>`__\  [3]_.
+you download and install `Krita <https://krita.org>`__.
 
 .. literalinclude:: programs/12_sprites.py
    :caption: Actor sprites
@@ -142,12 +142,9 @@ The alien moves when you press the cursor keys.
 
 
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{exercise:updown}
-   \heading{}
-   \noindent Make the alien move up and down as well as left and right.
+   Make the alien move up and down as well as left and right.
 
 
 .. topic:: Exercise
@@ -162,11 +159,3 @@ The alien moves when you press the cursor keys.
 
 
 
-.. [1]
-   https://pygame-zero.readthedocs.io
-
-.. [2]
-   https://pygame-zero.readthedocs.io/en/stable/ide-mode.html
-
-.. [3]
-   https://krita.org

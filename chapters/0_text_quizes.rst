@@ -16,9 +16,7 @@ that we can run programs.
    :name: code-hello
    :linenos:
 
-
-
-:raw-latex:`\noindent `If using the Mu editor:
+If using the Mu editor:
 
 1. Click the mode button and make sure the mode is set to ``Python3``.
 2. Type in the program.
@@ -49,14 +47,15 @@ Making decisions: if, elif, else
 
 This is how to add another name to :numref:`code-input`
 
-.. literalinclude:: programs/03_input2.py, options: "hl_lines": [6, 7, 8, 9]
+.. literalinclude:: programs/03_input2.py
+   :emphasize-lines: 6, 7, 8, 9
    :caption: Decisions: if, elif, else
    :name: code-input2
    :linenos:
 
 
 
-:raw-latex:`\noindent `:numref:`code-input2` is very
+:numref:`code-input2` is very
 similar to :numref:`code-input`. The new lines have
 been highlighted. You can either modify
 :numref:`code-input`, or else create a new file and use
@@ -65,14 +64,11 @@ copy and paste to copy the code from the old program into the new.
 A random maths question
 -----------------------
 
-.. raw:: latex
+.. literalinclude:: programs/04_maths_question.py
+   :caption: A random maths question
+   :name: code-maths
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{A random maths question}
-   \label{code:maths}
-   \phantom{.}
-   <<(programs/04_maths_question.py)
-   \end{codelisting}
 
 .. topic:: Exercise
 
@@ -97,32 +93,24 @@ Keeping score
 We create a ``score`` variable to record how many questions the player
 answered correctly.
 
-.. raw:: latex
 
-   \begin{codelisting}
-   \codecaption{Keeping score}
-   \label{code:maths2}
-   \phantom{.}
-   <<(programs/05_maths_question2.py)
-   \end{codelisting}
-
+.. literalinclude:: programs/05_maths_question2.py
+   :caption: Keeping score
+   :name: code-maths2
+   :linenos:
 
 
 Guessing game with a loop
 -------------------------
 
 This ``while`` loop goes round and round forever … or until the player
-gets a correct answer, and then it ``break``\ s out of the loop. Note
+gets a correct answer, and then it ``break``s out of the loop. Note
 that everything in the loop is indented.
 
-.. raw:: latex
-
-   \begin{codelisting}
-   \codecaption{Guessing game with a loop}
-   \label{code:loop}
-   \phantom{.}
-   <<(programs/06_loop.py)
-   \end{codelisting}
+.. literalinclude:: programs/06_loop.py
+   :caption: Guessing game with a loop
+   :name: code-loop
+   :linenos:
 
 .. topic:: Exercise
 
@@ -142,11 +130,8 @@ Improved guessing game
 :numref:`code-loop` with a hint whether the guess is
 greater or lesser than the answer.
 
-.. raw:: latex
+.. literalinclude:: programs/07_loop2.py
+   :caption: GImproved guessing game
+   :name: code-loop2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Improved guessing game}
-   \label{code:loop2}
-   \phantom{.}
-   <<(programs/07_loop2.py)
-   \end{codelisting}
