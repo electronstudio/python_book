@@ -20,13 +20,12 @@ remember to add a *vx* and *vy* every time we create an Actor.
 So let’s create our own class, called *Sprite*, that is the same as
 Actor but with these variables included.
 
-.. raw:: latex
+.. literalinclude:: programs/26_classes.py
+   :caption: Classes
+   :name: code-classes
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Classes}
-   \label{code:classes}
-   <<(programs/26_classes.py)
-   \end{codelisting}
+
 
 
 
@@ -36,13 +35,12 @@ Methods
 Classes can contain functions (called *methods*) as well as variables.
 Methods are the best place to modify the class’s variables.
 
-.. raw:: latex
+.. literalinclude:: programs/27_classes2.py
+   :caption: Class methods
+   :name: code-classes2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Class methods}
-   \label{code:classes2}
-   <<(programs/27_classes2.py)
-   \end{codelisting}
+
 
 
 
@@ -54,13 +52,12 @@ included to help you test the input from your controllers.
 
 (I don’t suggest typing this one yourself.)
 
-.. raw:: latex
+.. literalinclude:: programs/19_joystick_tester.py
+   :caption: Joystick tester
+   :name: code-joystick_tester
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Joystick tester}
-   \label{code:joystick_tester}
-   <<(programs/19_joystick_tester.py)
-   \end{codelisting}
+
 
 
 

@@ -26,13 +26,12 @@ folder (accessible with the ``images`` button in Mu).
 They must each be 64×64 pixels. For the player we will use the built in
 ``alien`` image.
 
-.. raw:: latex
+.. literalinclude:: programs/maze2.py
+   :caption: Drawing a tilemap
+   :name: code-maze2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Drawing a tilemap}
-   \label{code:maze2}
-   <<(programs/maze2.py)
-   \end{codelisting}
+
 
 The filenames of the tile images are stored in a *list*, ``tiles``. The
 level design is stored in a list of lists, more commonly called a *two
@@ -307,13 +306,12 @@ Finished game
 
 Here is the finished game with all the changes included:
 
-.. raw:: latex
+.. literalinclude:: programs/maze7.py
+   :caption: Finished maze game
+   :name: code-maze7
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Finished maze game}
-   \label{code:maze7}
-   <<(programs/maze7.py)
-   \end{codelisting}
+
 
 
 

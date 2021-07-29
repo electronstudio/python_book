@@ -9,13 +9,12 @@ sprite. Most of this code is copied from
 Program~:raw-latex:`\ref{code:moving_boxes}` and
 Program~:raw-latex:`\ref{code:keyboard_input}`.
 
-.. raw:: latex
+.. literalinclude:: programs/15_collisions.py
+   :caption: Collisions
+   :name: code-collisions
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Collisions}
-   \label{code:collisions}
-   <<(programs/15_collisions.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -52,13 +51,12 @@ New lines are highlighted. We have also changed what happens when the
 box catches the alien: the program now exits and you must run it again
 to play again. This may not be what you want in your game!
 
-.. raw:: latex
+.. literalinclude:: programs/15b_chase.py, options: "hl_lines": [18, 19, 20, 21, 22, 23]
+   :caption: Alien chase
+   :name: code-chase
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Alien chase}
-   \label{code:chase}
-   <<(programs/15b_chase.py, options: "hl_lines": [18, 19, 20, 21, 22, 23])
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -83,13 +81,12 @@ Powerup
 Instead of an enemy the box here is a powerup that the player must
 collect. When he does it disappears and moves to a new location.
 
-.. raw:: latex
+.. literalinclude:: programs/15c_powerup.py
+   :caption: Collect the powerups
+   :name: code-powerup
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Collect the powerups}
-   \label{code:powerup}
-   <<(programs/15c_powerup.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -125,13 +122,12 @@ Pygame Zero comes with one other image ``alien_hurt.png`` and one sound
 Most of this code is copied from
 Program~:raw-latex:`\ref{code:collisions}`
 
-.. raw:: latex
+.. literalinclude:: programs/16_collisions2_sound_animation.py, options: "hl_lines": [21, 22, 23, 24]
+   :caption: Sound and animation upon collision
+   :name: code-collisions2_sound_animation
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Sound and animation upon collision}
-   \label{code:collisions2_sound_animation}
-   <<(programs/16_collisions2_sound_animation.py, options: "hl_lines": [21, 22, 23, 24])
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -171,13 +167,12 @@ to Program~:raw-latex:`\ref{code:collisions2_sound_animation}` but:
 
 See Program~:raw-latex:`\ref{code:functions}` for more about functions.
 
-.. raw:: latex
+.. literalinclude:: programs/17_mouse_input.py
+   :caption: Getting input from mouse clicks
+   :name: code-mouse_input
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Getting input from mouse clicks}
-   \label{code:mouse_input}
-   <<(programs/17_mouse_input.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -186,13 +181,12 @@ See Program~:raw-latex:`\ref{code:functions}` for more about functions.
 Mouse movement
 --------------
 
-.. raw:: latex
+.. literalinclude:: programs/18_mouse_movement.py
+   :caption: Getting input from mouse movement
+   :name: code-mouse_movement
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Getting input from mouse movement}
-   \label{code:mouse_movement}
-   <<(programs/18_mouse_movement.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 

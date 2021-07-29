@@ -16,13 +16,12 @@ alien Actors.
 We again use loops to draw all the aliens and move all the aliens in the
 list. When the mouse is clicked we add a new alien to the list.
 
-.. raw:: latex
+.. literalinclude:: programs/21_arrays.py
+   :caption: Lists are useful in games!
+   :name: code-arrays2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Lists are useful in games!}
-   \label{code:arrays2}
-   <<(programs/21_arrays.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -42,13 +41,12 @@ Program~:raw-latex:`\ref{code:functions}`) We define our own function
 and then ask Pygame to *call it back* every 0.2 seconds. Most of this
 code is from Program~:raw-latex:`\ref{code:collisions}`.
 
-.. raw:: latex
+.. literalinclude:: programs/22_animation.py
+   :caption: Animation
+   :name: code-animation
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Animation}
-   \label{code:animation}
-   <<(programs/22_animation.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -87,13 +85,12 @@ fixed direction. ``vx`` is the speed in the horizontal direction and
 the velocity. Here we reverse the velocity when the ball hits the edge
 of the screen.
 
-.. raw:: latex
+.. literalinclude:: programs/23_simple_physics.py
+   :caption: Simple physics: velocity
+   :name: code-simple_physics
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Simple physics: velocity}
-   \label{code:simple_physics}
-   <<(programs/23_simple_physics.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -112,13 +109,12 @@ Bat and ball game
 
 *Pong* is the classic bat and ball game.
 
-.. raw:: latex
+.. literalinclude:: programs/24_pong.py
+   :caption: Pong
+   :name: code-pong
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Pong}
-   \label{code:pong}
-   <<(programs/24_pong.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -162,13 +158,12 @@ Fortunately Pygame can tell us exactly how much many seconds have passed
 since the last frame in a parameter to our update function. We use this
 *delta time* to keep a timer.
 
-.. raw:: latex
+.. literalinclude:: programs/28_timer.py
+   :caption: Timer
+   :name: code-timer
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Timer}
-   \label{code:timer}
-   <<(programs/28_timer.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -202,13 +197,12 @@ Pygame has its own clock which we can use by asking it to *callback* one
 of our functions at a certain time, or regularly over and over at an
 interval.
 
-.. raw:: latex
+.. literalinclude:: programs/29_timer2.py
+   :caption: Timer with callback functions
+   :name: code-timer2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Timer with callback functions}
-   \label{code:timer2}
-   <<(programs/29_timer2.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 

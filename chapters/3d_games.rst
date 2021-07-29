@@ -41,13 +41,12 @@ Much like Pygame draws rectangles and circles, Richlib draws cubes and
 spheres. Note if using Mu you must be in ``Python3`` mode, not
 ``Pygame Zero`` mode.
 
-.. raw:: latex
+.. literalinclude:: programs/rl_cubes_spheres.py
+   :caption: Cubes and spheres
+   :name: code-cubes
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Cubes and spheres}
-   \label{code:cubes}
-   <<(programs/rl_cubes_spheres.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -65,13 +64,12 @@ Moving cubes
 Just like in Pygame, the ``update()`` function is called for us and is
 where we make things move.
 
-.. raw:: latex
+.. literalinclude:: programs/rl_moving_cubes.py
+   :caption: Moving cubes
+   :name: code-cubes
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Moving cubes}
-   \label{code:cubes}
-   <<(programs/rl_moving_cubes.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -103,13 +101,12 @@ model. The following 3d objects are currently built-in:
 If you want any other objects you must provide an ``.obj`` 3d model
 file.
 
-.. raw:: latex
+.. literalinclude:: programs/rl_actors.py
+   :caption: 3d model actors
+   :name: code-rl_actors
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{3d model actors}
-   \label{code:rl_actors}
-   <<(programs/rl_actors.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -139,13 +136,12 @@ file.
 Keyboard input
 --------------
 
-.. raw:: latex
+.. literalinclude:: programs/rl_keyboard_input.py
+   :caption: Keyboard input
+   :name: code-rl_keyboard_input
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Keyboard input}
-   \label{code:rl_keyboard_input}
-   <<(programs/rl_keyboard_input.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -171,13 +167,12 @@ Controller input
 Richlib has a game controller API that is a bit different from Pygame’s.
 This will require a game controller connected to work.
 
-.. raw:: latex
+.. literalinclude:: programs/rl_joystick_input.py
+   :caption: Game controller input
+   :name: code-rl_joystick_input
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Game controller input}
-   \label{code:rl_joystick_input}
-   <<(programs/rl_joystick_input.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -187,13 +182,12 @@ This will require a game controller connected to work.
 3d collisions
 -------------
 
-.. raw:: latex
+.. literalinclude:: programs/rl_collisions.py
+   :caption: 3d collisions
+   :name: code-rl_collisions
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{3d collisions}
-   \label{code:rl_collisions}
-   <<(programs/rl_collisions.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -223,13 +217,12 @@ Mouse input
 We can get the mouse position in the 3d world and also test if mouse
 buttons are pressed.
 
-.. raw:: latex
+.. literalinclude:: programs/rl_mouse.py
+   :caption: Mouse input
+   :name: code-rl_mouse
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Mouse input}
-   \label{code:rl_mouse}
-   <<(programs/rl_mouse.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -246,13 +239,12 @@ Mouse collisions
 
 We can check if the mouse pointer is touching a 3d object.
 
-.. raw:: latex
+.. literalinclude:: programs/rl_mouse_collisions.py
+   :caption: Mouse collisions
+   :name: code-rl_mouse_collisions
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Mouse collisions}
-   \label{code:rl_mouse_collisions}
-   <<(programs/rl_mouse_collisions.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -286,13 +278,12 @@ Sound effects
 The ``eep`` sound is built-in. Other sounds must be provided as ``wav``
 files. Click the mouse to play the sound.
 
-.. raw:: latex
+.. literalinclude:: programs/rl_sounds.py
+   :caption: Sound effects
+   :name: code-rl_sounds
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Sound effects}
-   \label{code:rl_sounds}
-   <<(programs/rl_sounds.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -318,13 +309,12 @@ displays score on screen.
 Note that text is 2d, not 3d, so it must be drawn in ``draw2d()``
 function not the normal ``draw()`` function.
 
-.. raw:: latex
+.. literalinclude:: programs/rl_displaying_text.py
+   :caption: Sound effects
+   :name: code-rl_displaying_text
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Sound effects}
-   \label{code:rl_displaying_text}
-   <<(programs/rl_displaying_text.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 

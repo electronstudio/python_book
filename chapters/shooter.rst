@@ -26,13 +26,12 @@ will be appended to the lists later.
 
 
 
-.. raw:: latex
+.. literalinclude:: programs/shoot17a.py
+   :caption: Shooter game part 1 of 4
+   :name: code-shoot17a
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Shooter game part 1 of 4}
-   \label{code:shoot17a}
-   <<(programs/shoot17a.py)
-   \end{codelisting}
+
 
 Step 2: Draw your Actors
 ------------------------
@@ -40,13 +39,12 @@ Step 2: Draw your Actors
 Every Pygame game needs an ``draw()`` function, and it should draw all
 the Actors we created above.
 
-.. raw:: latex
+.. literalinclude:: programs/shoot17b.py
+   :caption: Shooter game part 2 of 4
+   :name: code-shoot17b
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Shooter game part 2 of 4}
-   \label{code:shoot17b}
-   <<(programs/shoot17b.py)
-   \end{codelisting}
+
 
 
 
@@ -56,13 +54,12 @@ Step 3: Move your Actors
 Every Pygame game needs an ``update()`` function to move the Actors,
 check for collisions, etc.
 
-.. raw:: latex
+.. literalinclude:: programs/shoot17c.py
+   :caption: Shooter game part 3 of 4
+   :name: code-shoot17c
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Shooter game part 3 of 4}
-   \label{code:shoot17c}
-   <<(programs/shoot17c.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -81,13 +78,12 @@ define a completely empty function - it must contain at least one line.
 Therefore we use the ``pass`` keyword to create a line that doesn’t do
 anything.
 
-.. raw:: latex
+.. literalinclude:: programs/shoot17d.py
+   :caption: Shooter game part 4 of 4
+   :name: code-shoot17d
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Shooter game part 4 of 4}
-   \label{code:shoot17d}
-   <<(programs/shoot17d.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 

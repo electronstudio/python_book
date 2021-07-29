@@ -38,13 +38,12 @@ horizontal line of the screen. It will have three values, ``x``, ``x2``
 and ``color``, representing the position of the left wall, the gap
 between the left wall and the right wall and the colour of the wall.
 
-.. raw:: latex
+.. literalinclude:: programs/race7.py
+   :caption: Basic skeleton of race game
+   :name: code-race7
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Basic skeleton of race game}
-   \label{code:race7}
-   <<(programs/race7.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 

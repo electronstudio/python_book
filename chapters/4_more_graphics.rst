@@ -18,13 +18,12 @@ Program~:raw-latex:`\ref{code:joystick_tester}` to test yours and find
 out what inputs it has. Note: if you run this program with no controller
 plugged in you will get an error.
 
-.. raw:: latex
+.. literalinclude:: programs/14_joystick_input.py
+   :caption: Joystick input
+   :name: code-joystick_input
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Joystick input}
-   \label{code:joystick_input}
-   <<(programs/14_joystick_input.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -44,13 +43,12 @@ create your own color with a *tuple* of three numbers. The numbers must
 be between 0 - 255 and represent how much *red*, *green* and *blue* to
 mix together.
 
-.. raw:: latex
+.. literalinclude:: programs/25_colours.py
+   :caption: RGB colours
+   :name: code-colours
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{RGB colours}
-   \label{code:colours}
-   <<(programs/25_colours.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -85,13 +83,12 @@ graphical games too! Here we draw red circles using a *for loop*.
 
 We draw green circles using a *loop within another loop*.
 
-.. raw:: latex
+.. literalinclude:: programs/20_loops.py
+   :caption: Loops are useful
+   :name: code-loops
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Loops are useful}
-   \label{code:loops}
-   <<(programs/20_loops.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -124,13 +121,12 @@ Sometimes it is nice to play your game using the entire screen rather
 than in a window. Add these lines to any game to enable fullscreen mode.
 Then press *F* to go fullscreen, *ESCAPE* to quit.
 
-.. raw:: latex
+.. literalinclude:: programs/26_fullscreen_mode.py
+   :caption: Fullscreen mode
+   :name: code-full_screen_mode
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Fullscreen mode}
-   \label{code:full_screen_mode}
-   <<(programs/26_fullscreen_mode.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -143,13 +139,12 @@ This game shows how you can keep the score in a variable and print it on
 to the game screen. You can display any other messages to the player the
 same way.
 
-.. raw:: latex
+.. literalinclude:: programs/27_displaying_text.py
+   :caption: Keeping score in a variable and displaying it
+   :name: code-displaying_text
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Keeping score in a variable and displaying it}
-   \label{code:displaying_text}
-   <<(programs/27_displaying_text.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 

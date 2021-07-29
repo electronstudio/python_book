@@ -130,26 +130,24 @@ Hello Minecraft
 This program tests you have a connection to the Minecraft server and
 displays a message on the client.
 
-.. raw:: latex
+.. literalinclude:: programs/e00_hello.py
+   :caption: Hello, Minecraft
+   :name: code-hellominecraft
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Hello, Minecraft}
-   \label{code:hellominecraft}
-   <<(programs/e00_hello.py)
-   \end{codelisting}
+
 
 Coordinates
 -----------
 
 This program gets the player’s co-ordinates and prints them to the chat.
 
-.. raw:: latex
+.. literalinclude:: programs/e01_coordinates.py
+   :caption: Getting player coordinates
+   :name: code-minecoordinates
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Getting player coordinates}
-   \label{code:minecoordinates}
-   <<(programs/e01_coordinates.py)
-   \end{codelisting}
+
 
 
 
@@ -161,13 +159,12 @@ in the game, or running Program~:raw-latex:`\ref{code:minecoordinates}`
 Enter these coordinates in this program and run it to teleport to that
 location.
 
-.. raw:: latex
+.. literalinclude:: programs/e02_teleport.py
+   :caption: Changing the player's position
+   :name: code-telport
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Changing the player's position}
-   \label{code:telport}
-   <<(programs/e02_teleport.py)
-   \end{codelisting}
+
 
 Build a teleporter
 ------------------
@@ -175,13 +172,12 @@ Build a teleporter
 Before you run this program, build two tiles in the game to be your
 teleporters and write down their co-ordinates.
 
-.. raw:: latex
+.. literalinclude:: programs/e03_teleport2.py
+   :caption: Teleporter
+   :name: code-telport2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Teleporter}
-   \label{code:telport2}
-   <<(programs/e03_teleport2.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -201,13 +197,12 @@ teleporters and write down their co-ordinates.
 Teleport player into the air
 ----------------------------
 
-.. raw:: latex
+.. literalinclude:: programs/e04_teleport3.py
+   :caption: Teleport player into the air
+   :name: code-telport3
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Teleport player into the air}
-   \label{code:telport3}
-   <<(programs/e04_teleport3.py)
-   \end{codelisting}
+
 
 Teleport jump
 -------------
@@ -215,13 +210,12 @@ Teleport jump
 This program does a series of teleports in quick succession to give the
 effect of a jump.
 
-.. raw:: latex
+.. literalinclude:: programs/e05_teleport4.py
+   :caption: Teleport jump
+   :name: code-telport4
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Teleport jump}
-   \label{code:telport4}
-   <<(programs/e05_teleport4.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -253,13 +247,12 @@ This program creates a block. Each type of block has it’s own number,
 but if we import ``mcpi.block`` we can use names instead remembering
 numbers.
 
-.. raw:: latex
+.. literalinclude:: programs/e06_create_block.py
+   :caption: Create a block
+   :name: code-create_block
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Create a block}
-   \label{code:create_block}
-   <<(programs/e06_create_block.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -306,13 +299,12 @@ Create a block inside a loop
 This program creates a block over and over again in a loop. Move around
 to see it.
 
-.. raw:: latex
+.. literalinclude:: programs/e07_create_block_loop.py
+   :caption: Block loop
+   :name: code-create_block_loop
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Block loop}
-   \label{code:create_block_loop}
-   <<(programs/e07_create_block_loop.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -329,13 +321,12 @@ Create a tower of blocks
 
 We use a ``for`` loop to easily build a tower of blocks.
 
-.. raw:: latex
+.. literalinclude:: programs/e08_tower.py
+   :caption: Tower of blocks
+   :name: code-e08_tower
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Tower of blocks}
-   \label{code:e08_tower}
-   <<(programs/e08_tower.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -357,13 +348,12 @@ therefore in this program we put it in a function. Make sure to save the
 program as ``clear_space.py`` so you can ``import`` it into the next
 program.
 
-.. raw:: latex
+.. literalinclude:: programs/e09_clear_space.py
+   :caption: Clear space
+   :name: code-e09_clear_space
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Clear space}
-   \label{code:e09_clear_space}
-   <<(programs/e09_clear_space.py)
-   \end{codelisting}
+
 
 Build a house
 -------------
@@ -373,13 +363,12 @@ Make sure you have saved the previous program
 this program because we are going to ``import`` the function from
 ``clear_space.py``. Save this program as ``house.py``.
 
-.. raw:: latex
+.. literalinclude:: programs/e10_basic_house.py
+   :caption: A simple house
+   :name: code-e10_basic_house
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{A simple house}
-   \label{code:e10_basic_house}
-   <<(programs/e10_basic_house.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -422,13 +411,12 @@ Make sure you have saved the previous program
 this program because we are going to ``import`` the function from
 ``house.py``.
 
-.. raw:: latex
+.. literalinclude:: programs/e11_street.py
+   :caption: A street of houses
+   :name: code-e11_street
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{A street of houses}
-   \label{code:e11_street}
-   <<(programs/e11_street.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -473,13 +461,12 @@ This program can read chat messages posted by players. It builds a block
 next to any player who says “build”. This is the first example that will
 work for more than one player.
 
-.. raw:: latex
+.. literalinclude:: programs/e12_chat.py
+   :caption: Chat commands
+   :name: code-e12_chat
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Chat commands}
-   \label{code:e12_chat}
-   <<(programs/e12_chat.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -516,13 +503,12 @@ in Mu by clicking in the bottom right gadget and adding
 You may have used a turtle for drawing at school. This is the same but
 in Minecraft.
 
-.. raw:: latex
+.. literalinclude:: programs/e13_turtle.py
+   :caption: Turtle
+   :name: code-e13_turtle
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Turtle}
-   \label{code:e13_turtle}
-   <<(programs/e13_turtle.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 

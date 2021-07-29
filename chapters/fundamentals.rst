@@ -423,17 +423,15 @@ Nested loops
 
 It is often useful to put one loop inside another loop.
 
-.. raw:: latex
+.. code-block::
+   :caption: Nested for loop
+   :name: code-for_loop
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Nested for loop}
-   \label{code:for_loop}
-   ```python
    for a in range(0, 6):
        for b in range(0, 6):
            print(a, "times", b, "is", a * b)
-   ```
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -467,20 +465,18 @@ so he knows how many he must bake. He writes this program.
 
 
 
-.. raw:: latex
+.. code-block::
+   :caption: Possible solution to baker program exercise
+   :name: code-baker
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Possible solution to baker program exercise}
-   \label{code:baker}
-   ```python
     total=0
     for x in range(1, 4):
         print("Customer", x, "how many cakes do you want?")
         cakes = int(input())
         total = total + cakes
     print("I will bake", total, "cakes!")
-   ```
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -496,12 +492,11 @@ so he knows how many he must bake. He writes this program.
 
 
 
-.. raw:: latex
+.. code-block::
+   :caption: Possible solution to variable number of customers exercise
+   :name: code-baker2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Possible solution to variable number of customers exercise}
-   \label{code:baker2}
-   ```python
     print("How many customers are there today?")
     c = int(input())
     total=0
@@ -510,8 +505,7 @@ so he knows how many he must bake. He writes this program.
         cakes = int(input())
         total = total + cakes
     print("I will bake", total, "cakes!")
-   ```
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -524,13 +518,12 @@ Array lists
 Variables can be stored together in a *list*. Most languages call this
 an *array* so try to remember that word also. [1]_
 
-.. raw:: latex
+.. literalinclude:: programs/0C_arrays.py
+   :caption: Array lists
+   :name: code-arrays
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Array lists}
-   \label{code:arrays}
-   <<(programs/0C_arrays.py)
-   \end{codelisting}
+
 
 Looping over lists
 ~~~~~~~~~~~~~~~~~~
@@ -552,17 +545,15 @@ elements then the final element will have index ``3``, nor ``4``.
 However, ``for`` can directly give you all the array values without the
 need for an index or to specify the size of the range:
 
-.. raw:: latex
+.. code-block::
+   :caption: A shopping list
+   :name: code-shoppinglist
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{A shopping list}
-   \label{code:shoppinglist}
-   ```python
    prices = [3.49, 9.99, 2.50, 20.00]
    for price in prices:
        print("item costs £", price)
-   ```
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -571,20 +562,18 @@ need for an index or to specify the size of the range:
 
 
 
-.. raw:: latex
+.. code-block::
+   :caption: Possible way of calculating the total cost of shopping list
+   :name: code-shoppinglist2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Possible way of calculating the total cost of shopping list}
-   \label{code:shoppinglist2}
-   ```python
    prices = [3.49, 9.99, 2.50, 20.00]
    total = 0
    for price in prices:
        print("item costs £", price)
        total = total + price
    print("shopping total", total)
-   ```
-   \end{codelisting}
+
 
 There is a problem with solution, can you see what it is when you run
 it?
@@ -610,20 +599,18 @@ pennies. Britain no longer has a half-penny, so the numbers will always
 be whole numbers - *integers* - and no floating points will be needed
 for the addition.
 
-.. raw:: latex
+.. code-block::
+   :caption: Better way of calculating the total cost of shopping list
+   :name: code-shoppinglist3
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Better way of calculating the total cost of shopping list}
-   \label{code:shoppinglist3}
-   ```python
    prices = [349, 999, 250, 2000]
    total = 0
    for price in prices:
        print("item costs £", price/100)
        total = total + price
    print("shopping total", total/100)
-   ```
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -633,12 +620,11 @@ for the addition.
 
 
 
-.. raw:: latex
+.. code-block::
+   :caption: Possible way of discounting shopping list
+   :name: code-shoppinglist4
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Possible way of discounting shopping list}
-   \label{code:shoppinglist4}
-   ```python
    prices = [349, 999, 250, 2000]
    total = 0
    for price in prices:
@@ -648,8 +634,7 @@ for the addition.
            print("  item discounted to", price/100)
        total = total + price
    print("shopping total", total/100)
-   ```
-   \end{codelisting}
+
 
 Functions
 ---------
@@ -665,13 +650,12 @@ get longer they enable you to create *abstractions* so you only have to
 think about what function you want to call and don’t need to remember
 the details of the code inside the function.
 
-.. raw:: latex
+.. literalinclude:: programs/0D_functions.py
+   :caption: Functions
+   :name: code-functions
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Functions}
-   \label{code:functions}
-   <<(programs/0D_functions.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -683,13 +667,12 @@ Shortcuts
 Here are quicker ways of doing basic things. You may have noticed some
 of these being used already.
 
-.. raw:: latex
+.. literalinclude:: programs/0A_shortcuts.py
+   :caption: Shortcuts
+   :name: code-shortcuts
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Shortcuts}
-   \label{code:shortcuts}
-   <<(programs/0A_shortcuts.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -711,13 +694,12 @@ The block ends when the indentation ends.
 
 Blocks can be *nested* inside other blocks.
 
-.. raw:: latex
+.. literalinclude:: programs/blocks.py
+   :caption: Can you predict what this program will print?
+   :name: code-blocks
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Can you predict what this program will print?}
-   \label{code:blocks}
-   <<(programs/blocks.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
@@ -737,20 +719,18 @@ variable and your changes to the global variable will be silently lost.
 You must explicitly tell Python that you want to use a global variable
 with the ``global`` keyword.
 
-.. raw:: latex
+.. code-block::
+   :caption: Try removing line 3 and see what happens
+   :name: code-globals
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Try removing line 3 and see what happens}
-   \label{code:globals}
-   ```python
    a = 10
    def my_function():
        global a
        a=20
    my_function()
    print(a)
-   ```
-   \end{codelisting}
+
 
 Dictionaries
 ------------
@@ -937,26 +917,24 @@ single wrong letter or space will prevent them from working.
 
 A particular issue in Python is that *indentation* must be correct.
 
-.. raw:: latex
+.. literalinclude:: programs/0E_bug1.py
+   :caption: Buggy program
+   :name: code-bug1
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Buggy program}
-   \label{code:bug1}
-   <<(programs/0E_bug1.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
    Can you spot and fix the bug in Program \ref{code:bug1}?
 
 
-.. raw:: latex
+.. literalinclude:: programs/0F_bug2.py
+   :caption: More bugs
+   :name: code-bug2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{More bugs}
-   \label{code:bug2}
-   <<(programs/0F_bug2.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 

@@ -11,13 +11,12 @@ Hello, world
 The traditional first program used to make sure Python is working and
 that we can run programs.
 
-.. raw:: latex
+.. literalinclude:: programs/01_intro.py
+   :caption: Hello, world
+   :name: code-hello
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Hello, world}
-   \label{code:hello}
-   <<(programs/01_intro.py)
-   \end{codelisting}
+
 
 :raw-latex:`\noindent `If using the Mu editor:
 
@@ -33,14 +32,12 @@ This program will pause and wait for you to enter some text with the
 keyboard, followed by the return key. The text you enter is stored in a
 variable, ``x``.
 
-.. raw:: latex
+.. literalinclude:: programs/02_input.py
+   :caption: Getting input from the keyboard
+   :name: code-input
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Getting input from the keyboard}
-   \label{code:input}
-   <<(programs/02_input.py)
 
-   \end{codelisting}
 
 .. topic:: Exercise
 
@@ -52,13 +49,12 @@ Making decisions: if, elif, else
 
 This is how to add another name to Program~:raw-latex:`\ref{code:input}`
 
-.. raw:: latex
+.. literalinclude:: programs/03_input2.py, options: "hl_lines": [6, 7, 8, 9]
+   :caption: Decisions: if, elif, else
+   :name: code-input2
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Decisions: if, elif, else}
-   \label{code:input2}
-   <<(programs/03_input2.py, options: "hl_lines": [6, 7, 8, 9])
-   \end{codelisting}
+
 
 :raw-latex:`\noindent `Program~:raw-latex:`\ref{code:input2}` is very
 similar to Program~:raw-latex:`\ref{code:input}`. The new lines have

@@ -33,13 +33,12 @@ which will be 600×600 pixels.
 
    New image in Krita, 600×600 pixels:raw-latex:`\label{fig:krita}`
 
-.. raw:: latex
+.. literalinclude:: programs/chase1.py
+   :caption: Chase game
+   :name: code-chase1
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Chase game}
-   \label{code:chase1}
-   <<(programs/chase1.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -357,13 +356,12 @@ Finished game
 
 Here is the finished game with all the changes included:
 
-.. raw:: latex
+.. literalinclude:: programs/chaser7.py
+   :caption: Finished chase game
+   :name: code-chaser7
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Finished chase game}
-   \label{code:chaser7}
-   <<(programs/chaser7.py)
-   \end{codelisting}
+
 
 
 

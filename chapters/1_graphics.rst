@@ -30,13 +30,12 @@ program**!
 If you are using a different editor, `instructions are
 online <https://pygame-zero.readthedocs.io/en/stable/ide-mode.html>`__\  [2]_
 
-.. raw:: latex
+.. literalinclude:: programs/10_lines_circles.py
+   :caption: Lines and circles
+   :name: code-lines_circles
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Lines and circles}
-   \label{code:lines_circles}
-   <<(programs/10_lines_circles.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -56,13 +55,12 @@ To make things move we need to add the special ``update()`` function. We
 don’t need to write our own loop because *Pygame Zero calls this
 function for us in its own loop*, over and over, many times per second.
 
-.. raw:: latex
+.. literalinclude:: programs/11_moving_boxes.py
+   :caption: Moving rectangles
+   :name: code-moving_boxes
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Moving rectangles}
-   \label{code:moving_boxes}
-   <<(programs/11_moving_boxes.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -91,13 +89,12 @@ but for other images you must add the files yourself.
 You could use Microsoft Paint which comes with Windows but I recommend
 you download and install `Krita <https://krita.org>`__\  [3]_.
 
-.. raw:: latex
+.. literalinclude:: programs/12_sprites.py
+   :caption: Actor sprites
+   :name: code-sprites
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Actor sprites}
-   \label{code:sprites}
-   <<(programs/12_sprites.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -119,13 +116,12 @@ Click ``Images`` to see the folder of image files available.
 same size as the window, 500×500 pixels and it must be in ``.png``
 format.**
 
-.. raw:: latex
+.. literalinclude:: programs/12b_background.py
+   :caption: Background
+   :name: code-background
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Background}
-   \label{code:background}
-   <<(programs/12b_background.py)
-   \end{codelisting}
+
 
 .. topic:: Exercise
 
@@ -139,13 +135,12 @@ Keyboard input
 
 The alien moves when you press the cursor keys.
 
-.. raw:: latex
+.. literalinclude:: programs/13_keyboard_input.py
+   :caption: Keyboard input
+   :name: code-keyboard_input
+   :linenos:
 
-   \begin{codelisting}
-   \codecaption{Keyboard input}
-   \label{code:keyboard_input}
-   <<(programs/13_keyboard_input.py)
-   \end{codelisting}
+
 
 .. raw:: latex
 
