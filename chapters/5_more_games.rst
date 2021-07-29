@@ -23,12 +23,9 @@ list. When the mouse is clicked we add a new alien to the list.
 
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Go back to a previous game (e.g. :numref:`code-collisions`)
+   Go back to a previous game (e.g. :numref:`code-collisions`)
    and add a list of bullets that move up the screen.  When the player presses the spacebar to shoot,
    add a new bullet to the list.
 
@@ -53,20 +50,14 @@ code is from :numref:`code-collisions`.
    Make the alien animate more quickly.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Add another image to the list of images.
+   Add another image to the list of images.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Draw your own animation, e.g. a man walking left which plays when the left key is pressed
+   Draw your own animation, e.g. a man walking left which plays when the left key is pressed
 
 
 
@@ -90,12 +81,9 @@ of the screen.
 
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Make the ball move faster by increasing its velocity each time it hits the sides.
+   Make the ball move faster by increasing its velocity each time it hits the sides.
 
 
 
@@ -119,20 +107,14 @@ Bat and ball game
    Make the ball move more quickly.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Add another bat at the top of the screen for player 2.
+   Add another bat at the top of the screen for player 2.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Add bricks (Rects) that disappear when the ball hits them.
+   Add bricks (Rects) that disappear when the ball hits them.
 
 
 
@@ -162,20 +144,14 @@ since the last frame in a parameter to our update function. We use this
    Make the timer count down, not up.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Add a timer to one of your other games.
+   Add a timer to one of your other games.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Add a timer to :numref:`code-arrays` that deletes one of the aliens when the timer runs out, then starts the timer again.
+   Add a timer to :numref:`code-arrays` that deletes one of the aliens when the timer runs out, then starts the timer again.
 
 
 
@@ -199,21 +175,15 @@ interval.
     Make the aliens appear more often.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Use ```len(aliens)``` to print how many aliens there are
+   Use ``len(aliens)`` to print how many aliens there are
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent When there are too many aliens, stop adding them using this code:
-   ```python
-          clock.unschedule(add_alien)
-   ```
+   When there are too many aliens, stop adding them using this code::
+
+      clock.unschedule(add_alien)
+
 

@@ -21,20 +21,14 @@ sprite. Most of this code is copied from
    Add vertical movement (as you did in Exercise \ref{exercise:updown}).
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Make the box chase the alien.
+   Make the box chase the alien.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent  Print number of times the box hits the alien (i.e. the score).
+    Print number of times the box hits the alien (i.e. the score).
 
 
 
@@ -61,12 +55,9 @@ to play again. This may not be what you want in your game!
    Add vertical movement (as you did in Exercise \ref{exercise:updown}).
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Draw a new enemy image.  Save it as `enemy.png` in your `mu_code/images` folder. Load it as an `Actor('enemy')` instead of the `Rect()`.
+   Draw a new enemy image.  Save it as `enemy.png` in your `mu_code/images` folder. Load it as an `Actor('enemy')` instead of the `Rect()`.
 
 
 
@@ -96,12 +87,9 @@ collect. When he does it disappears and moves to a new location.
    Draw a new powerup image.  Save it as `powerup.png` in your `mu_code/images` folder. Load it as an `Actor('powerup')` instead of the `Rect()`.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Combine this program with the enemy from  Program~\ref{code:chase} and the background from :numref:`code-background` and whatever else you want to make your own game.
+   Combine this program with the enemy from  Program~\ref{code:chase} and the background from :numref:`code-background` and whatever else you want to make your own game.
 
 
 
@@ -128,20 +116,14 @@ Most of this code is copied from
    Record your own sound effect and add it to the game.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Add more boxes or sprites that move in different ways for the player to avoid.
+   Add more boxes or sprites that move in different ways for the player to avoid.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Add a second alien controlled by different keys or gamepad for player 2.
+   Add a second alien controlled by different keys or gamepad for player 2.
 
 
 
@@ -180,10 +162,10 @@ Mouse movement
 
 .. topic:: Exercise
 
-   What happens if you delete line 8 and replace it with this:
-   ```python
+   What happens if you delete line 8 and replace it with this::
+
         animate(alien, pos=pos, duration=1, tween='bounce_end')
-   ```
+
 
 
 .. topic:: Exercise
@@ -191,10 +173,7 @@ Mouse movement
    What happens if you change `on_mouse_move` to `on_mouse_down`?
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Make a game with one alien controlled by mouse and another controlled by keyboard
+   Make a game with one alien controlled by mouse and another controlled by keyboard
 

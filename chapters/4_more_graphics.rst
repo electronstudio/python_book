@@ -25,12 +25,9 @@ plugged in you will get an error.
 
 
 
-.. raw:: latex
+.. topic:: Optional, if you have a controller
 
-   \begin{aside}
-   \label{}
-   \heading{Optional, if you have a controller}
-   \noindent Make the alien move up and down as well as left and right using the controller.  Do the same for any other examples that use the keyboard!
+   Make the alien move up and down as well as left and right using the controller.  Do the same for any other examples that use the keyboard!
 
 
 Colours
@@ -50,12 +47,9 @@ mix together.
 
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Change the green and blue amounts to make different colours.
+   Change the green and blue amounts to make different colours.
 
 
 .. topic:: Exercise
@@ -63,12 +57,9 @@ mix together.
    Make a gray colour.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Make random colours.
+   Make random colours.
 
 
 
@@ -90,26 +81,20 @@ We draw green circles using a *loop within another loop*.
 
 .. topic:: Exercise
 
-   `import random` at the top of the program and then make the positions random, e.g.
-   ```
-   x = random.randint(0, 100)
-   ```
+   `import random` at the top of the program and then make the positions random, e.g::
+
+      x = random.randint(0, 100)
 
 
-.. raw:: latex
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent  Learn about RGB colour and make random colours (see :numref:`code-colours`).
+.. topic:: Advanced
+
+    Learn about RGB colour and make random colours (see :numref:`code-colours`).
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Create a timer variable and change colours based on time (see :numref:`code-timer`)
+   Create a timer variable and change colours based on time (see :numref:`code-timer`)
 
 
 Fullscreen mode
@@ -147,12 +132,9 @@ same way.
     Make the score text larger.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Add a second player who presses a different key and show their score too.
+   Add a second player who presses a different key and show their score too.
 
 
 .. topic:: Exercise

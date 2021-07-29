@@ -179,16 +179,12 @@ teleporters and write down their co-ordinates.
 
 
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent
-   Add this line to the end of the program:
-   ```python
-   time.sleep(5)
-   ```
+   Add this line to the end of the program::
+
+        time.sleep(5)
+
 
    Then add another line that teleports the player somewhere else.
 
@@ -232,12 +228,9 @@ effect of a jump.
    Move the player in X and Z directions as well as Y during the jump.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Instead of checking if player is on a single teleporter tile, check if player is within a larger area.  Use `<`, `and`, `>` operators.
+   Instead of checking if player is on a single teleporter tile, check if player is within a larger area.  Use `<`, `and`, `>` operators.
 
 
 Create a block
@@ -431,12 +424,9 @@ this program because we are going to ``import`` the function from
    Add some towers to the street.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Put a loop inside the loop to create multiple streets.
+   Put a loop inside the loop to create multiple streets.
 
 
 .. raw:: latex
@@ -466,28 +456,19 @@ work for more than one player.
 
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Build a house around the player if the player says "house".
+   Build a house around the player if the player says "house".
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Build a lava trap if the player says "trap".
+   Build a lava trap if the player says "trap".
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent use `mc.getPlayerEntityId("fred")` to get the id of a certain player named Fred
+   use `mc.getPlayerEntityId("fred")` to get the id of a certain player named Fred
    (or whatever your friend's player name is).  Build something at the position of this player.
 
 

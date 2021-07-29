@@ -105,9 +105,9 @@ Save the file.
 
 7. You should find the *pgzero* folder at:
 
-   :raw-latex:`\verb+C:\Users\YOURNAME\AppData\\Local\\Programs\+`
+   ``C:\Users\YOURNAME\AppData\\Local\\Programs\``
 
-   :raw-latex:`\verb+Python\Python37\Lib\site-packages\pgzero+`
+   ``Python\Python37\Lib\site-packages\pgzero``
 
    This is a hidden folder so you must enable hidden folders in Windows
    Explorer to see it.
@@ -115,7 +115,7 @@ Save the file.
    Copy the *pgzero* folder into your *mu_code* folder.
 
    You should find your *mu_code* folder at:
-   :raw-latex:`\verb+C:\Users\YOURNAME\mu_code+`
+   ``\C:\Users\YOURNAME\mu_code+``
 
 8. Create the executable. At the command prompt type:
 

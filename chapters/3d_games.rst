@@ -81,12 +81,9 @@ where we make things move.
    Make the box move in a different direction.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Make two different boxes with different colours.
+   Make two different boxes with different colours.
 
 
 Actors
@@ -113,20 +110,14 @@ file.
    Change the `trooper` to one of the other 3d object build-ins listed above.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Try downloading some .obj files from the web.
+   Try downloading some .obj files from the web.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Try to create an .obj file using https://www.leocad.org/ or https://www.blender.org/
+   Try to create an .obj file using https://www.leocad.org/ or https://www.blender.org/
 
 
 
@@ -151,12 +142,9 @@ Keyboard input
    Use the `or` operator to allow the WASD keys to move the alien in addition to the arrow keys.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Make alien wrap around when he moves off the edge of the screen.
+   Make alien wrap around when he moves off the edge of the screen.
 
 
 Controller input
@@ -197,12 +185,9 @@ This will require a game controller connected to work.
    Make the box move so that it chases the alien wherever he moves.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Print the number of times the box hits the alien (the score).
+   Print the number of times the box hits the alien (the score).
 
 
 
@@ -252,16 +237,13 @@ We can check if the mouse pointer is touching a 3d object.
    Make the cube get smaller each time he clicks on it.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent make it move to a random place after it is clicked on, e.g.
-   ```python
-                     import random
-                     x = random.randint(0, 100)
-   ```
+   make it move to a random place after it is clicked on, e.g.::
+
+      import random
+      x = random.randint(0, 100)
+
 
 
 
@@ -315,12 +297,9 @@ function not the normal ``draw()`` function.
    Make the score text larger and `RED` coloured.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Create a `score2` variable for player 2 that increases when P key is pressed and display it.
+   Create a `score2` variable for player 2 that increases when P key is pressed and display it.
 
 
 .. topic:: Exercise

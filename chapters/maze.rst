@@ -67,12 +67,9 @@ columns, i.e. the elements of the row.
    Change the design of the maze by changing the numbers in the `maze` array.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Make the maze bigger.
+   Make the maze bigger.
 
 
 
@@ -224,20 +221,14 @@ wall.
    Verify that the enemy moves up and down and kills the player.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Make another enemy that moves horizontally (left and right).
+   Make another enemy that moves horizontally (left and right).
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent The collision detection is quite lenient (i.e. buggy) because it only tests for collisions between the
+   The collision detection is quite lenient (i.e. buggy) because it only tests for collisions between the
    enemy and player when a key is pressed.  Define a new function called `update()` and move the collisions detection there
    so that is called every frame.
 

@@ -104,12 +104,9 @@ it to generate the walls for the start of the game.
 
    generate_lines()
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Run the program.  Change the colour of the walls from red to green.
+   Run the program.  Change the colour of the walls from red to green.
 
 
 Make the walls colourful
@@ -140,12 +137,9 @@ bottom of the screen according to the player’s vertical velocity.
    Modify `scroll_walls()` as above and check that the player can now accelerate forward.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Change the amount of the forward acceleration to make the game faster or slower.
+   Change the amount of the forward acceleration to make the game faster or slower.
 
 
 
@@ -175,12 +169,9 @@ collide as a penalty.
    Modify `wall_collisions()` as above and check that the player now bounces off the walls.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Make the collision more bouncy, i.e. the player bounces further when he hits the wall.
+   Make the collision more bouncy, i.e. the player bounces further when he hits the wall.
 
 
 

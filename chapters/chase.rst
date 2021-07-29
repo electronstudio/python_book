@@ -258,12 +258,9 @@ the function), add these lines to move the second player:
        if player.colliderect(player2):
            exit()
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Create a variable `score2` and store the score for player two, i.e. it goes up when he collides with a coin.
+   Create a variable `score2` and store the score for player two, i.e. it goes up when he collides with a coin.
 
 
 Showing the score on the screen
@@ -290,20 +287,14 @@ string. Add these lines to the end of the ``draw()`` function:
    Change the colour of the text.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent Display the word "Score: " before the score.
+   Display the word "Score: " before the score.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced}
-   \noindent When the `score` reaches 10, show a message on the screen to congratulate the player
+   When the `score` reaches 10, show a message on the screen to congratulate the player
 
 
 Timer
