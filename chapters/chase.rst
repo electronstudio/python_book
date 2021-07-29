@@ -6,7 +6,7 @@ step. The Python we will use is very simple: just conditionals and
 loops.
 
 The techniques here should be familiar to you because we used them in
-Program~:raw-latex:`\ref{code:background}`,
+:numref:`code-background`,
 :raw-latex:`\ref{code:keyboard_input}`,
 :raw-latex:`\ref{code:collisions}` and :raw-latex:`\ref{code:chase}`
 

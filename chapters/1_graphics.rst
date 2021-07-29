@@ -107,7 +107,7 @@ Background image
 ----------------
 
 We are going to add a background image to
-Program~:raw-latex:`\ref{code:sprites}`
+:numref:`code-sprites`
 
 Click ``Images`` to see the folder of image files available.
 
@@ -152,12 +152,12 @@ The alien moves when you press the cursor keys.
 
 .. topic:: Exercise
 
-   Use the more concise += operator to change the `alien.x` value (see Program~\ref{code:shortcuts}).
+   Use the more concise += operator to change the `alien.x` value (see :numref:`code-shortcuts`).
 
 
 .. topic:: Exercise
 
-    Use the `or` operator to allow WASD keys to move the alien in addition to the cursor keys (see Program~\ref{code:logic}).
+    Use the `or` operator to allow WASD keys to move the alien in addition to the cursor keys (see :numref:`code-logic`).
 
 
 

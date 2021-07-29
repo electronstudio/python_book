@@ -50,7 +50,7 @@ Division       /      20 / 10  2
 ============== ====== ======== ======
 
 There are some more advanced operators in
-Progra{code:shortcuts}
+:numref:`code-shortcuts`.
 
 Variables
 ---------
@@ -148,7 +148,7 @@ You will often see this used for counting:
 
    What is the total count of :numref:`counting` ?
 
-See :numref:`shortcuts` for a quicker way of
+See :numref:`code-shortcuts` for a quicker way of
 writing this.
 
 Input
@@ -480,7 +480,7 @@ so he knows how many he must bake. He writes this program.
 
 .. topic:: Exercise
 
-   The baker gets a fourth customer.  Change Program~\ref{code:baker} so it works for 4 customers.
+   The baker gets a fourth customer.  Change :numref:`code-baker` so it works for 4 customers.
 
 
 .. topic:: Exercise
@@ -557,7 +557,7 @@ need for an index or to specify the size of the range:
 
 .. topic:: Exercise
 
-   Change the Program~\ref{code:shoppinglist} so that it prints the total price of all the items added together.
+   Change the :numref:`code-shoppinglist` so that it prints the total price of all the items added together.
 
 
 
@@ -657,9 +657,7 @@ the details of the code inside the function.
 
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Shortcuts
 ---------
@@ -674,9 +672,7 @@ of these being used already.
 
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Indentation
 -----------
@@ -701,9 +697,7 @@ Blocks can be *nested* inside other blocks.
 
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Global variables
 ----------------
@@ -926,7 +920,7 @@ A particular issue in Python is that *indentation* must be correct.
 
 .. topic:: Exercise
 
-   Can you spot and fix the bug in Program \ref{code:bug1}?
+   Can you spot and fix the bug in :numref:`code-bug1`?
 
 
 .. literalinclude:: programs/0F_bug2.py
@@ -938,7 +932,7 @@ A particular issue in Python is that *indentation* must be correct.
 
 .. topic:: Exercise
 
-   Program \ref{code:bug2} has two bugs to fix.
+   :numref:`code-bug2` has two bugs to fix.
 
 
 .. [1]

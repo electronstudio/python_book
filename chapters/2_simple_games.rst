@@ -6,8 +6,8 @@ Collisions
 
 Arcade games need to know when one Actor sprite has hit another Actor
 sprite. Most of this code is copied from
-Program~:raw-latex:`\ref{code:moving_boxes}` and
-Program~:raw-latex:`\ref{code:keyboard_input}`.
+:numref:`code-moving_boxes` and
+:numref:`code-keyboard_input`.
 
 .. literalinclude:: programs/15_collisions.py
    :caption: Collisions
@@ -37,16 +37,14 @@ Program~:raw-latex:`\ref{code:keyboard_input}`.
    \noindent  Print number of times the box hits the alien (i.e. the score).
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Chase
 -----
 
 Instead of moving constantly to the right we can make the movement
 conditional with an ``if`` statement so the box chases the alien. Most
-of this code is copied from Program~:raw-latex:`\ref{code:collisions}`.
+of this code is copied from :numref:`code-collisions`.
 New lines are highlighted. We have also changed what happens when the
 box catches the alien: the program now exits and you must run it again
 to play again. This may not be what you want in your game!
@@ -71,9 +69,7 @@ to play again. This may not be what you want in your game!
    \noindent Draw a new enemy image.  Save it as `enemy.png` in your `mu_code/images` folder. Load it as an `Actor('enemy')` instead of the `Rect()`.
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Powerup
 -------
@@ -105,12 +101,10 @@ collect. When he does it disappears and moves to a new location.
    \begin{aside}
    \label{}
    \heading{Advanced}
-   \noindent Combine this program with the enemy from  Program~\ref{code:chase} and the background from  Program~\ref{code:background} and whatever else you want to make your own game.
+   \noindent Combine this program with the enemy from  Program~\ref{code:chase} and the background from :numref:`code-background` and whatever else you want to make your own game.
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Sound and animation
 -------------------
@@ -120,7 +114,7 @@ Pygame Zero comes with one other image ``alien_hurt.png`` and one sound
 ``sounds`` and ``images`` folders.
 
 Most of this code is copied from
-Program~:raw-latex:`\ref{code:collisions}`
+:numref:`code-collisions`
 
 .. literalinclude:: programs/16_collisions2_sound_animation.py, options: "hl_lines": [21, 22, 23, 24]
    :caption: Sound and animation upon collision
@@ -150,22 +144,20 @@ Program~:raw-latex:`\ref{code:collisions}`
    \noindent Add a second alien controlled by different keys or gamepad for player 2.
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Mouse clicks
 ------------
 
 This uses a *function call-back* for event-based input. It is similiar
-to Program~:raw-latex:`\ref{code:collisions2_sound_animation}` but:
+to :numref:`code-collisions2_sound_animation` but:
 
 -  The box has been removed.
 -  There is an ``on_mouse_down()`` special function that is called
    automatically when the player click the mouse.
 -  The score is displayed.
 
-See Program~:raw-latex:`\ref{code:functions}` for more about functions.
+See :numref:`code-functions` for more about functions.
 
 .. literalinclude:: programs/17_mouse_input.py
    :caption: Getting input from mouse clicks
@@ -174,9 +166,7 @@ See Program~:raw-latex:`\ref{code:functions}` for more about functions.
 
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Mouse movement
 --------------

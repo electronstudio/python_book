@@ -155,7 +155,7 @@ Changing the player’s position
 ------------------------------
 
 Find the coordinates of a location in your world, either by pressing F3
-in the game, or running Program~:raw-latex:`\ref{code:minecoordinates}`
+in the game, or running :numref:`code-minecoordinates`
 Enter these coordinates in this program and run it to teleport to that
 location.
 
@@ -289,9 +289,7 @@ Types of block
 | WATER_FLOWING \| WATER_STATIONARY \| WOOD \|
 | WOOD_PLANKS \| LAPIS_LAZULI_BLOCK \| WOOL \|
 
-.. raw:: latex
 
-   \pagebreak
 
 Create a block inside a loop
 ----------------------------

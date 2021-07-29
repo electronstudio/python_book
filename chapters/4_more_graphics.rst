@@ -14,7 +14,7 @@ You may call them *gamepads* or *controllers*, but Pygame calls them
 Some controllers have different inputs and some are not compatible at
 all so don’t be surprised if this doesnt work properly! PS4 and Xbox One
 controllers connected by USB cable seems to work best. Use
-Program~:raw-latex:`\ref{code:joystick_tester}` to test yours and find
+:numref:`code-joystick_tester` to test yours and find
 out what inputs it has. Note: if you run this program with no controller
 plugged in you will get an error.
 
@@ -71,14 +71,12 @@ mix together.
    \noindent Make random colours.
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Using loops
 -----------
 
-The loops from Program~:raw-latex:`\ref{code:loop}` are useful for
+The loops from :numref:`code-loop` are useful for
 graphical games too! Here we draw red circles using a *for loop*.
 
 We draw green circles using a *loop within another loop*.
@@ -103,7 +101,7 @@ We draw green circles using a *loop within another loop*.
    \begin{aside}
    \label{}
    \heading{Advanced}
-   \noindent  Learn about RGB colour and make random colours (see Program~\ref{code:colours}).
+   \noindent  Learn about RGB colour and make random colours (see :numref:`code-colours`).
 
 
 .. raw:: latex
@@ -111,7 +109,7 @@ We draw green circles using a *loop within another loop*.
    \begin{aside}
    \label{}
    \heading{Advanced}
-   \noindent Create a timer variable and change colours based on time (see Program~\ref{code:timer})
+   \noindent Create a timer variable and change colours based on time (see :numref:`code-timer`)
 
 
 Fullscreen mode
@@ -128,9 +126,7 @@ Then press *F* to go fullscreen, *ESCAPE* to quit.
 
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Displaying the score
 --------------------

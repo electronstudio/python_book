@@ -9,7 +9,7 @@ make more advanced games of your own.
 Lists
 -----
 
-We introduced lists in Program~:raw-latex:`\ref{code:arrays}`. In this
+We introduced lists in :numref:`code-arrays`. In this
 game, we create an empty list ``[]`` and use a loop to fill it with
 alien Actors.
 
@@ -28,7 +28,7 @@ list. When the mouse is clicked we add a new alien to the list.
    \begin{aside}
    \label{}
    \heading{Advanced}
-   \noindent Go back to a previous game (e.g. Program~\ref{code:collisions})
+   \noindent Go back to a previous game (e.g. :numref:`code-collisions`)
    and add a list of bullets that move up the screen.  When the player presses the spacebar to shoot,
    add a new bullet to the list.
 
@@ -37,9 +37,9 @@ Animation
 ---------
 
 Animation is another use for functions. (See
-Program~:raw-latex:`\ref{code:functions}`) We define our own function
+:numref:`code-functions`) We define our own function
 and then ask Pygame to *call it back* every 0.2 seconds. Most of this
-code is from Program~:raw-latex:`\ref{code:collisions}`.
+code is from :numref:`code-collisions`.
 
 .. literalinclude:: programs/22_animation.py
    :caption: Animation
@@ -69,15 +69,13 @@ code is from Program~:raw-latex:`\ref{code:collisions}`.
    \noindent Draw your own animation, e.g. a man walking left which plays when the left key is pressed
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Simple physics
 --------------
 
 Here we draw a ball and move it, like we did in
-Program~:raw-latex:`\ref{code:moving_boxes}`. But instead of moving it
+:numref:`code-moving_boxes`. But instead of moving it
 by a fixed number of pixels, we store the number of pixels to move in
 variables, ``vx`` and ``vy``. These are *velocities*, i.e. speed in a
 fixed direction. ``vx`` is the speed in the horizontal direction and
@@ -100,9 +98,7 @@ of the screen.
    \noindent Make the ball move faster by increasing its velocity each time it hits the sides.
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Bat and ball game
 -----------------
@@ -116,9 +112,7 @@ Bat and ball game
 
 
 
-.. raw:: latex
 
-   \pagebreak
 
 .. topic:: Exercise
 
@@ -141,9 +135,7 @@ Bat and ball game
    \noindent Add bricks (Rects) that disappear when the ball hits them.
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Timer
 -----
@@ -183,12 +175,10 @@ since the last frame in a parameter to our update function. We use this
    \begin{aside}
    \label{}
    \heading{Advanced}
-   \noindent Add a timer to Program~\ref{code:arrays} that deletes one of the aliens when the timer runs out, then starts the timer again.
+   \noindent Add a timer to :numref:`code-arrays` that deletes one of the aliens when the timer runs out, then starts the timer again.
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Callbacks: another kind of timer
 --------------------------------

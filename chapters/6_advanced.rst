@@ -13,7 +13,7 @@ Classes
 
 You’ve already been using class types provided by Pygame Zero, e.g. Rect
 and Actor. But if we want to store velocity as in
-Program~:raw-latex:`\ref{code:simple_physics}` we find these classes do
+:numref:`code-simple_physics` we find these classes do
 not include *vx* and *vy* variables inside them by default. We have to
 remember to add a *vx* and *vy* every time we create an Actor.
 

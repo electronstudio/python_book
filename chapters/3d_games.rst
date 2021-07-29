@@ -129,9 +129,7 @@ file.
    \noindent Try to create an .obj file using https://www.leocad.org/ or https://www.blender.org/
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Keyboard input
 --------------
@@ -207,9 +205,7 @@ This will require a game controller connected to work.
    \noindent Print the number of times the box hits the alien (the score).
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Mouse input
 -----------
@@ -268,9 +264,7 @@ We can check if the mouse pointer is touching a 3d object.
    ```
 
 
-.. raw:: latex
 
-   \pagebreak
 
 Sound effects
 -------------

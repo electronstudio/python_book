@@ -47,7 +47,7 @@ variable, ``x``.
 Making decisions: if, elif, else
 --------------------------------
 
-This is how to add another name to Program~:raw-latex:`\ref{code:input}`
+This is how to add another name to :numref:`code-input`
 
 .. literalinclude:: programs/03_input2.py, options: "hl_lines": [6, 7, 8, 9]
    :caption: Decisions: if, elif, else
@@ -56,10 +56,10 @@ This is how to add another name to Program~:raw-latex:`\ref{code:input}`
 
 
 
-:raw-latex:`\noindent `Program~:raw-latex:`\ref{code:input2}` is very
-similar to Program~:raw-latex:`\ref{code:input}`. The new lines have
+:raw-latex:`\noindent `:numref:`code-input2` is very
+similar to :numref:`code-input`. The new lines have
 been highlighted. You can either modify
-Program~:raw-latex:`\ref{code:input}`, or else create a new file and use
+:numref:`code-input`, or else create a new file and use
 copy and paste to copy the code from the old program into the new.
 
 A random maths question
@@ -139,7 +139,7 @@ that everything in the loop is indented.
 Improved guessing game
 ----------------------
 
-Program~:raw-latex:`\ref{code:loop}` with a hint whether the guess is
+:numref:`code-loop` with a hint whether the guess is
 greater or lesser than the answer.
 
 .. raw:: latex
