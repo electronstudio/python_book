@@ -1,3 +1,3 @@
-.. |answer| replace:: ✓
+.. |answer2| replace:: ✓
 
-.. |answer2| unicode:: U+0020
+.. |answer| unicode:: U+0020

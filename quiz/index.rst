@@ -4,9 +4,16 @@ Quiz
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :hidden:
 
-   print_syntax.rst
-   variables.rst
+   quiz1
+   quiz2
+
+
+   .. print_syntax.rst
+   .. variables.rst
+   .. logic
+
 
 
 .. |tick| replace:: ✓
