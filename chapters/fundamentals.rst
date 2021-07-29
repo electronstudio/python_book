@@ -289,17 +289,12 @@ is ``True`` if either of its operands is true. Try this example:
    b = False
    print(a or b)
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Use the `or` operator to make the rollercoaster program shorter by combining the two tests into one test.
-   \end{aside}
+   Use the `or` operator to make the rollercoaster program shorter by combining the two tests into one test.
 
-.. raw:: latex
 
-   \newpage
+
 
 A possible solution:
 
@@ -326,17 +321,12 @@ this example:
    b = False
    print(a and b)
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent The rollercoaster is only allowed to run on days when the temperature is less than 30 degrees.  Extend the program to ask the temperature and use the `and` operator to only allow riding when less than 30 degrees.
-   \end{aside}
+   The rollercoaster is only allowed to run on days when the temperature is less than 30 degrees.  Extend the program to ask the temperature and use the `and` operator to only allow riding when less than 30 degrees.
 
-.. raw:: latex
 
-   \newpage
+
 
 A possible solution:
 
@@ -381,17 +371,12 @@ We can get a user input and convert it to a boolean like this:
    else:
        raining = False
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Change the program so that you can only ride the rollercoaster if it is not raining.
-   \end{aside}
+   Change the program so that you can only ride the rollercoaster if it is not raining.
 
-.. raw:: latex
 
-   \newpage
+
 
 Possible solution:
 
@@ -450,13 +435,10 @@ It is often useful to put one loop inside another loop.
    ```
    \end{codelisting}
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Write a program which prints out the 12 times table.
-   \end{aside}
+   Write a program which prints out the 12 times table.
+
 
 Incrementing a variable in a loop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -478,17 +460,12 @@ so he knows how many he must bake. He writes this program.
     total = total + cakes
     print("I will bake", total, "cakes!")
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent This program is longer than it needs to be.  Write your own program that does the same thing using a `for` loop.  It should be only 6 (or fewer) lines long.
-   \end{aside}
+   This program is longer than it needs to be.  Write your own program that does the same thing using a `for` loop.  It should be only 6 (or fewer) lines long.
 
-.. raw:: latex
 
-   \newpage
+
 
 .. raw:: latex
 
@@ -505,27 +482,19 @@ so he knows how many he must bake. He writes this program.
    ```
    \end{codelisting}
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent The baker gets a fourth customer.  Change Program~\ref{code:baker} so it works for 4 customers.
-   \end{aside}
+   The baker gets a fourth customer.  Change Program~\ref{code:baker} so it works for 4 customers.
 
-.. raw:: latex
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent The baker has a different number of customers every day.  Change the program so it
+.. topic:: Exercise
+
+   The baker has a different number of customers every day.  Change the program so it
    asks how many customers there are. Store the number typed by the user in a variable
    called `c`. Change the loop so it works for `c` customers rather than 4 customers.
-   \end{aside}
 
-.. raw:: latex
 
-   \newpage
+
 
 .. raw:: latex
 
@@ -544,13 +513,10 @@ so he knows how many he must bake. He writes this program.
    ```
    \end{codelisting}
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent If a customer orders 12 cakes, he gets an extra cake for free.  Use an `if` statement to check `cakes > 12`. If so, add one more cake.
-   \end{aside}
+   If a customer orders 12 cakes, he gets an extra cake for free.  Use an `if` statement to check `cakes > 12`. If so, add one more cake.
+
 
 Array lists
 -----------
@@ -598,17 +564,12 @@ need for an index or to specify the size of the range:
    ```
    \end{codelisting}
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Change the Program~\ref{code:shoppinglist} so that it prints the total price of all the items added together.
-   \end{aside}
+   Change the Program~\ref{code:shoppinglist} so that it prints the total price of all the items added together.
 
-.. raw:: latex
 
-   \newpage
+
 
 .. raw:: latex
 
@@ -628,9 +589,7 @@ need for an index or to specify the size of the range:
 There is a problem with solution, can you see what it is when you run
 it?
 
-.. raw:: latex
 
-   \newpage
 
 The problem is that we are using *floating point* numbers for the prices
 and floating point maths in the computer is not entirely accurate, so
@@ -644,9 +603,7 @@ the result to two decimal places using the ``round()`` function:
 This works for a short list, but if the list was millions of items long
 it might not give the right result. Can you think of a better way?
 
-.. raw:: latex
 
-   \newpage
 
 Instead of storing the number of pounds, store the the number of
 pennies. Britain no longer has a half-penny, so the numbers will always
@@ -668,18 +625,13 @@ for the addition.
    ```
    \end{codelisting}
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Conditional discount.  Any item that costs more than £10 will be discounted by 20 percent. Use an `if` statement to check if the price is more than 1000 pennies.
+   Conditional discount.  Any item that costs more than £10 will be discounted by 20 percent. Use an `if` statement to check if the price is more than 1000 pennies.
    If it is, multiply the price by 0.8 to reduce it before you add it to the total.
-   \end{aside}
 
-.. raw:: latex
 
-   \newpage
+
 
 .. raw:: latex
 
@@ -816,13 +768,10 @@ dictionary of the ages of my friends:
    age = friends[name]
    print("Your age is", age)
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Change the program so it contains 5 of your friends' ages.
-   \end{aside}
+   Change the program so it contains 5 of your friends' ages.
+
 
 Counting
 ~~~~~~~~
@@ -835,17 +784,12 @@ Here is a loop that prints out all the ages:
    for name, age in friends.items():
        print(name, "is age", age)
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Can you add an `if` statement to only print the ages of friends older than 10?
-   \end{aside}
+   Can you add an `if` statement to only print the ages of friends older than 10?
 
-.. raw:: latex
 
-   \newpage
+
 
 Possible solution:
 
@@ -856,17 +800,12 @@ Possible solution:
        if age > 10:
            print(name, "is age", age)
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Now add a `count` variable that counts how many of the friends are older than 10.  Print the number at the end.
-   \end{aside}
+   Now add a `count` variable that counts how many of the friends are older than 10.  Print the number at the end.
 
-.. raw:: latex
 
-   \newpage
+
 
 Possible solution:
 
@@ -882,17 +821,12 @@ Possible solution:
 Combining tests
 ~~~~~~~~~~~~~~~
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Use the `and` operator together with the `<` and `>` operators to only count friends between the ages of 11 to 13.
-   \end{aside}
+   Use the `and` operator together with the `<` and `>` operators to only count friends between the ages of 11 to 13.
 
-.. raw:: latex
 
-   \newpage
+
 
 Possible solution:
 
@@ -920,17 +854,12 @@ list.
            oldest = age
    print("oldest age", oldest)
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Make a variable `youngest` that will contain the youngest age in the list.  Print the youngest at the end.
-   \end{aside}
+   Make a variable `youngest` that will contain the youngest age in the list.  Print the youngest at the end.
 
-.. raw:: latex
 
-   \newpage
+
 
 Possible solution:
 
@@ -950,17 +879,12 @@ Possible solution:
 Finding names
 ~~~~~~~~~~~~~
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent As well as the ages, print the names of the youngest and oldest friends.
-   \end{aside}
+   As well as the ages, print the names of the youngest and oldest friends.
 
-.. raw:: latex
 
-   \newpage
+
 
 Possible solution:
 
@@ -982,17 +906,12 @@ Possible solution:
 Find the average
 ~~~~~~~~~~~~~~~~
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Create a `total` variable.  Add each age to the total.  At the end, calculate the average by dividing the total by the number of friends.
-   \end{aside}
+   Create a `total` variable.  Add each age to the total.  At the end, calculate the average by dividing the total by the number of friends.
 
-.. raw:: latex
 
-   \newpage
+
 
 Possible solution:
 
@@ -1005,9 +924,7 @@ Possible solution:
    average = total / 3
    print("average age is ", average)
 
-.. raw:: latex
 
-   \newpage
 
 Bugs
 ----
@@ -1028,13 +945,10 @@ A particular issue in Python is that *indentation* must be correct.
    <<(programs/0E_bug1.py)
    \end{codelisting}
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Can you spot and fix the bug in Program \ref{code:bug1}?
-   \end{aside}
+   Can you spot and fix the bug in Program \ref{code:bug1}?
+
 
 .. raw:: latex
 
@@ -1044,13 +958,10 @@ A particular issue in Python is that *indentation* must be correct.
    <<(programs/0F_bug2.py)
    \end{codelisting}
 
-.. raw:: latex
+.. topic:: Exercise
 
-   \begin{aside}
-   \label{}
-   \heading{}
-   \noindent Program \ref{code:bug2} has two bugs to fix.
-   \end{aside}
+   Program \ref{code:bug2} has two bugs to fix.
+
 
 .. [1]
    There are other kinds of list that are not arrays but this need not
