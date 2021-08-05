@@ -6,9 +6,8 @@ Quiz
    :caption: Contents:
    :hidden:
 
-   quiz1
-   quiz2
-
+   conditionals
+   loops
 
    .. print_syntax.rst
    .. variables.rst
