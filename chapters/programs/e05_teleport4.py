@@ -1,4 +1,3 @@
-
 from mcpi.minecraft import *
 import time
 

@@ -1,44 +1,39 @@
-Minecraft
-=========
+Python in Minecraft
+===================
 
-The Minecraft Python library is made by David Whale and Martin O’Hanlon.
-I highly recommend their book *Adventures in Minecraft* which contains a
-great deal more programs.
+.. note:: The Minecraft Python library is made by David Whale and Martin O’Hanlon.
+   I highly recommend their book *Adventures in Minecraft* which contains a
+   great deal more programs.
 
 Setup
 -----
 
-You will need to own Minecraft **Java Edition**.
-`https://my.minecraft.net/en-us/store/minecraft/) <https://my.minecraft.net/en-us/store/minecraft/>`__
+You will need to own Minecraft `Java Edition <https://www.minecraft.net/en-us/store/minecraft-java-edition>`_ (not Bedrock edition).
 
-If you already have a Mojang account, click login. If you haven’t
+If you already have a Mojang or Microsoft account, go to the Minecraft website and click login. If you haven’t
 accessed it for years you may need to reset your password. If you
-already own Minecraft it will then tell you. If you don’t have a Mojang
+already own Minecraft it will then tell you. If you don’t have an
 account, create one, and buy Minecraft Java Edition.
 
 Setup Java
 ~~~~~~~~~~
 
-You need to install Java Runtime Environment version 8.
+You will need to download and install Java from `adoptopenjdk.net <https://adoptopenjdk.net>`_.
 
-Download for Windows:
-https://github.com/frekele/oracle-java/releases/download/8u212-b10/jre-8u212-windows-x64.exe
-
-Download for Mac:
-https://github.com/frekele/oracle-java/releases/download/8u212-b10/jre-8u212-macosx-x64.dmg
+I recommend the *latest* (currently **OpenJDK 16**) because it will be useful for other things, but if you have problems you
+can fall back to using **OpenJDK 8**.  Choose **HotSpot** and click the button to download.
 
 Setup Server
 ~~~~~~~~~~~~
 
-Download the Adventures In Minecraft Starter Kit from
+Download the *Adventures In Minecraft Starter Kit* from
 
-https://adventuresinminecraft.github.io/ and unpack it in a folder on
+https://adventuresinminecraft.github.io and unpack it in a folder on
 your desktop. There are videos on the site that explain how to set it
 up.
 
-I suggest before you first run the server you edit the file
-*Server/server.properties* (use Notepad or
-`SublimeText <https://www.sublimetext.com/>`__) and change
+Use Notepad or `SublimeText <https://www.sublimetext.com/>`_ to edit the file
+*Server/server.properties*.  Change this setting
 
 ::
 
@@ -47,7 +42,7 @@ I suggest before you first run the server you edit the file
 to generate a flat world. (But it’s up to you what sort of world you
 prefer!)
 
-To run the server, double click the *StartServer* file. It will open a
+To run the server, double click the **StartServer** file. It will open a
 server console window, and ask you press space.
 
 If you want to generate another world later you can change
@@ -58,7 +53,7 @@ If you want to generate another world later you can change
 
 and then run the server again.
 
-Once server is running, to stop nighttime from happening I suggest you
+Once the server is running, to stop nighttime from happening I suggest you
 type this at the server console
 
 ::
@@ -103,22 +98,22 @@ Setup Mu
 
 Mu is the Python editor we have already been using, so you probably
 already have it installed. However you need to make sure you have the
-latest *alpha version 1.1*, not the regular 1.0. You can download it
+latest version. You can download it
 from the links at the *top* of https://codewith.mu/en/download.
 
-Run Mu. Click *Mode* and select *Python3*.
+Run *Mu*. Click **Mode** and select **Python3**.
 
 Then click the small gadget icon in the bottom right hand corner of the
-window. Click ‘third party packages’. Type
+window. Click **third party packages**. Type
 
 ::
 
    mcpi
 
-Into the box. Click OK. The library will download.
+into the box. Click **OK**. The library will download.
 
-If you are using a different editor you can install mcpi from the
-command line:
+*If you are not using Mu* you can install mcpi from the
+command line like this:
 
 ::
 
@@ -257,30 +252,81 @@ numbers.
 Types of block
 --------------
 
-| AIR \| BED \| BEDROCK \|
-| BEDROCK_INVISIBLE \| BOOKSHELF \| BRICK_BLOCK \|
-| CACTUS \| CHEST \| CLAY \|
-| COAL_ORE \| COBBLESTONE \| COBWEB \|
-| CRAFTING_TABLE \| DIAMOND_BLOCK \| DIAMOND_ORE \|
-| DIRT \| DOOR_IRON \| DOOR_WOOD \|
-| FARMLAND \| FENCE \| FENCE_GATE \|
-| FIRE \| FLOWER_CYAN \| FLOWER_YELLOW \|
-| FURNACE_ACTIVE \| FURNACE_INACTIVE \| GLASS \|
-| GLASS_PANE \| GLOWSTONE_BLOCK \| GOLD_BLOCK \|
-| GOLD_ORE \| GRASS \| GRASS_TALL \|
-| GRAVEL \| ICE \| IRON_BLOCK \|
-| IRON_ORE \| LADDER \|
-| LAPIS_LAZULI_ORE \| LAVA \| LAVA_FLOWING \|
-| LAVA_STATIONARY \| LEAVES \| MELON \|
-| MOSS_STONE \| MUSHROOM_BROWN \| MUSHROOM_RED \|
-| OBSIDIAN \| REDSTONE_ORE \| SAND \|
-| SANDSTONE \| SAPLING \| SNOW \|
-| SNOW_BLOCK \| STAIRS_COBBLESTONE \|
-| STAIRS_WOOD \| STONE \| STONE_BRICK \|
-| STONE_SLAB \| STONE_SLAB_DOUBLE \| SUGAR_CANE \|
-| TNT \| TORCH \| WATER \|
-| WATER_FLOWING \| WATER_STATIONARY \| WOOD \|
-| WOOD_PLANKS \| LAPIS_LAZULI_BLOCK \| WOOL \|
+..  list-table::
+    :widths: 25 25 25
+
+    *   - AIR
+        - BED
+        - BEDROCK
+    *   - BEDROCK_INVISIBLE
+        - BOOKSHELF
+        - BRICK_BLOCK
+    *   - CACTUS
+        - CHEST
+        - CLAY
+    *   - COAL_ORE
+        - COBBLESTONE
+        - COBWEB
+    *   - CRAFTING_TABLE
+        - DIAMOND_BLOCK
+        - DIAMOND_ORE
+    *   - DIRT
+        - DOOR_IRON
+        - DOOR_WOOD
+    *   - FARMLAND
+        - FENCE
+        - FENCE_GATE
+    *   - FIRE
+        - FLOWER_CYAN
+        - FLOWER_YELLOW
+    *   - FURNACE_ACTIVE
+        - FURNACE_INACTIVE
+        - GLASS
+    *   - GLASS_PANE
+        - GLOWSTONE_BLOCK
+        - GOLD_BLOCK
+    *   - GOLD_ORE
+        - GRASS
+        - GRASS_TALL
+    *   - GRAVEL
+        - ICE
+        - IRON_BLOCK
+    *   - IRON_ORE
+        - LADDER
+        -
+    *   - LAPIS_LAZULI_ORE
+        - LAVA
+        - LAVA_FLOWING
+    *   - LAVA_STATIONARY
+        - LEAVES
+        - MELON
+    *   - MOSS_STONE
+        - MUSHROOM_BROWN
+        - MUSHROOM_RED
+    *   - OBSIDIAN
+        - REDSTONE_ORE
+        - SAND
+    *   - SANDSTONE
+        - SAPLING
+        - SNOW
+    *   - SNOW_BLOCK
+        - STAIRS_COBBLESTONE
+        -
+    *   - STAIRS_WOOD
+        - STONE
+        - STONE_BRICK
+    *   - STONE_SLAB
+        - STONE_SLAB_DOUBLE
+        - SUGAR_CANE
+    *   - TNT
+        - TORCH
+        - WATER
+    *   - WATER_FLOWING
+        - WATER_STATIONARY
+        - WOOD
+    *   - WOOD_PLANKS
+        - LAPIS_LAZULI_BLOCK
+        - WOOL
 
 
 
@@ -310,7 +356,7 @@ to see it.
 Create a tower of blocks
 ------------------------
 
-We use a ``for`` loop to easily build a tower of blocks.
+We will use a ``for`` loop to easily build a tower of blocks.
 
 .. literalinclude:: programs/e08_tower.py
    :caption: Tower of blocks
@@ -321,12 +367,12 @@ We use a ``for`` loop to easily build a tower of blocks.
 
 .. topic:: Exercise
 
-   Mow high can you make the tower?
+   How high can you make the tower?
 
 
 .. topic:: Exercise
 
-   Change the program to create 3 towers next to each other.
+   Change the program to create *three* towers next to one another.
 
 
 Clear space
@@ -335,7 +381,7 @@ Clear space
 The ``setBlocks()`` function lets us create a large cube of blocks. If
 we create blocks of type ``AIR`` this has the effect of removing all
 blocks! This is such a useful thing that we will need it in the future,
-therefore in this program we put it in a function. Make sure to save the
+therefore in this program we put it in its own *function*. Make sure to save the
 program as ``clear_space.py`` so you can ``import`` it into the next
 program.
 
@@ -349,8 +395,7 @@ program.
 Build a house
 -------------
 
-Make sure you have saved the previous program
-:raw-latex:`\ref{e09_clear_space}` to the same directory before you run
+Make sure you have saved the previous :numref:`code-e09_clear_space` to the same directory before you run
 this program because we are going to ``import`` the function from
 ``clear_space.py``. Save this program as ``house.py``.
 
@@ -381,12 +426,9 @@ this program because we are going to ``import`` the function from
    Add some furniture, torches, windows.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced }
-   \noindent Make the windows get bigger if you increase the size of the house.
+   Make the windows get bigger if you increase the size of the house.
 
 
 .. topic:: Exercise
@@ -397,8 +439,8 @@ this program because we are going to ``import`` the function from
 Build a street of houses
 ------------------------
 
-Make sure you have saved the previous program
-:raw-latex:`\ref{e10_basic_house}` to the same directory before you run
+Make sure you have saved the previous :numref:`code-e10_basic_house`
+to the same directory before you run
 this program because we are going to ``import`` the function from
 ``house.py``.
 
@@ -429,12 +471,9 @@ this program because we are going to ``import`` the function from
    Put a loop inside the loop to create multiple streets.
 
 
-.. raw:: latex
+.. topic:: Advanced
 
-   \begin{aside}
-   \label{}
-   \heading{Advanced }
-   \noindent Make some roads or fences.
+   Make some roads or fences.
 
 
 .. topic:: Exercise
@@ -475,11 +514,12 @@ work for more than one player.
 Turtle
 ------
 
-*This requires ``minecraftstuff`` package to work.* You can install it
+*This requires the* **minecraftstuff** *package to work.* You can install it
 in Mu by clicking in the bottom right gadget and adding
 ``minecraftstuff`` to list of third party packages
 
-You may have used a turtle for drawing at school. This is the same but
+In olden days at school we used robotic turtles to draw on paper.  You may have
+done similar on the screen in Python or Scratch.  This is the same but
 in Minecraft.
 
 .. literalinclude:: programs/e13_turtle.py

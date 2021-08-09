@@ -11,6 +11,7 @@ Python Book
    :numbered:
    :caption: Contents:
 
+   chapters/minecraft
    chapters/overview
    chapters/fundamentals
    chapters/0_text_quizes
