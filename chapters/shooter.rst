@@ -8,7 +8,7 @@ Step 1: Decide what Actors you will need
 ----------------------------------------
 
 Our game will need these Actors, so **we must create images for all of
-them and save them as ``.png`` files in the ``images`` folder.**
+them and save them** as ``.png`` files in the ``images`` folder.
 
 ============== =============== ==========
 variable name  image file name image size
@@ -63,7 +63,7 @@ check for collisions, etc.
 
 .. topic:: Exercise
 
-   Create the png image files (`player.png, background.png, bullet.png, bomb.png, enemy.png`).  Type in program \ref{code:shoot17a}, \ref{code:shoot17b} and \ref{code:shoot17c} into a single file.  Save the file.  Why doesn't it run?
+   Create the png image files (``player.png, background.png, bullet.png, bomb.png, enemy.png``).  Type in program :numref:`code-shoot17a`, :numref:`code-shoot17b` and :numref:`code-shoot17c` into a single file.  Save the file.  Why doesn't it run?
 
 
 
@@ -87,7 +87,7 @@ anything.
 
 .. topic:: Exercise
 
-   Add listing \ref{code:shoot17d} to the end of the file.  Verify the game now runs and you can see the player at the bottom of the screen.  (He can't move yet.)
+   Add listing :numref:`code-shoot17d` to the end of the file.  Verify the game now runs and you can see the player at the bottom of the screen.  (He can't move yet.)
 
 
 Create enemies

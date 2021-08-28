@@ -4,7 +4,7 @@ Advanced topics
 Instructor note
 ---------------
 
-This is the beginning of my attempts to teach object oriented
+This introduces object oriented
 programming, but I wouldn’t attempt this with young students since it
 requires abstract thinking.
 
@@ -73,56 +73,48 @@ people to buy.
    `www.python.org <https://www.python.org/downloads/>`__.
 
 2. Edit your game source code (using Mu). We will assume your source is
-   in a file ``NAME_OF_GAME.py``. At the top of the file add the line:
+   in a file ``MY_GAME.py``. At the top of the file add the line:
 
-.. code:: python
+   .. code:: python
 
-   import pgzrun
+      import pgzrun
 
-At the bottom of the file add the line:
+   At the bottom of the file add the line:
 
-.. code:: python
+   .. code:: python
 
-   pgzrun.go()
+      pgzrun.go()
 
-Any time in the program you use ``draw.text()`` you *must* specify a
-font, e.g. add parameter ``fontname="arial"``
+   Save the file.
 
-Save the file.
 
-3. Copy any fonts you have used into the ``fonts`` folder and rename
-   them to lowercase names, e.g. ``arial.ttf``
+4. Open a command shell: Click start menu and type ``cmd.exe``.  You should see a prompt similar to this:
 
-4. Open a command prompt (Click start menu and type ``cmd.exe``)
+   .. code::
 
-5. Enter your mu_code folder. At the prompt type:
+      C:\Users\YourName>
 
-   ``cd mu_code``
+   This means you are in the user YourName home directory, with the ``mu_code`` sub-directory inside it.
+   If you are in a different directory you will have to change it with the ``cd`` command.
 
-6. Install pyinstaller and pgzero. At the command prompt type:
+5. Install Nuitka and PGZero. At the command prompt type:
 
-   ``pip install pgzero pyinstaller``
+   .. code::
 
-7. You should find the *pgzero* folder at:
+      pip install nuitka pgzero
 
-   ``C:\Users\YOURNAME\AppData\\Local\\Programs\``
 
-   ``Python\Python37\Lib\site-packages\pgzero``
+6. Create the executable. At the command prompt type this (all one long line):
 
-   This is a hidden folder so you must enable hidden folders in Windows
-   Explorer to see it.
+   .. code::
 
-   Copy the *pgzero* folder into your *mu_code* folder.
+      python -m nuitka --onefile --include-package-data=pgzero,pygame --include-data-dir=mu_code=. --output-dir=Documents mu_code/MY_GAME.py
 
-   You should find your *mu_code* folder at:
-   ``\C:\Users\YOURNAME\mu_code+``
+   Remember to replace ``MY_GAME`` with the actual name of the Python file.  If Nuitka asks for confirmation,
+   type ``Yes`` and press enter.
 
-8. Create the executable. At the command prompt type:
+   This will generate a program called ``MY_GAME.exe`` in your ``Documents`` folder.
 
-   ``pyinstaller NAME_OF_GAME.py --distpath . --add-data "pgzero;pgzero" --add-data "images;images" --add-data "fonts;fonts" --add-data "sounds;sounds" --add-data "music;music" --onefile --noconfirm --windowed --clean``
+7. In Windows Explorer, double click the ``MY_GAME.exe`` icon in ``Documents`` to play your game.  To distribute your game,
+   copy this file.
 
-   This will generate a program called ``NAME_OF_GAME.exe``. You can
-   double click this program to play your game.
-
-9. To distribute your game you need to copy the entire *mu_code* folder.
-   You could put it inside a zip file, and then put that on a website

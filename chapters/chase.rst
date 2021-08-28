@@ -7,8 +7,8 @@ loops.
 
 The techniques here should be familiar to you because we used them in
 :numref:`code-background`,
-:raw-latex:`\ref{code:keyboard_input}`,
-:raw-latex:`\ref{code:collisions}` and :raw-latex:`\ref{code:chase}`
+:numref:`code-keyboard_input}`,
+:numref:`code-collisions}` and :numref:`code-chase`
 
 Now we will show you how to put them all together in one program.
 
@@ -29,9 +29,9 @@ which will be 600×600 pixels.
 
 .. figure:: images/figures/krita.png
    :alt: New image in Krita, 600×600
-   pixels:raw-latex:`\label{fig:krita}`
+   pixels
 
-   New image in Krita, 600×600 pixels:raw-latex:`\label{fig:krita}`
+   New image in Krita, 600×600 pixels
 
 .. literalinclude:: programs/chase1.py
    :caption: Chase game

@@ -11,17 +11,24 @@ Hello, world
 The traditional first program used to make sure Python is working and
 that we can run programs.
 
-.. literalinclude:: programs/01_intro.py
-   :caption: Hello, world
-   :name: code-hello
-   :linenos:
-
 If using the Mu editor:
 
 1. Click the mode button and make sure the mode is set to ``Python3``.
 2. Type in the program.
 3. Click ``Save`` and enter a name for the program.
 4. Click ``Run``.
+
+
+
+.. code-block:: python
+   :caption: Hello, world
+   :name: code-hello
+   :linenos:
+
+   print("Hello world")
+
+   # This line is a comment, you dont have to type these!
+
 
 Getting input from the keyboard
 -------------------------------

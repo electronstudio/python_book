@@ -7,9 +7,10 @@ The technique of creating a tilemap is common in games and after seeing
 it here you should be able to incorporate it into your own projects.
 
 .. figure:: images/figures/mazegame.png
-   :alt: Maze game:raw-latex:`\label{fig:maze_fig}`
+   :width: 70%
+   :alt: Maze game
 
-   Maze game:raw-latex:`\label{fig:maze_fig}`
+   Maze game
 
 Tilemap
 -------
@@ -42,9 +43,9 @@ elements in the ``tiles`` array. So ``0`` means ``empty`` and ``1``
 means ``wall``, etc.
 
 .. figure:: images/figures/maze2.png
-   :alt: Tile grid:raw-latex:`\label{fig:maze_fig_grid}`
+   :alt: Tile grid
 
-   Tile grid:raw-latex:`\label{fig:maze_fig_grid}`
+   Tile grid
 
 To draw the maze we use a ``for`` loop within another ``for`` loop. The
 outer loop iterates over the rows and the inner loop iterates over the

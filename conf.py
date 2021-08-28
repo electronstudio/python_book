@@ -20,12 +20,13 @@
 project = 'Python Book'
 copyright = '2021, Richard Smith'
 author = 'Richard Smith'
-
+version = '2.1'
+release = '2nd edition, revised'
 
 # -- General configuration ---------------------------------------------------
 
 
-extensions = ['myst_parser']
+extensions = ['myst_parser', "sphinx_rtd_theme"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -41,7 +42,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'classic'
+html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -85,6 +86,8 @@ latex_elements = {
         \DeclareCaptionFont{white}{\color{white}}
         \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
         \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+        \addto\captionsenglish{\renewcommand{\literalblockname}{Program}}
+        \providecommand*{\literalblockname}{Program }
     ''',
     'passoptionstopackages': r'\PassOptionsToPackage{svgnames}{xcolor}',
     'sphinxsetup':'verbatimwithframe=false, VerbatimColor={named}{AliceBlue}, VerbatimHighlightColor={named}{Yellow}',

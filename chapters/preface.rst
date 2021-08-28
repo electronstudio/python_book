@@ -1,5 +1,6 @@
-For the instructor
-==================
+.. _preface:
+
+.. rubric:: For the instructor
 
 This book contains all the example programs used in my CoderDojo class
 to teach Python programming. The primary goal of the class is to teach
@@ -44,8 +45,7 @@ does not attempt to be comprehensive or give detailed explanations
 because it is intended to be used in a class with an instructor who will
 fill in the gaps as needed by the students.
 
-The second edition
-==================
+.. rubric:: The second edition
 
 I discovered two important things from feedback from the first edition:
 

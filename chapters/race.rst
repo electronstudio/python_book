@@ -15,9 +15,10 @@ functions, so they just contain ``pass`` to indicate to Python they do
 nothing.)
 
 .. figure:: images/figures/race.png
-   :alt: Race game:raw-latex:`\label{fig:race_fig}`
+   :width: 70%
+   :alt: Race game
 
-   Race game:raw-latex:`\label{fig:race_fig}`
+   Race game
 
 Like the shooter program, we begin we three things:
 

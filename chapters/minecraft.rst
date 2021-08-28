@@ -72,6 +72,12 @@ want to quit, first type
 
 at the server console, so it saves your world.
 
+.. topic:: Advanced Challenge
+
+   Setup a more modern Minecraft server, such as `PaperMC <https://papermc.io/>`_.
+
+   Then try to get the `Raspberryjuice plugin <https://dev.bukkit.org/projects/raspberryjuice>`_ to work with it so you can use it with Python.  This is not easy; I couldn't do it!
+
 Setup Minecraft
 ~~~~~~~~~~~~~~~
 
@@ -79,12 +85,10 @@ Run the Minecraft launcher you downloaded from minecraft.net. We will
 not be using the default which is the latest version of Minecraft.
 Instead we will be using **version 1.12**.
 
-Click *launch options* then *add new*, then set version to *release
-1.12*. Then click *save*. Then click *Minecraft* at the top. Then click
-the arrow next to *Play* at the bottom. Then select *1.12*. Then click
-*Play*.
+Run the **Minecraft Launcher**.  Click **Installations** then **New Installation**, then select version **release
+1.12**. Then click *Create*.  Then click **Play** next to the new installation in the list.
 
-Minecraft will run. Click ‘multiplayer’. Then ‘add server’. Enter the
+Minecraft will run. Click **multiplayer**. Then **add server**. Enter the
 server address as
 
 ::
@@ -101,9 +105,7 @@ already have it installed. However you need to make sure you have the
 latest version. You can download it
 from the links at the *top* of https://codewith.mu/en/download.
 
-Run *Mu*. Click **Mode** and select **Python3**.
-
-Then click the small gadget icon in the bottom right hand corner of the
+Run *Mu*. Click **Mode** and select **Python3**.  Then click *the small gadget icon* in the bottom right hand corner of the
 window. Click **third party packages**. Type
 
 ::
@@ -118,6 +120,18 @@ command line like this:
 ::
 
    pip3 install mcpi
+
+
+Summary
+~~~~~~~
+
+.. image:: images/minecraft.png
+   :width: 50%
+   :align: center
+
+You need to have the Minecraft server, Minecraft (the client) and Mu all running at the same time.  It may be
+useful to arrange them in separate windows.  Your Python program will talk to the server, and Minecraft will also talk to the server,
+allowing you to see the results of your program in Mincraft.
 
 Hello Minecraft
 ---------------
@@ -210,17 +224,15 @@ effect of a jump.
 
 .. topic:: Exercise
 
-   Change the height of the jump.
-
-
-.. topic:: Exercise
-
-   Make the jump faster.
-
+   * Change the height of the jump.
 
 .. topic:: Exercise
 
-   Move the player in X and Z directions as well as Y during the jump.
+   * Make the jump faster.
+
+.. topic:: Exercise
+
+   * Move the player in X and Z directions as well as Y during the jump.
 
 
 .. topic:: Advanced
