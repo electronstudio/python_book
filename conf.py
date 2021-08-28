@@ -13,15 +13,15 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-
+import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Python Book'
+project = 'Coding Games With Pygame Zero & Python'
 copyright = '2021, Richard Smith'
 author = 'Richard Smith'
 version = '2.1'
-release = '2nd edition, revised'
+release = ''
 
 # -- General configuration ---------------------------------------------------
 
@@ -43,6 +43,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
+#html_theme = "classic"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -50,6 +51,8 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
 latex_show_urls = 'footnote'
+
+numfig_format = {'code-block': 'Program %s'}
 
 numfig = True
 
@@ -72,6 +75,8 @@ latex_elements = {
 
     'figure_align': 'H',
 
+    'releasename': '2nd edition, revised',
+
     # Additional stuff for the LaTeX preamble.
     'preamble': r'''
         \usepackage{charter}
@@ -86,8 +91,6 @@ latex_elements = {
         \DeclareCaptionFont{white}{\color{white}}
         \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
         \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
-        \addto\captionsenglish{\renewcommand{\literalblockname}{Program}}
-        \providecommand*{\literalblockname}{Program }
     ''',
     'passoptionstopackages': r'\PassOptionsToPackage{svgnames}{xcolor}',
     'sphinxsetup':'verbatimwithframe=false, VerbatimColor={named}{AliceBlue}, VerbatimHighlightColor={named}{Yellow}',
