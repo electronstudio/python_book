@@ -1,4 +1,5 @@
 import random
+import pgzrun
 
 WIDTH = 600
 HEIGHT = 600
@@ -81,3 +82,4 @@ def update(delta):
 
 
 
+pgzrun.go()

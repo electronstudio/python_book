@@ -17,10 +17,10 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Coding Games With Pygame Zero & Python'
+project = 'Learn to code with Python and Raylib'
 copyright = '2021, Richard Smith'
 author = 'Richard Smith'
-version = '2.1'
+version = '3'
 release = ''
 
 # -- General configuration ---------------------------------------------------
@@ -75,7 +75,7 @@ latex_elements = {
 
     'figure_align': 'H',
 
-    'releasename': '2nd edition, revised',
+    'releasename': 'release',
 
     # Additional stuff for the LaTeX preamble.
     'preamble': r'''
