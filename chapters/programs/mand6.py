@@ -26,10 +26,7 @@ def draw2d():
             c = complex((RE_START + (x / WIDTH) * RE_WIDTH),
                         (IM_START + (y / HEIGHT) * IM_HEIGHT))
             m = mandelbrot(c)
-            if m == MAX_ITER:
-                color = BLACK
-            else:
-                color = WHITE
+            color = BLACK if m == MAX_ITER else WHITE
             screen.draw_pixel(x, y, color)
 
 

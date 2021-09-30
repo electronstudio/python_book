@@ -38,9 +38,9 @@ def draw2d():
 def update():
     global zoom, IM_START, RE_START
     if keyboard.space:
-        zoom = zoom * 1.2
+        zoom *= 1.2
     elif keyboard.enter:
-        zoom = zoom * 0.8
+        zoom *= 0.8
     elif keyboard.up:
         IM_START -= 0.2
     elif keyboard.down:

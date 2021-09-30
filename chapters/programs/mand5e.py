@@ -46,16 +46,16 @@ def init():
 
 
 def draw2d():
-    rl.UpdateTexture(texture, image.data)
+    screen.update_texture(texture, image.data)
     screen.draw_texture_ex(texture, (0, 0), 0, 1, WHITE)
 
 def update():
     global zoom, IM_START, RE_START
     if keyboard.space:
-        zoom = zoom * 1.2
+        zoom *= 1.2
         plot_image()
     elif keyboard.enter:
-        zoom = zoom * 0.8
+        zoom *= 0.8
         plot_image()
     elif keyboard.up:
         IM_START -= 0.2

@@ -30,6 +30,9 @@ We are going to write a program to draw one fractal in particular, the Mandelbro
 Mandelbrot set
 --------------
 
+We are going to skip through the maths so we can get straight to coding, but if you would like to understand complex numbers,
+`watch this video <https://youtu.be/NGMRB4O922I>`_ or ask your maths teacher.
+
 Every complex number is either *in* the Mandelbrot set, or *out* of the Mandelbrot set.  To decide which it is, we
 do an iteration:
 
@@ -72,10 +75,7 @@ pixel or a white pixel.
                 c = complex((RE_START + (x / WIDTH) * RE_WIDTH),
                             (IM_START + (y / HEIGHT) * IM_HEIGHT))
                 m = mandelbrot(c)
-                if m == MAX_ITER:
-                    color = BLACK
-                else:
-                    color = WHITE
+                color = BLACK if m == MAX_ITER else WHITE
                 screen.draw_pixel(x, y, color)
 
 .. figure:: images/Mandelset_hires.png
@@ -214,7 +214,7 @@ is much faster than re-plotting the whole thing.
 ..  code-block::
 
     def draw2d():
-        rl.UpdateTexture(texture, image.data)
+        screen.update_texture(texture, image.data)
         screen.draw_texture_ex(texture, (0, 0), 0, 1, WHITE)
 
 Finally, we must remember to re-plot the image if the user presses any keys:
@@ -279,7 +279,7 @@ Change the ``draw_2d()`` function to use the ``SCALE``:
 ..  code-block::
 
     def draw2d():
-        rl.UpdateTexture(texture, image.data)
+        screen.update_texture(texture, image.data)
         screen.draw_texture_ex(texture, (0,0), 0, SCALE, WHITE)
 
 Run the program and experiment with different ``SCALE`` values.

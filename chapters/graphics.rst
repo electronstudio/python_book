@@ -1,9 +1,51 @@
 Drawing graphics
 ================
 
-To create graphics for our games we will use `the Pygame Zero
-library <https://pygame-zero.readthedocs.io>`__. You will find
-the documentation on the website useful!
+To create graphics for our games we will use `Raylib <https://www.raylib.com/>`__
+along with `my RLZero
+library <https://electronstudio.github.io/rlzero/>`__. You will find
+the documentation on the websites useful!
+
+Installing the graphics library
+-------------------------------
+
+Installing a Python package varies depending on what Python editor or IDE
+you are using.
+Here is how you do it if you are using the Mu editor.
+
+Run *Mu*. Click **Mode** and select **Python3**.  Then click *the small gadget icon* in the bottom right
+hand corner of the
+window. Click **third party packages**. Type
+
+::
+
+   rlzero
+
+into the box. Click **OK**. The library will download.
+
+*If you are not using Mu* you can install from the
+command line like this:
+
+::
+
+   pip3 install rlzero
+
+RLZero and Raylib
+-----------------
+
+Raylib is a graphics library.  RLZero adds some extra functions to Raylib to make
+it easier to use.  Once you have installed RLZero you are free to use all the
+functions of Raylib - you don't have to stick to the RLZero features.
+
+Specifically, whenever we use a function prefixed by ``screen.`` that is a Raylib
+function.  You can use any function from the
+`Raylib documentation <https://electronstudio.github.io/raylib-python-cffi/pyray.html>`__
+if you prefix it with ``screen``.
+
+The RLZero functions don't need a prefix.
+
+Pixels
+------
 
 The smallest square that can be displayed on a monitor is called a
 *pixel*. This diagram shows a close-up view of a window that is 40
@@ -20,15 +62,17 @@ you understand co-ordinates before moving on because everything we do in
 Pygame Zero will use it. (In maths this called a ‘Cartesian coordinate
 system’).
 
+.. literalinclude:: programs/pixels.py
+   :caption: A pixel
+   :name: code-pixels
+   :linenos:
+
+.. topic:: Exercise
+
+   Make this pixel blue.
+
 Lines and circles
 -----------------
-
-If are using the Mu editor, Pygame Zero is built-in, but **you must
-remember to click ‘Mode’ and select ‘Pygame Zero’ before running your
-program**!
-
-If you are using a different editor, `instructions are
-online <https://pygame-zero.readthedocs.io/en/stable/ide-mode.html>`__.
 
 .. literalinclude:: programs/10_lines_circles.py
    :caption: Lines and circles
