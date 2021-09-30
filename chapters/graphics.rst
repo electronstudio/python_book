@@ -52,7 +52,7 @@ The smallest square that can be displayed on a monitor is called a
 pixels wide and 40 pixels high. At normal size you will not see the grid
 lines.
 
-.. figure:: images/figures/pixelgrid.pdf
+.. figure:: images/figures/pixelgrid.png
    :width: 70%
 
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6. Tutorial: Race game &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>10. Tutorial: Race game &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -43,7 +43,7 @@
 <li class="toctree-l1"><a class="reference internal" href="fundamentals.html">2. Python Fundamentals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fractals.html">5. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
         </div>
@@ -60,7 +60,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">6. </span>Tutorial: Race game</li>
+      <li><span class="section-number">10. </span>Tutorial: Race game</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/race.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -71,12 +71,12 @@
            <div itemprop="articleBody">
              
   <div class="section" id="tutorial-race-game">
-<h1><span class="section-number">6. </span>Tutorial: Race game<a class="headerlink" href="#tutorial-race-game" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">10. </span>Tutorial: Race game<a class="headerlink" href="#tutorial-race-game" title="Permalink to this headline"></a></h1>
 <p>In this chapter we will build a racing game together, step by step. The
 Python we will use is: conditionals, loops, lists, functions and tuples.
 We will show use of velocity, high score and a title screen.</p>
 <div class="section" id="basic-game">
-<h2><span class="section-number">6.1. </span>Basic game<a class="headerlink" href="#basic-game" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">10.1. </span>Basic game<a class="headerlink" href="#basic-game" title="Permalink to this headline"></a></h2>
 <p>Similar to the shooter game, we will begin with a complete program
 listing but with empty bodies for some of the functions that we will
 fill in later. (Python will not run a program with completely empty
@@ -256,7 +256,7 @@ remaining functions.)</p>
 </div>
 </div>
 <div class="section" id="player-input">
-<h2><span class="section-number">6.2. </span>Player input<a class="headerlink" href="#player-input" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">10.2. </span>Player input<a class="headerlink" href="#player-input" title="Permalink to this headline"></a></h2>
 <p>Replace the definiton of <code class="docutils literal notranslate"><span class="pre">player_input()</span></code> with this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">player_input</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">up</span><span class="p">:</span>
@@ -278,7 +278,7 @@ remaining functions.)</p>
 </div>
 </div>
 <div class="section" id="generate-the-walls">
-<h2><span class="section-number">6.3. </span>Generate the walls<a class="headerlink" href="#generate-the-walls" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">10.3. </span>Generate the walls<a class="headerlink" href="#generate-the-walls" title="Permalink to this headline"></a></h2>
 <p>We already have code to draw the walls, but currently <code class="docutils literal notranslate"><span class="pre">lines</span></code> is empty
 so nothing gets drawn. Replace the function <code class="docutils literal notranslate"><span class="pre">generate_lines()</span></code> with
 this. Note that we immediately call <code class="docutils literal notranslate"><span class="pre">generate_lines()</span></code> after defining
@@ -306,14 +306,14 @@ it to generate the walls for the start of the game.</p>
 </div>
 </div>
 <div class="section" id="make-the-walls-colourful">
-<h2><span class="section-number">6.4. </span>Make the walls colourful<a class="headerlink" href="#make-the-walls-colourful" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">10.4. </span>Make the walls colourful<a class="headerlink" href="#make-the-walls-colourful" title="Permalink to this headline"></a></h2>
 <p>Modify the line that sets the colour of the generated line to this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pretty_colour</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">left_wall_x</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">time</span> <span class="o">*</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="scrolling">
-<h2><span class="section-number">6.5. </span>Scrolling<a class="headerlink" href="#scrolling" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">10.5. </span>Scrolling<a class="headerlink" href="#scrolling" title="Permalink to this headline"></a></h2>
 <p>Modify the <code class="docutils literal notranslate"><span class="pre">scroll_walls()</span></code> function so it removes lines from the
 bottom of the screen according to the player’s vertical velocity.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scroll_walls</span><span class="p">():</span>
@@ -333,7 +333,7 @@ bottom of the screen according to the player’s vertical velocity.</p>
 </div>
 </div>
 <div class="section" id="wall-collisions">
-<h2><span class="section-number">6.6. </span>Wall collisions<a class="headerlink" href="#wall-collisions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">10.6. </span>Wall collisions<a class="headerlink" href="#wall-collisions" title="Permalink to this headline"></a></h2>
 <p>Currently the player can move through the walls - we don’t want to allow
 this. Also we want the player to lose all their velocity each time they
 collide as a penalty.</p>
@@ -359,7 +359,7 @@ collide as a penalty.</p>
 </div>
 </div>
 <div class="section" id="timer">
-<h2><span class="section-number">6.7. </span>Timer<a class="headerlink" href="#timer" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">10.7. </span>Timer<a class="headerlink" href="#timer" title="Permalink to this headline"></a></h2>
 <p>Currently the player has infinite time. We want decrease the <code class="docutils literal notranslate"><span class="pre">time</span></code>
 variable by how much time has passed and end the game when time runs
 out.</p>
@@ -382,7 +382,7 @@ out.</p>
 </div>
 </div>
 <div class="section" id="mouse-movement">
-<h2><span class="section-number">6.8. </span>Mouse movement<a class="headerlink" href="#mouse-movement" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">10.8. </span>Mouse movement<a class="headerlink" href="#mouse-movement" title="Permalink to this headline"></a></h2>
 <p>The game is easier but perhaps more fun if you can play it with mouse.
 Pygame will call this function for us automatically.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_mouse_move</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
@@ -397,7 +397,7 @@ Pygame will call this function for us automatically.</p>
 </div>
 </div>
 <div class="section" id="ideas-for-extension">
-<h2><span class="section-number">6.9. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">10.9. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Draw a new image for the player. Make the Actor show a different
 image depending on if the player is steering left or right.</p></li>

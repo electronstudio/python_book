@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4. Tutorial: Maze game &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>8. Tutorial: Maze game &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -43,7 +43,7 @@
 <li class="toctree-l1"><a class="reference internal" href="fundamentals.html">2. Python Fundamentals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fractals.html">5. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
         </div>
@@ -60,7 +60,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">4. </span>Tutorial: Maze game</li>
+      <li><span class="section-number">8. </span>Tutorial: Maze game</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/maze.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -71,7 +71,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="tutorial-maze-game">
-<h1><span class="section-number">4. </span>Tutorial: Maze game<a class="headerlink" href="#tutorial-maze-game" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">8. </span>Tutorial: Maze game<a class="headerlink" href="#tutorial-maze-game" title="Permalink to this headline"></a></h1>
 <p>In this chapter we will build a maze game together, step by step. The
 Python we will use is quite simple: mostly just conditionals and loops.
 The technique of creating a tilemap is common in games and after seeing
@@ -81,7 +81,7 @@ it here you should be able to incorporate it into your own projects.</p>
 <p class="caption"><span class="caption-text">Maze game</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </div>
 <div class="section" id="tilemap">
-<h2><span class="section-number">4.1. </span>Tilemap<a class="headerlink" href="#tilemap" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.1. </span>Tilemap<a class="headerlink" href="#tilemap" title="Permalink to this headline"></a></h2>
 <p>A tilemap uses a small number of images (the tiles) and draws them many
 times to build a much larger game level (the map). This saves you from
 creating a lot of artwork and makes it very easy to change the design of
@@ -183,7 +183,7 @@ columns, i.e. the elements of the row.</p>
 </div>
 </div>
 <div class="section" id="moving-the-player">
-<h2><span class="section-number">4.2. </span>Moving the player<a class="headerlink" href="#moving-the-player" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.2. </span>Moving the player<a class="headerlink" href="#moving-the-player" title="Permalink to this headline"></a></h2>
 <p>Add this code to the <em>end</em> of the program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_key_down</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
     <span class="n">row</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">/</span> <span class="n">TILE_SIZE</span><span class="p">)</span>
@@ -210,7 +210,7 @@ pressed is passed to the function in the <code class="docutils literal notransla
 </div>
 </div>
 <div class="section" id="restricting-where-the-player-can-move">
-<h2><span class="section-number">4.3. </span>Restricting where the player can move<a class="headerlink" href="#restricting-where-the-player-can-move" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.3. </span>Restricting where the player can move<a class="headerlink" href="#restricting-where-the-player-can-move" title="Permalink to this headline"></a></h2>
 <p>Delete the last two lines of the program and replace them with this
 modified version:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tile</span> <span class="o">=</span> <span class="n">tiles</span><span class="p">[</span><span class="n">maze</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">column</span><span class="p">]]</span>
@@ -232,7 +232,7 @@ modified version:</p>
 </div>
 </div>
 <div class="section" id="animate-the-movement-of-the-player">
-<h2><span class="section-number">4.4. </span>Animate the movement of the player<a class="headerlink" href="#animate-the-movement-of-the-player" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.4. </span>Animate the movement of the player<a class="headerlink" href="#animate-the-movement-of-the-player" title="Permalink to this headline"></a></h2>
 <p>First, the alien Actor is bit too big. Draw a new image of size 64×64
 pixels and save it as <code class="docutils literal notranslate"><span class="pre">player.png</span></code> in the <code class="docutils literal notranslate"><span class="pre">images</span></code> folder. In the
 program, change the line:</p>
@@ -264,7 +264,7 @@ these lines of the program:</p>
 </div>
 </div>
 <div class="section" id="create-an-enemy">
-<h2><span class="section-number">4.5. </span>Create an enemy<a class="headerlink" href="#create-an-enemy" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.5. </span>Create an enemy<a class="headerlink" href="#create-an-enemy" title="Permalink to this headline"></a></h2>
 <p>We will create a simple enemy that moves up and down. Add this code near
 the top just <em>above</em> the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enemy</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s2">&quot;enemy&quot;</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">,</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">TILE_SIZE</span><span class="p">))</span>
@@ -312,7 +312,7 @@ so that is called every frame.</p>
 </div>
 </div>
 <div class="section" id="a-locked-door-and-a-key">
-<h2><span class="section-number">4.6. </span>A locked door and a key<a class="headerlink" href="#a-locked-door-and-a-key" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.6. </span>A locked door and a key<a class="headerlink" href="#a-locked-door-and-a-key" title="Permalink to this headline"></a></h2>
 <p>We will add two new tiles to the game. Draw images <code class="docutils literal notranslate"><span class="pre">door.png</span></code> and
 <code class="docutils literal notranslate"><span class="pre">key.png</span></code> and save them in <code class="docutils literal notranslate"><span class="pre">images</span></code> folder.</p>
 <p>Find the <code class="docutils literal notranslate"><span class="pre">tiles</span></code> list near the top and <strong>change</strong> it to include the
@@ -360,7 +360,7 @@ are modifying a <em>global</em> variable inside a function we must declare it.</
 </div>
 </div>
 <div class="section" id="finished-game">
-<h2><span class="section-number">4.7. </span>Finished game<a class="headerlink" href="#finished-game" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.7. </span>Finished game<a class="headerlink" href="#finished-game" title="Permalink to this headline"></a></h2>
 <p>Here is the finished game with all the changes included:</p>
 <div class="literal-block-wrapper docutils container" id="code-maze7">
 <div class="code-block-caption"><span class="caption-text">Finished maze game</span><a class="headerlink" href="#code-maze7" title="Permalink to this code"></a></div>
@@ -526,7 +526,7 @@ are modifying a <em>global</em> variable inside a function we must declare it.</
 </div>
 </div>
 <div class="section" id="ideas-for-extension">
-<h2><span class="section-number">4.8. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">8.8. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
 <p>However that is not the end! There are many things you could add to this
 game.</p>
 <ul class="simple">

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. More advanced games &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>6. More advanced games &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -43,7 +43,7 @@
 <li class="toctree-l1"><a class="reference internal" href="fundamentals.html">2. Python Fundamentals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fractals.html">5. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
         </div>
@@ -60,7 +60,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">2. </span>More advanced games</li>
+      <li><span class="section-number">6. </span>More advanced games</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/more_games.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -71,11 +71,11 @@
            <div itemprop="articleBody">
              
   <div class="section" id="more-advanced-games">
-<h1><span class="section-number">2. </span>More advanced games<a class="headerlink" href="#more-advanced-games" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">6. </span>More advanced games<a class="headerlink" href="#more-advanced-games" title="Permalink to this headline"></a></h1>
 <p>These games demonstrate some essential building blocks you will need to
 make more advanced games of your own.</p>
 <div class="section" id="lists">
-<h2><span class="section-number">2.1. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.1. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline"></a></h2>
 <p>We introduced lists in <a class="reference internal" href="fundamentals.html#code-arrays"><span class="std std-numref">Program 2.12</span></a>. In this
 game, we create an empty list <code class="docutils literal notranslate"><span class="pre">[]</span></code> and use a loop to fill it with
 alien Actors.</p>
@@ -135,7 +135,7 @@ add a new bullet to the list.</p>
 </div>
 </div>
 <div class="section" id="animation">
-<h2><span class="section-number">2.2. </span>Animation<a class="headerlink" href="#animation" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.2. </span>Animation<a class="headerlink" href="#animation" title="Permalink to this headline"></a></h2>
 <p>Animation is another use for functions. (See
 <a class="reference internal" href="fundamentals.html#code-functions"><span class="std std-numref">Program 2.17</span></a>) We define our own function
 and then ask Pygame to <em>call it back</em> every 0.2 seconds. Most of this
@@ -204,7 +204,7 @@ code is from <code class="xref std std-numref docutils literal notranslate"><spa
 </div>
 </div>
 <div class="section" id="simple-physics">
-<h2><span class="section-number">2.3. </span>Simple physics<a class="headerlink" href="#simple-physics" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.3. </span>Simple physics<a class="headerlink" href="#simple-physics" title="Permalink to this headline"></a></h2>
 <p>Here we draw a ball and move it, like we did in
 <a class="reference internal" href="graphics.html#code-moving-boxes"><span class="std std-numref">Program 4.3</span></a>. But instead of moving it
 by a fixed number of pixels, we store the number of pixels to move in
@@ -261,7 +261,7 @@ of the screen.</p>
 </div>
 </div>
 <div class="section" id="bat-and-ball-game">
-<h2><span class="section-number">2.4. </span>Bat and ball game<a class="headerlink" href="#bat-and-ball-game" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.4. </span>Bat and ball game<a class="headerlink" href="#bat-and-ball-game" title="Permalink to this headline"></a></h2>
 <p><em>Pong</em> is the classic bat and ball game.</p>
 <div class="literal-block-wrapper docutils container" id="code-pong">
 <div class="code-block-caption"><span class="caption-text">Pong</span><a class="headerlink" href="#code-pong" title="Permalink to this code"></a></div>
@@ -337,7 +337,7 @@ of the screen.</p>
 </div>
 </div>
 <div class="section" id="timer">
-<h2><span class="section-number">2.5. </span>Timer<a class="headerlink" href="#timer" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.5. </span>Timer<a class="headerlink" href="#timer" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">update()</span></code> and <code class="docutils literal notranslate"><span class="pre">draw()</span></code> functions are called by Pygame many
 times every second. Each time <code class="docutils literal notranslate"><span class="pre">draw()</span></code> is called we say it draws one
 <em>frame</em>. The exact number of frames per second is called the <em>framerate</em>
@@ -390,7 +390,7 @@ since the last frame in a parameter to our update function. We use this
 </div>
 </div>
 <div class="section" id="callbacks-another-kind-of-timer">
-<h2><span class="section-number">2.6. </span>Callbacks: another kind of timer<a class="headerlink" href="#callbacks-another-kind-of-timer" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">6.6. </span>Callbacks: another kind of timer<a class="headerlink" href="#callbacks-another-kind-of-timer" title="Permalink to this headline"></a></h2>
 <p>Pygame has its own clock which we can use by asking it to <em>callback</em> one
 of our functions at a certain time, or regularly over and over at an
 interval.</p>
