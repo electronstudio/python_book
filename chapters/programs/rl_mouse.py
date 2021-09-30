@@ -1,4 +1,7 @@
-from richlib import *
+"""
+    get the mouse position and test if mouse buttons are pressed
+"""
+from rlzero import *
 
 cube = Cube((0, 10, 0), (10, 20, 10), 'blue')
 
@@ -17,3 +20,8 @@ def update():
 
 
 run()
+
+""" TODO
+    Make the cube jump up when the mouse button is clicked
+    Make the cube change colour when the mouse button is held down
+"""

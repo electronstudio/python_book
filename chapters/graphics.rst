@@ -53,9 +53,10 @@ pixels wide and 40 pixels high. At normal size you will not see the grid
 lines.
 
 .. figure:: images/figures/pixelgrid.pdf
-   :alt: Model View Controller
+   :width: 70%
 
-   Model View Controller
+
+
 
 We can refer to any pixel by giving two co-ordinates, *(x,y)* Make sure
 you understand co-ordinates before moving on because everything we do in
@@ -96,7 +97,7 @@ Moving rectangles
 -----------------
 
 To make things move we need to add the special ``update()`` function. We
-don’t need to write our own loop because *Pygame Zero calls this
+don’t need to write our own loop because *RLZero calls this
 function for us in its own loop*, over and over, many times per second.
 
 .. literalinclude:: programs/11_moving_boxes.py
@@ -123,12 +124,13 @@ function for us in its own loop*, over and over, many times per second.
 
 
 
-Actor sprites
+Sprites
 -------------
 
-Actor sprites are very similar to boxes! Click ``Images`` to see the
-folder of image files available. ``alien.png`` should already be there,
-but for other images you must add the files yourself.
+Sprites are very similar to boxes, but are loaded from a **png** or **jpg** image file.
+RLZero has one such image built-in,
+``alien.png``.  If you want to use other images you must create them
+and place the files in the same directory as your program.
 
 You could use Microsoft Paint which comes with Windows but I recommend
 you download and install `Krita <https://krita.org>`__.
@@ -153,10 +155,8 @@ Background image
 We are going to add a background image to
 :numref:`code-sprites`
 
-Click ``Images`` to see the folder of image files available.
-
 **You must create or download a picture to use a background.** Save it as
-``background.png`` in the directory ``mu_code/images``. It should be the
+``background.png`` in the folder with your program. It should be the
 same size as the window, 500×500 pixels and it must be in ``.png``
 format.
 

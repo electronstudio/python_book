@@ -1,8 +1,10 @@
-alien = Actor('alien')
+from rlzero import *
+
+alien = Sprite('alien')
 alien.pos = (0, 50)
 
 def draw():
-    screen.clear()
+    clear()
     alien.draw()
 
 def update():
@@ -11,3 +13,4 @@ def update():
     elif keyboard.left:
         alien.x = alien.x - 2
 
+run()

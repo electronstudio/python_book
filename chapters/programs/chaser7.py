@@ -1,38 +1,44 @@
+from rlzero import *
+
 import random
-import pgzrun
+
 
 WIDTH = 600
 HEIGHT = 600
+DATA_DIR = "."
 
-background = Actor("background")
-player = Actor("player")
+background = Sprite("background")
+player = Sprite("player")
 player.x = 200
 player.y = 200
+player.rotation_angle = 0
+player.scale = 2
 
-enemy = Actor("alien")
-player2 = Actor("player")
-coin = Actor("alien", pos=(300,300))
+enemy = Sprite("alien")
+player2 = Sprite("player")
+coin = Sprite("alien", pos=(300,300))
 score = 0
 time = 20
 
 
-def draw():
-    screen.clear()
+def draw2d():
+    clear()
     background.draw()
     player.draw()
     enemy.draw()
     player2.draw()
     coin.draw()
-    screen.draw.text("My game", (200,0), color='red')
+    screen.draw_text("My game", 200, 0, 20, RED)
     score_string = str(score)
-    screen.draw.text(score_string, (0,0), color='green')
+    screen.draw_text(score_string, 0,0, 20, GREEN)
     time_string = str(round(time))
-    screen.draw.text(time_string, (50,0), color='green')
+    screen.draw_text(time_string, 50,0, 20, GREEN)
 
 def update(delta):
     global score, time
     time = time - delta
     if time <= 0:
+        print("time out")
         exit()
     if keyboard.right:
         player.x = player.x + 4
@@ -61,6 +67,7 @@ def update(delta):
     if enemy.y > player.y:
         enemy.y = enemy.y - 1
     if player.colliderect(enemy):
+        print("player 1 hit enemy")
         exit()
 
     if keyboard.d:
@@ -72,6 +79,7 @@ def update(delta):
     if keyboard.w:
         player2.y = player2.y - 4
     if player.colliderect(player2):
+        print("player1 hit player 2")
         exit()
 
     if coin.colliderect(player):
@@ -81,5 +89,4 @@ def update(delta):
         print("Score:", score)
 
 
-
-pgzrun.go()
+run()

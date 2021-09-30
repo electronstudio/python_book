@@ -1,4 +1,7 @@
-from richlib import *
+"""
+IMPORTANT: switch Mu mode to "Python 3"
+"""
+from rlzero import *
 
 WIDTH = 500
 HEIGHT = 500
@@ -19,3 +22,10 @@ def draw():
 
 
 run()
+
+""" TODO:
+    Change the colors and positions of the cubes.
+    Make sure you understand (x,y,z) co-ordinates
+    (In maths this called a 'Cartesian coordinate system'
+    and everything we do in RLZero will use it)
+"""
