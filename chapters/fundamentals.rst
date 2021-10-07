@@ -657,7 +657,7 @@ the details of the code inside the function.
 
 
 
-
+.. _shortcuts:
 
 Shortcuts
 ---------

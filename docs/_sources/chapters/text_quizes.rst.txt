@@ -114,9 +114,10 @@ This ``while`` loop goes round and round forever … or until the player
 gets a correct answer, and then it ``break``s out of the loop. Note
 that everything in the loop is indented.
 
+
 .. literalinclude:: programs/06_loop.py
    :caption: Guessing game with a loop
-   :name: code-loop
+   :name: codeloop
    :linenos:
 
 .. topic:: Exercise

@@ -13,7 +13,12 @@ Installing a Python package varies depending on what Python editor or IDE
 you are using.
 Here is how you do it if you are using the Mu editor.
 
-Run *Mu*. Click **Mode** and select **Python3**.  Then click *the small gadget icon* in the bottom right
+Run *Mu*. Click **Mode** and select **Python3**.
+
+.. figure:: images/mu1.png
+   :width: 70%
+
+Then click *the small gadget icon* in the bottom right
 hand corner of the
 window. Click **third party packages**. Type
 
@@ -34,15 +39,8 @@ RLZero and Raylib
 -----------------
 
 Raylib is a graphics library.  RLZero adds some extra functions to Raylib to make
-it easier to use.  Once you have installed RLZero you are free to use all the
-functions of Raylib - you don't have to stick to the RLZero features.
-
-Specifically, whenever we use a function prefixed by ``screen.`` that is a Raylib
-function.  You can use any function from the
-`Raylib documentation <https://electronstudio.github.io/raylib-python-cffi/pyray.html>`__
-if you prefix it with ``screen``.
-
-The RLZero functions don't need a prefix.
+it easier to use.  Once you have installed RLZero you are free to use `all the
+functions of Raylib <https://electronstudio.github.io/raylib-python-cffi/pyray.html>`__- you don't have to stick to the RLZero functions.
 
 Pixels
 ------
@@ -56,12 +54,12 @@ lines.
    :width: 70%
 
 
-
-
 We can refer to any pixel by giving two co-ordinates, *(x,y)* Make sure
 you understand co-ordinates before moving on because everything we do in
 Pygame Zero will use it. (In maths this called a ‘Cartesian coordinate
 system’).
+
+Now type in :numref:`code-pixels` and run it, to see a pixel.
 
 .. literalinclude:: programs/pixels.py
    :caption: A pixel
@@ -193,7 +191,7 @@ The alien moves when you press the cursor keys.
 
 .. topic:: Exercise
 
-   Use the more concise += operator to change the `alien.x` value (see :numref:`code-shortcuts`).
+   Use the more concise += operator to change the `alien.x` value (see :numref:`shortcuts`).
 
 
 .. topic:: Exercise

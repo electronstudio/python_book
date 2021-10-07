@@ -69,7 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#indentation">2.12. Indentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#global-variables">2.13. Global variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dictionaries">2.14. Dictionaries</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">2.14.1. Counting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.14.1. Counting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#combining-tests">2.14.2. Combining tests</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#finding">2.14.3. Finding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#finding-names">2.14.4. Finding names</a></li>
@@ -81,6 +81,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">5. Improving your games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_games.html">6. More advanced games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
@@ -123,9 +125,9 @@ immediately (no need to click <code class="docutils literal notranslate"><span c
 to type <code class="docutils literal notranslate"><span class="pre">print()</span></code>). It’s useful for doing calculations and trying
 things out, but it won’t save what you type, so you will only want to
 use it for very short programs.</p>
-<div class="figure align-default" id="id5">
+<div class="figure align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/repl.png"><img alt="../_images/repl.png" src="../_images/repl.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The REPL</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The REPL</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </div>
 </div>
 <div class="section" id="arithmetic-operators">
@@ -639,7 +641,7 @@ called <cite>c</cite>. Change the loop so it works for <cite>c</cite> customers 
 <div class="section" id="array-lists">
 <h2><span class="section-number">2.9. </span>Array lists<a class="headerlink" href="#array-lists" title="Permalink to this headline"></a></h2>
 <p>Variables can be stored together in a <em>list</em>. Most languages call this
-an <em>array</em> so try to remember that word also. <a class="footnote-reference brackets" href="#id4" id="id2">1</a></p>
+an <em>array</em> so try to remember that word also. <a class="footnote-reference brackets" href="#id5" id="id2">1</a></p>
 <div class="literal-block-wrapper docutils container" id="code-arrays">
 <div class="code-block-caption"><span class="caption-number">Program 2.12 </span><span class="caption-text">Array lists</span><a class="headerlink" href="#code-arrays" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -816,7 +818,7 @@ the details of the code inside the function.</p>
 </div>
 </div>
 <div class="section" id="shortcuts">
-<h2><span class="section-number">2.11. </span>Shortcuts<a class="headerlink" href="#shortcuts" title="Permalink to this headline"></a></h2>
+<span id="id3"></span><h2><span class="section-number">2.11. </span>Shortcuts<a class="headerlink" href="#shortcuts" title="Permalink to this headline"></a></h2>
 <p>Here are quicker ways of doing basic things. You may have noticed some
 of these being used already.</p>
 <div class="literal-block-wrapper docutils container" id="code-shortcuts">
@@ -974,8 +976,8 @@ dictionary of the ages of my friends:</p>
 <p class="topic-title">Exercise</p>
 <p>Change the program so it contains 5 of your friends’ ages.</p>
 </div>
-<div class="section" id="id3">
-<h3><span class="section-number">2.14.1. </span>Counting<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
+<div class="section" id="id4">
+<h3><span class="section-number">2.14.1. </span>Counting<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
 <p>Here is a loop that prints out all the ages:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">friends</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;richard&#39;</span><span class="p">:</span> <span class="mi">96</span><span class="p">,</span> <span class="s1">&#39;john&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;paul&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="ow">in</span> <span class="n">friends</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -1137,7 +1139,7 @@ single wrong letter or space will prevent them from working.</p>
 <p><a class="reference internal" href="#code-bug2"><span class="std std-numref">Program 2.22</span></a> has two bugs to fix.</p>
 </div>
 <dl class="footnote brackets">
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>There are other kinds of list that are not arrays but this need not
 concern the beginner.</p>
 </dd>

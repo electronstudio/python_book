@@ -17,6 +17,8 @@ Learn to code with Python and Raylib
    chapters/fundamentals
    chapters/text_quizes
    chapters/graphics
+   chapters/more_graphics
+   chapters/more_games
    chapters/fractals
 
 

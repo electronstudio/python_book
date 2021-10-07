@@ -23,4 +23,6 @@ def update():
     if alien.colliderect(box):
         print("hit")
 
+
 run()
+

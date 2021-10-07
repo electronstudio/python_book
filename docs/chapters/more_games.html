@@ -16,7 +16,9 @@
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11. Tutorial: Fractals" href="fractals.html" />
+    <link rel="prev" title="5. Improving your games" href="more_graphics.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,11 +40,21 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview of Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fundamentals.html">2. Python Fundamentals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">5. Improving your games</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. More advanced games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lists">6.1. Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#animation">6.2. Animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simple-physics">6.3. Simple physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bat-and-ball-game">6.4. Bat and ball game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#timer">6.5. Timer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#callbacks-another-kind-of-timer">6.6. Callbacks: another kind of timer</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
@@ -82,7 +94,7 @@ alien Actors.</p>
 <p>We again use loops to draw all the aliens and move all the aliens in the
 list. When the mouse is clicked we add a new alien to the list.</p>
 <div class="literal-block-wrapper docutils container" id="code-arrays2">
-<div class="code-block-caption"><span class="caption-text">Lists are useful in games!</span><a class="headerlink" href="#code-arrays2" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 6.1 </span><span class="caption-text">Lists are useful in games!</span><a class="headerlink" href="#code-arrays2" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -141,7 +153,7 @@ add a new bullet to the list.</p>
 and then ask Pygame to <em>call it back</em> every 0.2 seconds. Most of this
 code is from <code class="xref std std-numref docutils literal notranslate"><span class="pre">code-collisions</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-animation">
-<div class="code-block-caption"><span class="caption-text">Animation</span><a class="headerlink" href="#code-animation" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 6.2 </span><span class="caption-text">Animation</span><a class="headerlink" href="#code-animation" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -214,7 +226,7 @@ fixed direction. <code class="docutils literal notranslate"><span class="pre">vx
 the velocity. Here we reverse the velocity when the ball hits the edge
 of the screen.</p>
 <div class="literal-block-wrapper docutils container" id="code-simple-physics">
-<div class="code-block-caption"><span class="caption-text">Simple physics: velocity</span><a class="headerlink" href="#code-simple-physics" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 6.3 </span><span class="caption-text">Simple physics: velocity</span><a class="headerlink" href="#code-simple-physics" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -264,7 +276,7 @@ of the screen.</p>
 <h2><span class="section-number">6.4. </span>Bat and ball game<a class="headerlink" href="#bat-and-ball-game" title="Permalink to this headline"></a></h2>
 <p><em>Pong</em> is the classic bat and ball game.</p>
 <div class="literal-block-wrapper docutils container" id="code-pong">
-<div class="code-block-caption"><span class="caption-text">Pong</span><a class="headerlink" href="#code-pong" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 6.4 </span><span class="caption-text">Pong</span><a class="headerlink" href="#code-pong" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -347,7 +359,7 @@ is not the most reliable way of keeping time.</p>
 since the last frame in a parameter to our update function. We use this
 <em>delta time</em> to keep a timer.</p>
 <div class="literal-block-wrapper docutils container" id="code-timer">
-<div class="code-block-caption"><span class="caption-text">Timer</span><a class="headerlink" href="#code-timer" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 6.5 </span><span class="caption-text">Timer</span><a class="headerlink" href="#code-timer" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -395,7 +407,7 @@ since the last frame in a parameter to our update function. We use this
 of our functions at a certain time, or regularly over and over at an
 interval.</p>
 <div class="literal-block-wrapper docutils container" id="code-timer2">
-<div class="code-block-caption"><span class="caption-text">Timer with callback functions</span><a class="headerlink" href="#code-timer2" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 6.6 </span><span class="caption-text">Timer with callback functions</span><a class="headerlink" href="#code-timer2" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -459,7 +471,10 @@ interval.</p>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="more_graphics.html" class="btn btn-neutral float-left" title="5. Improving your games" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fractals.html" class="btn btn-neutral float-right" title="11. Tutorial: Fractals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

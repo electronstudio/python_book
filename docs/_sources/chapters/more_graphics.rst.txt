@@ -8,15 +8,12 @@ Here are some tips that will enable you to enhance your games.
 Joystick input
 --------------
 
-You may call them *gamepads* or *controllers*, but Pygame calls them
-*joysticks*.
+You may call them *joysticks* or *controllers*, but Raylib calls them
+*gamepads*.
 
 Some controllers have different inputs and some are not compatible at
 all so don’t be surprised if this doesnt work properly! PS4 and Xbox One
-controllers connected by USB cable seems to work best. Use
-:numref:`code-joystick_tester` to test yours and find
-out what inputs it has. Note: if you run this program with no controller
-plugged in you will get an error.
+controllers connected by USB cable seems to work best.
 
 .. literalinclude:: programs/14_joystick_input.py
    :caption: Joystick input
@@ -33,10 +30,13 @@ plugged in you will get an error.
 Colours
 -------
 
-Note that sometimes *colour* is spelt *color* in American programs.
+.. Note::
+   The word *colour* is incorrectly spelt *color* in American programs such as Raylib.
+   We will try to use the correct spelling wherever we can but sometimes you will have to use
+   *color*.
 
-Instead of using ready made colours like ‘red’, ‘yellow’, etc. you can
-create your own color with a *tuple* of three numbers. The numbers must
+Instead of using ready made colours like ``RED``, ``YELLOW``, etc. you can
+create your own colour with a *tuple* of three numbers. The numbers must
 be between 0 - 255 and represent how much *red*, *green* and *blue* to
 mix together.
 
@@ -67,7 +67,7 @@ mix together.
 Using loops
 -----------
 
-The loops from :numref:`code-loop` are useful for
+The loops from :numref:`codeloop` are useful for
 graphical games too! Here we draw red circles using a *for loop*.
 
 We draw green circles using a *loop within another loop*.
@@ -101,14 +101,17 @@ Fullscreen mode
 ---------------
 
 Sometimes it is nice to play your game using the entire screen rather
-than in a window. Add these lines to any game to enable fullscreen mode.
-Then press *F* to go fullscreen, *ESCAPE* to quit.
+than in a window. This programs show how to enter fullscreen and and how to quit.
 
 .. literalinclude:: programs/26_fullscreen_mode.py
    :caption: Fullscreen mode
    :name: code-full_screen_mode
    :linenos:
 
+.. note::
+
+   RLZero **automatically** uses the *F* key for fullscreen and *Escape* key to quit, so
+   you don't actually need this code in your programs unless you want to use a different key.
 
 
 

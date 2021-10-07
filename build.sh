@@ -1,5 +1,5 @@
-cp ../richlib/examples/chase_game/*.py chapters/programs/
-cp ../richlib/examples/*.py chapters/programs
+cp ../rlzero/examples/chase_game/*.py chapters/programs/
+cp ../rlzero/examples/*.py chapters/programs
 make latexpdf
 make html
 rm -rf docs

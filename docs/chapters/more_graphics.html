@@ -16,7 +16,9 @@
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. More advanced games" href="more_games.html" />
+    <link rel="prev" title="4. Drawing graphics" href="graphics.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,11 +40,20 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview of Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fundamentals.html">2. Python Fundamentals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Improving your games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#joystick-input">5.1. Joystick input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colours">5.2. Colours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-loops">5.3. Using loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fullscreen-mode">5.4. Fullscreen mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#displaying-the-score">5.5. Displaying the score</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="more_games.html">6. More advanced games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
@@ -75,16 +86,13 @@
 <p>Here are some tips that will enable you to enhance your games.</p>
 <div class="section" id="joystick-input">
 <h2><span class="section-number">5.1. </span>Joystick input<a class="headerlink" href="#joystick-input" title="Permalink to this headline"></a></h2>
-<p>You may call them <em>gamepads</em> or <em>controllers</em>, but Pygame calls them
-<em>joysticks</em>.</p>
+<p>You may call them <em>joysticks</em> or <em>controllers</em>, but Raylib calls them
+<em>gamepads</em>.</p>
 <p>Some controllers have different inputs and some are not compatible at
 all so don’t be surprised if this doesnt work properly! PS4 and Xbox One
-controllers connected by USB cable seems to work best. Use
-<code class="xref std std-numref docutils literal notranslate"><span class="pre">code-joystick_tester</span></code> to test yours and find
-out what inputs it has. Note: if you run this program with no controller
-plugged in you will get an error.</p>
+controllers connected by USB cable seems to work best.</p>
 <div class="literal-block-wrapper docutils container" id="code-joystick-input">
-<div class="code-block-caption"><span class="caption-text">Joystick input</span><a class="headerlink" href="#code-joystick-input" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 5.1 </span><span class="caption-text">Joystick input</span><a class="headerlink" href="#code-joystick-input" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -100,7 +108,8 @@ plugged in you will get an error.</p>
 13
 14
 15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien&#39;</span><span class="p">)</span>
 <span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
@@ -116,6 +125,7 @@ plugged in you will get an error.</p>
         <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
 
 <span class="n">run</span><span class="p">()</span>
+
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -126,13 +136,18 @@ plugged in you will get an error.</p>
 </div>
 <div class="section" id="colours">
 <h2><span class="section-number">5.2. </span>Colours<a class="headerlink" href="#colours" title="Permalink to this headline"></a></h2>
-<p>Note that sometimes <em>colour</em> is spelt <em>color</em> in American programs.</p>
-<p>Instead of using ready made colours like ‘red’, ‘yellow’, etc. you can
-create your own color with a <em>tuple</em> of three numbers. The numbers must
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The word <em>colour</em> is incorrectly spelt <em>color</em> in American programs such as Raylib.
+We will try to use the correct spelling wherever we can but sometimes you will have to use
+<em>color</em>.</p>
+</div>
+<p>Instead of using ready made colours like <code class="docutils literal notranslate"><span class="pre">RED</span></code>, <code class="docutils literal notranslate"><span class="pre">YELLOW</span></code>, etc. you can
+create your own colour with a <em>tuple</em> of three numbers. The numbers must
 be between 0 - 255 and represent how much <em>red</em>, <em>green</em> and <em>blue</em> to
 mix together.</p>
 <div class="literal-block-wrapper docutils container" id="code-colours">
-<div class="code-block-caption"><span class="caption-text">RGB colours</span><a class="headerlink" href="#code-colours" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 5.2 </span><span class="caption-text">RGB colours</span><a class="headerlink" href="#code-colours" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -150,7 +165,12 @@ mix together.</p>
 15
 16
 17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># my_colour = (0,0,0) # makes black</span>
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># my_colour = (0,0,0) # makes black</span>
 <span class="c1"># my_colour = (255,255,255) # makes white</span>
 
 <span class="n">red_amount</span> <span class="o">=</span> <span class="mi">0</span>
@@ -159,7 +179,7 @@ mix together.</p>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">my_colour</span> <span class="o">=</span> <span class="p">(</span><span class="n">red_amount</span><span class="p">,</span> <span class="n">green_amount</span><span class="p">,</span> <span class="n">blue_amount</span><span class="p">)</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">my_colour</span><span class="p">)</span>
+    <span class="n">clear_background</span><span class="p">(</span><span class="n">my_colour</span><span class="p">)</span>
 
 <span class="c1"># This function makes the colour change every frame</span>
 <span class="c1"># Remove it if you just want to see a static colour.</span>
@@ -168,6 +188,7 @@ mix together.</p>
     <span class="n">red_amount</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">red_amount</span> <span class="o">=</span> <span class="n">red_amount</span> <span class="o">%</span> <span class="mi">255</span>
 
+<span class="n">run</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -186,58 +207,11 @@ mix together.</p>
 </div>
 <div class="section" id="using-loops">
 <h2><span class="section-number">5.3. </span>Using loops<a class="headerlink" href="#using-loops" title="Permalink to this headline"></a></h2>
-<p>The loops from <a class="reference internal" href="text_quizes.html#code-loop"><span class="std std-numref">Program 3.6</span></a> are useful for
+<p>The loops from <a class="reference internal" href="text_quizes.html#codeloop"><span class="std std-numref">Program 3.6</span></a> are useful for
 graphical games too! Here we draw red circles using a <em>for loop</em>.</p>
 <p>We draw green circles using a <em>loop within another loop</em>.</p>
 <div class="literal-block-wrapper docutils container" id="code-loops">
-<div class="code-block-caption"><span class="caption-text">Loops are useful</span><a class="headerlink" href="#code-loops" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
-<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
-
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="mi">40</span><span class="p">):</span>
-        <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_circle</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="mi">40</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="mi">40</span><span class="p">):</span>
-            <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_circle</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table></div>
-</div>
-<div class="topic">
-<p class="topic-title">Exercise</p>
-<p><cite>import random</cite> at the top of the program and then make the positions random, e.g:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="topic">
-<p class="topic-title">Advanced</p>
-<p>Learn about RGB colour and make random colours (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">code-colours</span></code>).</p>
-</div>
-<div class="topic">
-<p class="topic-title">Advanced</p>
-<p>Create a timer variable and change colours based on time (see <code class="xref std std-numref docutils literal notranslate"><span class="pre">code-timer</span></code>)</p>
-</div>
-</div>
-<div class="section" id="fullscreen-mode">
-<h2><span class="section-number">5.4. </span>Fullscreen mode<a class="headerlink" href="#fullscreen-mode" title="Permalink to this headline"></a></h2>
-<p>Sometimes it is nice to play your game using the entire screen rather
-than in a window. Add these lines to any game to enable fullscreen mode.
-Then press <em>F</em> to go fullscreen, <em>ESCAPE</em> to quit.</p>
-<div class="literal-block-wrapper docutils container" id="code-full-screen-mode">
-<div class="code-block-caption"><span class="caption-text">Fullscreen mode</span><a class="headerlink" href="#code-full-screen-mode" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 5.3 </span><span class="caption-text">Loops are useful</span><a class="headerlink" href="#code-loops" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -252,34 +226,46 @@ Then press <em>F</em> to go fullscreen, <em>ESCAPE</em> to quit.</p>
 12
 13
 14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygame</span>
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
-
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">clear</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="mi">40</span><span class="p">):</span>
+        <span class="n">draw_circle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">f</span><span class="p">:</span>
-        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">),</span> <span class="n">pygame</span><span class="o">.</span><span class="n">FULLSCREEN</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">escape</span><span class="p">:</span>
-        <span class="n">exit</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="mi">40</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="mi">40</span><span class="p">):</span>
+            <span class="n">draw_circle</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
+
+<span class="n">run</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 </div>
+<div class="topic">
+<p class="topic-title">Exercise</p>
+<p><cite>import random</cite> at the top of the program and then make the positions random, e.g:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="displaying-the-score">
-<h2><span class="section-number">5.5. </span>Displaying the score<a class="headerlink" href="#displaying-the-score" title="Permalink to this headline"></a></h2>
-<p>This game shows how you can keep the score in a variable and print it on
-to the game screen. You can display any other messages to the player the
-same way.</p>
-<div class="literal-block-wrapper docutils container" id="code-displaying-text">
-<div class="code-block-caption"><span class="caption-text">Keeping score in a variable and displaying it</span><a class="headerlink" href="#code-displaying-text" title="Permalink to this code"></a></div>
+</div>
+<div class="topic">
+<p class="topic-title">Advanced</p>
+<p>Learn about RGB colour and make random colours (see <a class="reference internal" href="#code-colours"><span class="std std-numref">Program 5.2</span></a>).</p>
+</div>
+<div class="topic">
+<p class="topic-title">Advanced</p>
+<p>Create a timer variable and change colours based on time (see <a class="reference internal" href="more_games.html#code-timer"><span class="std std-numref">Program 6.5</span></a>)</p>
+</div>
+</div>
+<div class="section" id="fullscreen-mode">
+<h2><span class="section-number">5.4. </span>Fullscreen mode<a class="headerlink" href="#fullscreen-mode" title="Permalink to this headline"></a></h2>
+<p>Sometimes it is nice to play your game using the entire screen rather
+than in a window. This programs show how to enter fullscreen and and how to quit.</p>
+<div class="literal-block-wrapper docutils container" id="code-full-screen-mode">
+<div class="code-block-caption"><span class="caption-number">Program 5.4 </span><span class="caption-text">Fullscreen mode</span><a class="headerlink" href="#code-full-screen-mode" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -296,23 +282,80 @@ same way.</p>
 14
 15
 16
-17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">clear</span><span class="p">()</span>
+    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">f1</span><span class="p">:</span>
+        <span class="n">toggle_fullscreen</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">enter</span><span class="p">:</span>
+        <span class="n">exit</span><span class="p">()</span>
+
+<span class="n">run</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>RLZero <strong>automatically</strong> uses the <em>F</em> key for fullscreen and <em>Escape</em> key to quit, so
+you don’t actually need this code in your programs unless you want to use a different key.</p>
+</div>
+</div>
+<div class="section" id="displaying-the-score">
+<h2><span class="section-number">5.5. </span>Displaying the score<a class="headerlink" href="#displaying-the-score" title="Permalink to this headline"></a></h2>
+<p>This game shows how you can keep the score in a variable and print it on
+to the game screen. You can display any other messages to the player the
+same way.</p>
+<div class="literal-block-wrapper docutils container" id="code-displaying-text">
+<div class="code-block-caption"><span class="caption-number">Program 5.5 </span><span class="caption-text">Keeping score in a variable and displaying it</span><a class="headerlink" href="#code-displaying-text" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
 
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Player 1 score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">textbox</span><span class="p">(</span><span class="s2">&quot;Hello mum&quot;</span><span class="p">,</span> <span class="n">Rect</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+    <span class="n">clear</span><span class="p">()</span>
+    <span class="n">pr</span><span class="o">.</span><span class="n">draw_text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Player 1 score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
 
-<span class="c1"># This is another special function that is called by Pygame automatically</span>
-<span class="c1"># each time a key is pressed. That way player cannot just hold down key!</span>
+<span class="c1"># This is another special function that is called by RLzero automatically</span>
+<span class="c1"># each time a key is pressed. That way player cannot just hold down the key!</span>
 
-<span class="k">def</span> <span class="nf">on_key_down</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">on_key_pressed</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">score</span>
-    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">keys</span><span class="o">.</span><span class="n">SPACE</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">KEY_SPACE</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">run</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -334,7 +377,10 @@ same way.</p>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="graphics.html" class="btn btn-neutral float-left" title="4. Drawing graphics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="more_games.html" class="btn btn-neutral float-right" title="6. More advanced games" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
