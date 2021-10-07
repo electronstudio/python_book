@@ -5,8 +5,8 @@ Here are some tips that will enable you to enhance your games.
 
 
 
-Joystick input
---------------
+Game controllers
+----------------
 
 You may call them *joysticks* or *controllers*, but Raylib calls them
 *gamepads*.
@@ -101,7 +101,7 @@ Fullscreen mode
 ---------------
 
 Sometimes it is nice to play your game using the entire screen rather
-than in a window. This programs show how to enter fullscreen and and how to quit.
+than in a window. This program show how to enter fullscreen and and how to quit.
 
 .. literalinclude:: programs/26_fullscreen_mode.py
    :caption: Fullscreen mode
@@ -143,4 +143,14 @@ same way.
 .. topic:: Exercise
 
    Add text to one of your other games.
+
+Animation
+----------------
+
+
+
+.. literalinclude:: programs/animation.py
+   :caption: Animation
+   :name: codeanimation
+   :linenos:
 

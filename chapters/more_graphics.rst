@@ -5,8 +5,8 @@ Here are some tips that will enable you to enhance your games.
 
 
 
-Joystick input
---------------
+Game controllers
+----------------
 
 You may call them *joysticks* or *controllers*, but Raylib calls them
 *gamepads*.
@@ -143,4 +143,14 @@ same way.
 .. topic:: Exercise
 
    Add text to one of your other games.
+
+Animation
+----------------
+
+
+
+.. literalinclude:: programs/animation.py
+   :caption: Animation
+   :name: codeanimation
+   :linenos:
 
