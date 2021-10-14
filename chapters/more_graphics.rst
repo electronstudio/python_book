@@ -59,7 +59,7 @@ mix together.
 
 .. topic:: Advanced
 
-   Make random colours.
+   Make random colours.  (see :numref:`codemaths`).
 
 
 
@@ -89,7 +89,7 @@ We draw green circles using a *loop within another loop*.
 
 .. topic:: Advanced
 
-    Learn about RGB colour and make random colours (see :numref:`code-colours`).
+    Learn about `RGB colour <https://en.wikipedia.org/wiki/RGB_color_model>`_ and make random colours (see :numref:`code-colours`).
 
 
 .. topic:: Advanced
@@ -147,10 +147,16 @@ same way.
 Animation
 ----------------
 
-
+*Animation* is a RLZero class that makes it easy to show a sequence of different
+images on the same Sprite.  You need to give it the image file names and the number
+of frames-per-second you want.
 
 .. literalinclude:: programs/animation.py
    :caption: Animation
    :name: codeanimation
    :linenos:
 
+.. topic:: Exercise
+
+    Draw three images of a man walking and save them as *man1.png*, *man2.png*, *man3.png*.
+    Edit the program so it animates these images.

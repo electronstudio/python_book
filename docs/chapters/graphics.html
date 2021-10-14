@@ -57,7 +57,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="more_graphics.html">5. Improving your games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_games.html">6. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fractals.html">7. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
         </div>
@@ -102,13 +102,13 @@ Here is how you do it if you are using the Mu editor.</p>
 <p>Then click <em>the small gadget icon</em> in the bottom right
 hand corner of the
 window. Click <strong>third party packages</strong>. Type</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rlzero</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rlzero</span><span class="o">&gt;=</span><span class="mf">0.2</span><span class="o">&lt;</span><span class="mf">0.3</span>
 </pre></div>
 </div>
 <p>into the box. Click <strong>OK</strong>. The library will download.</p>
 <p><em>If you are not using Mu</em> you can install from the
 command line like this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">rlzero</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;rlzero&gt;=0.2&lt;0.3&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -131,7 +131,8 @@ lines.</p>
 you understand co-ordinates before moving on because everything we do in
 Pygame Zero will use it. (In maths this called a ‘Cartesian coordinate
 system’).</p>
-<p>Now type in <a class="reference internal" href="#code-pixels"><span class="std std-numref">Program 4.1</span></a> and run it, to see a pixel.</p>
+<p>Now type in <a class="reference internal" href="#code-pixels"><span class="std std-numref">Program 4.1</span></a> and run it, to see a pixel.  It’s very small,
+so look carefully!</p>
 <div class="literal-block-wrapper docutils container" id="code-pixels">
 <div class="code-block-caption"><span class="caption-number">Program 4.1 </span><span class="caption-text">A pixel</span><a class="headerlink" href="#code-pixels" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -266,6 +267,10 @@ function for us in its own loop</em>, over and over, many times per second.</p>
 RLZero has one such image built-in,
 <code class="docutils literal notranslate"><span class="pre">alien.png</span></code>.  If you want to use other images you must create them
 and place the files in the same directory as your program.</p>
+<p>We are going to store the sprite in a variable so we can refer to it again
+when we want to draw it.  We have called this variable <em>alan</em>.  We could
+create more sprites using the same image, but we would have to use
+different variable names.</p>
 <p>You could use Microsoft Paint which comes with Windows but I recommend
 you download and install <a class="reference external" href="https://krita.org">Krita</a>.</p>
 <div class="literal-block-wrapper docutils container" id="code-sprites">
@@ -296,20 +301,20 @@ you download and install <a class="reference external" href="https://krita.org">
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien&#39;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">alan</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien.png&#39;</span><span class="p">)</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">100</span>
 
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">clear</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="n">run</span><span class="p">()</span>
 
@@ -359,22 +364,22 @@ format.</p>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien&#39;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">alan</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien.png&#39;</span><span class="p">)</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
 
-<span class="n">background</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;background&#39;</span><span class="p">)</span>
+<span class="n">background</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;background.png&#39;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">clear</span><span class="p">()</span>
     <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="n">run</span><span class="p">()</span>
 
@@ -388,7 +393,7 @@ format.</p>
 </div>
 <div class="section" id="keyboard-input">
 <h2><span class="section-number">4.8. </span>Keyboard input<a class="headerlink" href="#keyboard-input" title="Permalink to this headline"></a></h2>
-<p>The alien moves when you press the cursor keys.</p>
+<p>Alan moves when you press the cursor keys.</p>
 <div class="literal-block-wrapper docutils container" id="code-keyboard-input">
 <div class="code-block-caption"><span class="caption-number">Program 4.6 </span><span class="caption-text">Keyboard input</span><a class="headerlink" href="#code-keyboard-input" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -408,18 +413,18 @@ format.</p>
 15
 16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien&#39;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">alan</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien.png&#39;</span><span class="p">)</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">clear</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
     <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
 
 <span class="n">run</span><span class="p">()</span>
 </pre></div>
@@ -427,7 +432,7 @@ format.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>
-<p>Make the alien move up and down as well as left and right.</p>
+<p>Make Alan move up and down as well as left and right.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>

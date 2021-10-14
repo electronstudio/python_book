@@ -24,7 +24,7 @@ window. Click **third party packages**. Type
 
 ::
 
-   rlzero
+   rlzero>=0.2<0.3
 
 into the box. Click **OK**. The library will download.
 
@@ -33,7 +33,7 @@ command line like this:
 
 ::
 
-   pip3 install rlzero
+    python3 -m pip install 'rlzero>=0.2<0.3'
 
 RLZero and Raylib
 -----------------
@@ -59,7 +59,8 @@ you understand co-ordinates before moving on because everything we do in
 Pygame Zero will use it. (In maths this called a ‘Cartesian coordinate
 system’).
 
-Now type in :numref:`code-pixels` and run it, to see a pixel.
+Now type in :numref:`code-pixels` and run it, to see a pixel.  It's very small,
+so look carefully!
 
 .. literalinclude:: programs/pixels.py
    :caption: A pixel
@@ -130,6 +131,11 @@ RLZero has one such image built-in,
 ``alien.png``.  If you want to use other images you must create them
 and place the files in the same directory as your program.
 
+We are going to store the sprite in a variable so we can refer to it again
+when we want to draw it.  We have called this variable *alan*.  We could
+create more sprites using the same image, but we would have to use
+different variable names.
+
 You could use Microsoft Paint which comes with Windows but I recommend
 you download and install `Krita <https://krita.org>`__.
 
@@ -175,7 +181,7 @@ format.
 Keyboard input
 --------------
 
-The alien moves when you press the cursor keys.
+Alan moves when you press the cursor keys.
 
 .. literalinclude:: programs/13_keyboard_input.py
    :caption: Keyboard input
@@ -186,7 +192,7 @@ The alien moves when you press the cursor keys.
 
 .. topic:: Exercise
 
-   Make the alien move up and down as well as left and right.
+   Make Alan move up and down as well as left and right.
 
 
 .. topic:: Exercise

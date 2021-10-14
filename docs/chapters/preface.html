@@ -47,7 +47,7 @@
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_graphics.html">5. Improving your games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_games.html">6. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fractals.html">7. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
         </div>
@@ -79,23 +79,30 @@
 to teach Python programming. The primary goal of the class is to teach
 programming using action games to make learning more interesting. Some
 of the examples are entirely focused on introducing new language
-concepts or showing how the Pygame Zero API works, but most are a
+concepts or showing how the Raylib API works, but most are a
 mixture of both.</p>
 <p>The intention is that each program in the example chapters is <em>brief,
 complete</em> and <em>introduces only one or two new concepts</em>.</p>
 <ul class="simple">
-<li><p>The programs are short so that students can feasibly type them in
+<li><p>The programs are <em>short</em> so that students can feasibly type them in
 during the class. Typing for themselves is very valuable for
 beginners, because it helps them learn to type, and to type precisely
 without mistakes (which show up as syntax errors). Even if it takes
 them a while, they should feel proud when they type a program
 correctly in the end! <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p></li>
-<li><p>Each program is complete to avoid the confusion caused by worksheets
+<li><p>No-one actually knows how best to teach coding, so there are a variety
+of approaches, but some studies have shown students enjoy doing
+purely syntactic practises, and those who do them go on to do better
+when learning semantics.</p></li>
+<li><p>Initially, each program is <em>complete</em> to avoid the confusion caused by worksheets
 that tell a student to add lines to a program piecemeal. If they make
 an error or omit a step they may never recover and not produce a
-working program. Also being <em>complete</em> and <em>separate</em> means the whole
+working program. Also being complete and <em>separate</em> means the whole
 class can be told to skip to the same program and it won’t matter so
-much that some of them didn’t complete all the prior programs.</p></li>
+much that some of them didn’t complete all the prior programs.  The more advanced
+chapters
+do use the piecemeal approach but always include a complete listing of
+the end result.</p></li>
 <li><p>Introducing ideas one or two at a time allows the students to learn
 mostly through <em>doing</em> and observing the output of each program
 rather than memorizing. To this end the <em>order</em> of the programs
@@ -105,6 +112,10 @@ chapters. If the text quizzes or the Python fundamentals are boring
 the students, skip ahead to the graphical games, then come back to
 the earlier examples when necessary.</p></li>
 </ul>
+<p>This is a practical approach, and so the programs are the core of it.  In the first
+edition they were all of it.  In this edition explanatory text has been added,
+but for those who don’t the patience to read, this is can be skipped.  The
+code cannot.</p>
 <p>Following each program are some ideas for how students can modify the
 program. Hopefully they will go further and modify these programs into
 their own unique games! The difficulty of these suggestions varies, to
@@ -135,6 +146,17 @@ accomplishment as each subsequent modifcation improves the game, and
 also to allow lots of scope for student creativity and customisation.</p>
 <p>As noted above, tutorials can become confusing, but I hope the class
 instructors can resolve any issues.</p>
+<p class="rubric">The third edition</p>
+<p>The library used in this book has been switched from Pygame to Raylib.
+The initial motivation for this was to allow the addition of 3d graphics, which
+are the main new addition to the book.</p>
+<p>But there are other advantages.  It turns out
+that the ‘zero boilerplate’ approach, in the sense of making the program as
+short as it can possibly be, is not actually most
+conducive to learning.  Sometimes being explicit rather than implicit is good.</p>
+<p>So the Raylib programs are usually a couple of lines longer, but they expose
+the student to more of what is going on in the computer and I hope provide
+an easier transition into using a ‘real’ API, without being dependent on training wheels.</p>
 <dl class="footnote brackets">
 <dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>For writing essays nowadays people can use voice input and

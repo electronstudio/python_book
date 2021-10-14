@@ -55,7 +55,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="more_games.html">6. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fractals.html">7. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
         </div>
@@ -112,18 +112,18 @@ controllers connected by USB cable seems to work best.</p>
 16
 17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien&#39;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">alan</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien.png&#39;</span><span class="p">)</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">clear</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span> <span class="ow">or</span> <span class="n">gamepad</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
     <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span> <span class="ow">or</span> <span class="n">gamepad</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
 
 <span class="n">run</span><span class="p">()</span>
 
@@ -203,7 +203,7 @@ mix together.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Advanced</p>
-<p>Make random colours.</p>
+<p>Make random colours.  (see <a class="reference internal" href="text_quizes.html#codemaths"><span class="std std-numref">Program 3.4</span></a>).</p>
 </div>
 </div>
 <div class="section" id="using-loops">
@@ -254,7 +254,7 @@ graphical games too! Here we draw red circles using a <em>for loop</em>.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Advanced</p>
-<p>Learn about RGB colour and make random colours (see <a class="reference internal" href="#code-colours"><span class="std std-numref">Program 5.2</span></a>).</p>
+<p>Learn about <a class="reference external" href="https://en.wikipedia.org/wiki/RGB_color_model">RGB colour</a> and make random colours (see <a class="reference internal" href="#code-colours"><span class="std std-numref">Program 5.2</span></a>).</p>
 </div>
 <div class="topic">
 <p class="topic-title">Advanced</p>
@@ -346,7 +346,7 @@ same way.</p>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">clear</span><span class="p">()</span>
-    <span class="n">pr</span><span class="o">.</span><span class="n">draw_text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Player 1 score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
+    <span class="n">draw_text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Player 1 score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
 
 <span class="c1"># This is another special function that is called by RLzero automatically</span>
 <span class="c1"># each time a key is pressed. That way player cannot just hold down the key!</span>
@@ -375,6 +375,9 @@ same way.</p>
 </div>
 <div class="section" id="animation">
 <h2><span class="section-number">5.6. </span>Animation<a class="headerlink" href="#animation" title="Permalink to this headline"></a></h2>
+<p><em>Animation</em> is a RLZero class that makes it easy to show a sequence of different
+images on the same Sprite.  You need to give it the image file names and the number
+of frames-per-second you want.</p>
 <div class="literal-block-wrapper docutils container" id="codeanimation">
 <div class="code-block-caption"><span class="caption-number">Program 5.6 </span><span class="caption-text">Animation</span><a class="headerlink" href="#codeanimation" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -401,8 +404,8 @@ same way.</p>
 
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
-<span class="n">animation</span> <span class="o">=</span> <span class="n">Animation</span><span class="p">([</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span><span class="s2">&quot;alien_hurt&quot;</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien.png&quot;</span><span class="p">)</span>
+<span class="n">animation</span> <span class="o">=</span> <span class="n">Animation</span><span class="p">([</span><span class="s2">&quot;alien.png&quot;</span><span class="p">,</span><span class="s2">&quot;alien_hurt.png&quot;</span><span class="p">],</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 
 
@@ -420,6 +423,11 @@ same way.</p>
 <span class="n">run</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></div>
+</div>
+<div class="topic">
+<p class="topic-title">Exercise</p>
+<p>Draw three images of a man walking and save them as <em>man1.png</em>, <em>man2.png</em>, <em>man3.png</em>.
+Edit the program so it animates these images.</p>
 </div>
 </div>
 </div>

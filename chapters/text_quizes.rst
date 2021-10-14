@@ -73,7 +73,7 @@ A random maths question
 
 .. literalinclude:: programs/04_maths_question.py
    :caption: A random maths question
-   :name: code-maths
+   :name: codemaths
    :linenos:
 
 
@@ -135,7 +135,7 @@ that everything in the loop is indented.
 Improved guessing game
 ----------------------
 
-:numref:`code-loop` with a hint whether the guess is
+:numref:`codeloop` with a hint whether the guess is
 greater or lesser than the answer.
 
 .. literalinclude:: programs/07_loop2.py

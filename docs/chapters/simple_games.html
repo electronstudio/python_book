@@ -45,7 +45,7 @@
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_graphics.html">5. Improving your games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_games.html">6. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fractals.html">7. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
         </div>
@@ -114,24 +114,24 @@ sprite. Most of this code is copied from
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien&#39;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">alan</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s1">&#39;alien.png&#39;</span><span class="p">)</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">box</span> <span class="o">=</span> <span class="n">screen</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">clear</span><span class="p">()</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw_rectangle_rec</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
     <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
     <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
     <span class="k">if</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
         <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">box</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">alan</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">box</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hit&quot;</span><span class="p">)</span>
 
 
@@ -210,23 +210,23 @@ collect. When he does it disappears and moves to a new location.</p>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">500</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">alan</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien.png&quot;</span><span class="p">)</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">box</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">clear</span><span class="p">()</span>
     <span class="n">draw_rectangle_rec</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">score</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
     <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">box</span><span class="p">):</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">alan</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">box</span><span class="p">):</span>
         <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
         <span class="n">box</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)</span>
         <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span>
@@ -312,28 +312,28 @@ automatically when the player click the mouse.</p></li>
 28
 29</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">alan</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien.png&quot;</span><span class="p">)</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">eep</span> <span class="o">=</span> <span class="n">Sound</span><span class="p">(</span><span class="s2">&quot;eep&quot;</span><span class="p">)</span>
 
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">clear</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">draw_text</span><span class="p">(</span><span class="s2">&quot;Score &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
     <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="s1">&#39;alien&#39;</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">alan</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="s1">&#39;alien.png&#39;</span>
 
 <span class="k">def</span> <span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">button</span><span class="p">):</span>
     <span class="k">global</span> <span class="n">score</span>
-    <span class="k">if</span> <span class="n">button</span> <span class="o">==</span> <span class="n">MOUSE_MIDDLE_BUTTON</span> <span class="ow">and</span> <span class="n">alien</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="s1">&#39;alien_hurt&#39;</span>
+    <span class="k">if</span> <span class="n">button</span> <span class="o">==</span> <span class="n">MOUSE_LEFT_BUTTON</span> <span class="ow">and</span> <span class="n">alan</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+        <span class="n">alan</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="s1">&#39;alien_hurt.png&#39;</span>
         <span class="n">eep</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
         <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span>
 
@@ -364,14 +364,14 @@ automatically when the player click the mouse.</p></li>
 
 <span class="c1"># wiggle your mouse around the screen!</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
+<span class="n">alan</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien.png&quot;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">clear</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">on_mouse_move</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">pos</span>
+    <span class="n">alan</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">pos</span>
 
 <span class="n">run</span><span class="p">()</span>
 </pre></div>

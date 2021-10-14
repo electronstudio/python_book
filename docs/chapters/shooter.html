@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3. Tutorial: Shooting game &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>9. Tutorial: Shooting game &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -45,7 +45,7 @@
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_graphics.html">5. Improving your games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_games.html">6. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fractals.html">7. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
 </ul>
 
         </div>
@@ -62,7 +62,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">3. </span>Tutorial: Shooting game</li>
+      <li><span class="section-number">9. </span>Tutorial: Shooting game</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/shooter.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -73,11 +73,11 @@
            <div itemprop="articleBody">
              
   <div class="section" id="tutorial-shooting-game">
-<h1><span class="section-number">3. </span>Tutorial: Shooting game<a class="headerlink" href="#tutorial-shooting-game" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">9. </span>Tutorial: Shooting game<a class="headerlink" href="#tutorial-shooting-game" title="Permalink to this headline"></a></h1>
 <p>In this chapter we will build a shooting game together, step by step.
 The Python we will use is: conditionals, loops, lists and functions.</p>
 <div class="section" id="step-1-decide-what-actors-you-will-need">
-<h2><span class="section-number">3.1. </span>Step 1: Decide what Actors you will need<a class="headerlink" href="#step-1-decide-what-actors-you-will-need" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.1. </span>Step 1: Decide what Actors you will need<a class="headerlink" href="#step-1-decide-what-actors-you-will-need" title="Permalink to this headline"></a></h2>
 <p>Our game will need these Actors, so <strong>we must create images for all of
 them and save them</strong> as <code class="docutils literal notranslate"><span class="pre">.png</span></code> files in the <code class="docutils literal notranslate"><span class="pre">images</span></code> folder.</p>
 <table class="docutils align-default">
@@ -156,7 +156,7 @@ will be appended to the lists later.</p>
 </div>
 </div>
 <div class="section" id="step-2-draw-your-actors">
-<h2><span class="section-number">3.2. </span>Step 2: Draw your Actors<a class="headerlink" href="#step-2-draw-your-actors" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.2. </span>Step 2: Draw your Actors<a class="headerlink" href="#step-2-draw-your-actors" title="Permalink to this headline"></a></h2>
 <p>Every Pygame game needs an <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function, and it should draw all
 the Actors we created above.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17b">
@@ -189,7 +189,7 @@ the Actors we created above.</p>
 </div>
 </div>
 <div class="section" id="step-3-move-your-actors">
-<h2><span class="section-number">3.3. </span>Step 3: Move your Actors<a class="headerlink" href="#step-3-move-your-actors" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.3. </span>Step 3: Move your Actors<a class="headerlink" href="#step-3-move-your-actors" title="Permalink to this headline"></a></h2>
 <p>Every Pygame game needs an <code class="docutils literal notranslate"><span class="pre">update()</span></code> function to move the Actors,
 check for collisions, etc.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17c">
@@ -218,7 +218,7 @@ check for collisions, etc.</p>
 </div>
 </div>
 <div class="section" id="step-4-define-your-functions">
-<h2><span class="section-number">3.4. </span>Step 4: Define your functions<a class="headerlink" href="#step-4-define-your-functions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.4. </span>Step 4: Define your functions<a class="headerlink" href="#step-4-define-your-functions" title="Permalink to this headline"></a></h2>
 <p>Python cannot call a function that has not yet been defined. Therefore
 we must at least provide empty, dummy versions of our functions that
 don’t do anything so we can fill them in later. However Python cannot
@@ -277,7 +277,7 @@ anything.</p>
 </div>
 </div>
 <div class="section" id="create-enemies">
-<h2><span class="section-number">3.5. </span>Create enemies<a class="headerlink" href="#create-enemies" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.5. </span>Create enemies<a class="headerlink" href="#create-enemies" title="Permalink to this headline"></a></h2>
 <p>Add this new function to the end of the program, and then call it
 immediately. It uses a loop within a loop to create enemy Actors and put
 them in the <code class="docutils literal notranslate"><span class="pre">enemies</span></code> list. The reason we put this in a function is we
@@ -295,7 +295,7 @@ will need to call it again at the start of each level.</p>
 </div>
 </div>
 <div class="section" id="move-the-player">
-<h2><span class="section-number">3.6. </span>Move the player<a class="headerlink" href="#move-the-player" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.6. </span>Move the player<a class="headerlink" href="#move-the-player" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">move_player()</span></code> dummy function definition with this.
 Remember <strong>there can only be one function with a given name</strong>. <em>There
 cannot be two ``move_player()`` function definitions.</em></p>
@@ -312,7 +312,7 @@ cannot be two ``move_player()`` function definitions.</em></p>
 </div>
 </div>
 <div class="section" id="move-the-enemies">
-<h2><span class="section-number">3.7. </span>Move the enemies<a class="headerlink" href="#move-the-enemies" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.7. </span>Move the enemies<a class="headerlink" href="#move-the-enemies" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">move_enemies()</span></code> dummy function definition with this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">move_enemies</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">score</span>
@@ -332,7 +332,7 @@ cannot be two ``move_player()`` function definitions.</em></p>
 </div>
 </div>
 <div class="section" id="draw-text-on-the-screen">
-<h2><span class="section-number">3.8. </span>Draw text on the screen<a class="headerlink" href="#draw-text-on-the-screen" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.8. </span>Draw text on the screen<a class="headerlink" href="#draw-text-on-the-screen" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">draw_text()</span></code> dummy function definition with this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_text</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;Level &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">level</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
@@ -342,7 +342,7 @@ cannot be two ``move_player()`` function definitions.</em></p>
 </div>
 </div>
 <div class="section" id="player-bullets">
-<h2><span class="section-number">3.9. </span>Player bullets<a class="headerlink" href="#player-bullets" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.9. </span>Player bullets<a class="headerlink" href="#player-bullets" title="Permalink to this headline"></a></h2>
 <p>Add this new function to the end of the program. Pygame will call it for
 us automatically when a key is pressed.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_key_down</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
@@ -361,7 +361,7 @@ us automatically when a key is pressed.</p>
 </div>
 </div>
 <div class="section" id="enemy-bombs">
-<h2><span class="section-number">3.10. </span>Enemy bombs<a class="headerlink" href="#enemy-bombs" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.10. </span>Enemy bombs<a class="headerlink" href="#enemy-bombs" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">create_bombs()</span></code> dummy function definition with this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_bombs</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">level</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -384,7 +384,7 @@ us automatically when a key is pressed.</p>
 </div>
 </div>
 <div class="section" id="check-for-end-of-level">
-<h2><span class="section-number">3.11. </span>Check for end of level<a class="headerlink" href="#check-for-end-of-level" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.11. </span>Check for end of level<a class="headerlink" href="#check-for-end-of-level" title="Permalink to this headline"></a></h2>
 <p>Replace the <code class="docutils literal notranslate"><span class="pre">check_for_end_of_level()</span></code> dummy function definition with
 this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_for_end_of_level</span><span class="p">():</span>
@@ -396,7 +396,7 @@ this:</p>
 </div>
 </div>
 <div class="section" id="ideas-for-extension">
-<h2><span class="section-number">3.12. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">9.12. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Draw an explosion image and create an explosion Actor every time an
 alien dies.</p></li>

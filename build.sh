@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cp ../rlzero/examples/chase_game/*.py chapters/programs/
 cp ../rlzero/examples/*.py chapters/programs
 make latexpdf

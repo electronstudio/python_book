@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7. Tutorial: Fractals &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>11. Tutorial: Fractals &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -46,14 +46,14 @@
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_graphics.html">5. Improving your games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_games.html">6. More advanced games</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Tutorial: Fractals</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#mandelbrot-set">7.1. Mandelbrot set</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#shades-of-grey">7.2. Shades of Grey</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#colours">7.3. Colours</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#zooming-in">7.4. Zooming in</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#performance">7.5. Performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#quality-setting">7.6. Quality setting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#further-improvements">7.7. Further improvements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Tutorial: Fractals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mandelbrot-set">11.1. Mandelbrot set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shades-of-grey">11.2. Shades of Grey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#colours">11.3. Colours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zooming-in">11.4. Zooming in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#performance">11.5. Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quality-setting">11.6. Quality setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#further-improvements">11.7. Further improvements</a></li>
 </ul>
 </li>
 </ul>
@@ -72,7 +72,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">7. </span>Tutorial: Fractals</li>
+      <li><span class="section-number">11. </span>Tutorial: Fractals</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/fractals.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -83,7 +83,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="tutorial-fractals">
-<h1><span class="section-number">7. </span>Tutorial: Fractals<a class="headerlink" href="#tutorial-fractals" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">11. </span>Tutorial: Fractals<a class="headerlink" href="#tutorial-fractals" title="Permalink to this headline"></a></h1>
 <blockquote class="epigraph">
 <div><p>In mathematics, a fractal is a subset of Euclidean space with a fractal dimension that strictly exceeds its topological dimension.</p>
 <p class="attribution">—Wikipedia</p>
@@ -103,7 +103,7 @@ clouds, seashells, hurricanes, etc.</p>
 </ul>
 <p>We are going to write a program to draw one fractal in particular, the Mandelbrot set.</p>
 <div class="section" id="mandelbrot-set">
-<h2><span class="section-number">7.1. </span>Mandelbrot set<a class="headerlink" href="#mandelbrot-set" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.1. </span>Mandelbrot set<a class="headerlink" href="#mandelbrot-set" title="Permalink to this headline"></a></h2>
 <p>We are going to skip through the maths so we can get straight to coding, but if you would like to understand complex numbers,
 <a class="reference external" href="https://youtu.be/NGMRB4O922I">watch this video</a> or ask your maths teacher.</p>
 <p>Every complex number is either <em>in</em> the Mandelbrot set, or <em>out</em> of the Mandelbrot set.  To decide which it is, we
@@ -144,7 +144,7 @@ pixel or a white pixel.</p>
 </div>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/Mandelset_hires.png"><img alt="Complex plaine" src="../_images/Mandelset_hires.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Complex plain</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p class="caption"><span class="caption-number">Fig. 11.1 </span><span class="caption-text">Complex plain</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </div>
 <p>A Mandlebrot is drawn in the <em>complex plain</em>.  This means that the axes are not labelled <em>x</em> and <em>y</em>.  Instead we call
 the horizontal axis <em>RE</em> (for ‘real’) and the vertical axis <em>IM</em> (for ‘imaginary’).  These terms come from the maths
@@ -159,7 +159,7 @@ of complex numbers.  So we define some constants to specify the left, right, top
 </div>
 <p>Here is the complete program to type in and run:</p>
 <div class="literal-block-wrapper docutils container" id="code-mandelbrot">
-<div class="code-block-caption"><span class="caption-number">Program 7.1 </span><span class="caption-text">Mandlebrot set</span><a class="headerlink" href="#code-mandelbrot" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 11.1 </span><span class="caption-text">Mandlebrot set</span><a class="headerlink" href="#code-mandelbrot" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -230,7 +230,7 @@ of complex numbers.  So we define some constants to specify the left, right, top
 </div>
 </div>
 <div class="section" id="shades-of-grey">
-<h2><span class="section-number">7.2. </span>Shades of Grey<a class="headerlink" href="#shades-of-grey" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.2. </span>Shades of Grey<a class="headerlink" href="#shades-of-grey" title="Permalink to this headline"></a></h2>
 <p>The reason we returned the number of iterations is that for a point <em>outside</em> of the Mandlebrot set, this number
 tells us how far outside it is.  So instead of just plotting black and white for <em>in</em> or <em>out</em> we can plot shades of grey.</p>
 <p>Here is the modified function that does this,</p>
@@ -248,7 +248,7 @@ tells us how far outside it is.  So instead of just plotting black and white for
 <p>Modify your <code class="docutils literal notranslate"><span class="pre">draw2d()</span></code> function and run.</p>
 </div>
 <div class="section" id="colours">
-<h2><span class="section-number">7.3. </span>Colours<a class="headerlink" href="#colours" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.3. </span>Colours<a class="headerlink" href="#colours" title="Permalink to this headline"></a></h2>
 <p>In the previous function we created an <em>RGB</em> <code class="docutils literal notranslate"><span class="pre">color</span></code> where the red, green and blue values were the all same, i.e. a shade of grey.</p>
 <p><em>RGB</em> is the most common colour space, but it is not only one.  The <em>HSV</em> colour space is useful because one single value, the <em>hue</em>,
 can be changed to produce completely different colours.</p>
@@ -268,12 +268,12 @@ can be changed to produce completely different colours.</p>
 <p>Modify your <code class="docutils literal notranslate"><span class="pre">draw2d()</span></code> function and run.</p>
 </div>
 <div class="section" id="zooming-in">
-<h2><span class="section-number">7.4. </span>Zooming in<a class="headerlink" href="#zooming-in" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.4. </span>Zooming in<a class="headerlink" href="#zooming-in" title="Permalink to this headline"></a></h2>
 <p>Lets introduce a new variable, <em>zoom</em>.  We will multiply our co-ordinates by this factor to enable zooming.</p>
 <p>We will also add an <code class="docutils literal notranslate"><span class="pre">update</span></code> function.  This is called automatically and will handle input.  You can now
 hold down the space and enter to zoom in and out, and hold the cursor keys to move around.</p>
 <div class="literal-block-wrapper docutils container" id="code-mandelbrot2">
-<div class="code-block-caption"><span class="caption-number">Program 7.2 </span><span class="caption-text">Mandlebrot set with colour and zooming</span><a class="headerlink" href="#code-mandelbrot2" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 11.2 </span><span class="caption-text">Mandlebrot set with colour and zooming</span><a class="headerlink" href="#code-mandelbrot2" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -391,7 +391,7 @@ hold down the space and enter to zoom in and out, and hold the cursor keys to mo
 </div>
 </div>
 <div class="section" id="performance">
-<h2><span class="section-number">7.5. </span>Performance<a class="headerlink" href="#performance" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.5. </span>Performance<a class="headerlink" href="#performance" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">draw2d()</span></code> function is called automatically, up to 60 times per second, and every time it is called we plot
 a new fractal.  This is very inefficient, because we are re-plotting the fractal even when it has not changed at all.</p>
 <p>So, we will move the plotting code into a new function.  Instead of plotting directly to the screen, we will create
@@ -453,7 +453,7 @@ is much faster than re-plotting the whole thing.</p>
 </pre></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-mandelbrot3">
-<div class="code-block-caption"><span class="caption-number">Program 7.3 </span><span class="caption-text">Mandlebrot set with improved performance</span><a class="headerlink" href="#code-mandelbrot3" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 11.3 </span><span class="caption-text">Mandlebrot set with improved performance</span><a class="headerlink" href="#code-mandelbrot3" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -604,7 +604,7 @@ is much faster than re-plotting the whole thing.</p>
 </div>
 </div>
 <div class="section" id="quality-setting">
-<h2><span class="section-number">7.6. </span>Quality setting<a class="headerlink" href="#quality-setting" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.6. </span>Quality setting<a class="headerlink" href="#quality-setting" title="Permalink to this headline"></a></h2>
 <p>It would be nice if we could make the window bigger so we can see the fractal more easily, but depending on the speed
 of your computer you may already find even the small window is very slow.</p>
 <p>A simple way of speeding it up is to plot the image at a lower resolution and scale it up to full size when we
@@ -632,7 +632,7 @@ draw the texture to the screen.</p>
 <p>Run the program and experiment with different <code class="docutils literal notranslate"><span class="pre">SCALE</span></code> values.</p>
 </div>
 <div class="section" id="further-improvements">
-<h2><span class="section-number">7.7. </span>Further improvements<a class="headerlink" href="#further-improvements" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">11.7. </span>Further improvements<a class="headerlink" href="#further-improvements" title="Permalink to this headline"></a></h2>
 <p>If you have ever used a fractal viewer program before, you will probably notice that it is faster than the simple one we have written.
 How could we make ours faster?</p>
 <ul class="simple">
