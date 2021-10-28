@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>13. Python in Minecraft &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>14. Python in Minecraft &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -16,7 +16,8 @@
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="13. Advanced topics" href="advanced.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -38,14 +39,46 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview of Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fundamentals.html">2. Python Fundamentals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text_quizes.html">3. Text-based quiz games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphics.html">4. Drawing graphics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">5. Improving your games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="more_games.html">6. More advanced games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fractals.html">11. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_games.html">5. Arcade games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_graphics.html">6. Improving your games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more_games.html">7. More advanced games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chase.html">8. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maze.html">9. Tutorial: Maze game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shooter.html">10. Tutorial: Shooting game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="race.html">11. Tutorial: Race game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fractals.html">12. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">13. Advanced topics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">14. Python in Minecraft</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setup">14.1. Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup-java">14.1.1. Setup Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-server">14.1.2. Setup Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-minecraft">14.1.3. Setup Minecraft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-mu">14.1.4. Setup Mu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">14.1.5. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hello-minecraft">14.2. Hello Minecraft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coordinates">14.3. Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changing-the-players-position">14.4. Changing the player’s position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-a-teleporter">14.5. Build a teleporter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teleport-player-into-the-air">14.6. Teleport player into the air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teleport-jump">14.7. Teleport jump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-block">14.8. Create a block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types-of-block">14.9. Types of block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-block-inside-a-loop">14.10. Create a block inside a loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-tower-of-blocks">14.11. Create a tower of blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clear-space">14.12. Clear space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-a-house">14.13. Build a house</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-a-street-of-houses">14.14. Build a street of houses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chat-commands">14.15. Chat commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#turtle">14.16. Turtle</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -62,7 +95,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">13. </span>Python in Minecraft</li>
+      <li><span class="section-number">14. </span>Python in Minecraft</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/chapters/minecraft.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -73,7 +106,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="python-in-minecraft">
-<h1><span class="section-number">13. </span>Python in Minecraft<a class="headerlink" href="#python-in-minecraft" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">14. </span>Python in Minecraft<a class="headerlink" href="#python-in-minecraft" title="Permalink to this headline"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Minecraft Python library is made by David Whale and Martin O’Hanlon.
@@ -81,20 +114,20 @@ I highly recommend their book <em>Adventures in Minecraft</em> which contains a
 great deal more programs.</p>
 </div>
 <div class="section" id="setup">
-<h2><span class="section-number">13.1. </span>Setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.1. </span>Setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h2>
 <p>You will need to own Minecraft <a class="reference external" href="https://www.minecraft.net/en-us/store/minecraft-java-edition">Java Edition</a> (not Bedrock edition).</p>
 <p>If you already have a Mojang or Microsoft account, go to the Minecraft website and click login. If you haven’t
 accessed it for years you may need to reset your password. If you
 already own Minecraft it will then tell you. If you don’t have an
 account, create one, and buy Minecraft Java Edition.</p>
 <div class="section" id="setup-java">
-<h3><span class="section-number">13.1.1. </span>Setup Java<a class="headerlink" href="#setup-java" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">14.1.1. </span>Setup Java<a class="headerlink" href="#setup-java" title="Permalink to this headline"></a></h3>
 <p>You will need to download and install Java from <a class="reference external" href="https://adoptopenjdk.net">adoptopenjdk.net</a>.</p>
 <p>I recommend the <em>latest</em> (currently <strong>OpenJDK 16</strong>) because it will be useful for other things, but if you have problems you
 can fall back to using <strong>OpenJDK 8</strong>.  Choose <strong>HotSpot</strong> and click the button to download.</p>
 </div>
 <div class="section" id="setup-server">
-<h3><span class="section-number">13.1.2. </span>Setup Server<a class="headerlink" href="#setup-server" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">14.1.2. </span>Setup Server<a class="headerlink" href="#setup-server" title="Permalink to this headline"></a></h3>
 <p>Download the <em>Adventures In Minecraft Starter Kit</em> from</p>
 <p><a class="reference external" href="https://adventuresinminecraft.github.io">https://adventuresinminecraft.github.io</a> and unpack it in a folder on
 your desktop. There are videos on the site that explain how to set it
@@ -133,7 +166,7 @@ want to quit, first type</p>
 </div>
 </div>
 <div class="section" id="setup-minecraft">
-<h3><span class="section-number">13.1.3. </span>Setup Minecraft<a class="headerlink" href="#setup-minecraft" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">14.1.3. </span>Setup Minecraft<a class="headerlink" href="#setup-minecraft" title="Permalink to this headline"></a></h3>
 <p>Run the Minecraft launcher you downloaded from minecraft.net. We will
 not be using the default which is the latest version of Minecraft.
 Instead we will be using <strong>version 1.12</strong>.</p>
@@ -147,7 +180,7 @@ server address as</p>
 <p>Click ‘done’. Click on your server to connect to it.</p>
 </div>
 <div class="section" id="setup-mu">
-<h3><span class="section-number">13.1.4. </span>Setup Mu<a class="headerlink" href="#setup-mu" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">14.1.4. </span>Setup Mu<a class="headerlink" href="#setup-mu" title="Permalink to this headline"></a></h3>
 <p>Mu is the Python editor we have already been using, so you probably
 already have it installed. However you need to make sure you have the
 latest version. You can download it
@@ -165,7 +198,7 @@ command line like this:</p>
 </div>
 </div>
 <div class="section" id="summary">
-<h3><span class="section-number">13.1.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h3>
+<h3><span class="section-number">14.1.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/minecraft.png"><img alt="../_images/minecraft.png" class="align-center" src="../_images/minecraft.png" style="width: 50%;" /></a>
 <p>You need to have the Minecraft server, Minecraft (the client) and Mu all running at the same time.  It may be
 useful to arrange them in separate windows.  Your Python program will talk to the server, and Minecraft will also talk to the server,
@@ -173,11 +206,11 @@ allowing you to see the results of your program in Mincraft.</p>
 </div>
 </div>
 <div class="section" id="hello-minecraft">
-<h2><span class="section-number">13.2. </span>Hello Minecraft<a class="headerlink" href="#hello-minecraft" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.2. </span>Hello Minecraft<a class="headerlink" href="#hello-minecraft" title="Permalink to this headline"></a></h2>
 <p>This program tests you have a connection to the Minecraft server and
 displays a message on the client.</p>
 <div class="literal-block-wrapper docutils container" id="code-hellominecraft">
-<div class="code-block-caption"><span class="caption-text">Hello, Minecraft</span><a class="headerlink" href="#code-hellominecraft" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.1 </span><span class="caption-text">Hello, Minecraft</span><a class="headerlink" href="#code-hellominecraft" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mcpi.minecraft</span> <span class="kn">import</span> <span class="o">*</span>
@@ -188,10 +221,10 @@ displays a message on the client.</p>
 </div>
 </div>
 <div class="section" id="coordinates">
-<h2><span class="section-number">13.3. </span>Coordinates<a class="headerlink" href="#coordinates" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.3. </span>Coordinates<a class="headerlink" href="#coordinates" title="Permalink to this headline"></a></h2>
 <p>This program gets the player’s co-ordinates and prints them to the chat.</p>
 <div class="literal-block-wrapper docutils container" id="code-minecoordinates">
-<div class="code-block-caption"><span class="caption-text">Getting player coordinates</span><a class="headerlink" href="#code-minecoordinates" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.2 </span><span class="caption-text">Getting player coordinates</span><a class="headerlink" href="#code-minecoordinates" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -216,13 +249,13 @@ displays a message on the client.</p>
 </div>
 </div>
 <div class="section" id="changing-the-players-position">
-<h2><span class="section-number">13.4. </span>Changing the player’s position<a class="headerlink" href="#changing-the-players-position" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.4. </span>Changing the player’s position<a class="headerlink" href="#changing-the-players-position" title="Permalink to this headline"></a></h2>
 <p>Find the coordinates of a location in your world, either by pressing F3
 in the game, or running <code class="xref std std-numref docutils literal notranslate"><span class="pre">code-minecoordinates</span></code>
 Enter these coordinates in this program and run it to teleport to that
 location.</p>
 <div class="literal-block-wrapper docutils container" id="code-telport">
-<div class="code-block-caption"><span class="caption-text">Changing the player’s position</span><a class="headerlink" href="#code-telport" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.3 </span><span class="caption-text">Changing the player’s position</span><a class="headerlink" href="#code-telport" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -247,11 +280,11 @@ location.</p>
 </div>
 </div>
 <div class="section" id="build-a-teleporter">
-<h2><span class="section-number">13.5. </span>Build a teleporter<a class="headerlink" href="#build-a-teleporter" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.5. </span>Build a teleporter<a class="headerlink" href="#build-a-teleporter" title="Permalink to this headline"></a></h2>
 <p>Before you run this program, build two tiles in the game to be your
 teleporters and write down their co-ordinates.</p>
 <div class="literal-block-wrapper docutils container" id="code-telport2">
-<div class="code-block-caption"><span class="caption-text">Teleporter</span><a class="headerlink" href="#code-telport2" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.4 </span><span class="caption-text">Teleporter</span><a class="headerlink" href="#code-telport2" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -310,9 +343,9 @@ teleporters and write down their co-ordinates.</p>
 </div>
 </div>
 <div class="section" id="teleport-player-into-the-air">
-<h2><span class="section-number">13.6. </span>Teleport player into the air<a class="headerlink" href="#teleport-player-into-the-air" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.6. </span>Teleport player into the air<a class="headerlink" href="#teleport-player-into-the-air" title="Permalink to this headline"></a></h2>
 <div class="literal-block-wrapper docutils container" id="code-telport3">
-<div class="code-block-caption"><span class="caption-text">Teleport player into the air</span><a class="headerlink" href="#code-telport3" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.5 </span><span class="caption-text">Teleport player into the air</span><a class="headerlink" href="#code-telport3" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -357,11 +390,11 @@ teleporters and write down their co-ordinates.</p>
 </div>
 </div>
 <div class="section" id="teleport-jump">
-<h2><span class="section-number">13.7. </span>Teleport jump<a class="headerlink" href="#teleport-jump" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.7. </span>Teleport jump<a class="headerlink" href="#teleport-jump" title="Permalink to this headline"></a></h2>
 <p>This program does a series of teleports in quick succession to give the
 effect of a jump.</p>
 <div class="literal-block-wrapper docutils container" id="code-telport4">
-<div class="code-block-caption"><span class="caption-text">Teleport jump</span><a class="headerlink" href="#code-telport4" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.6 </span><span class="caption-text">Teleport jump</span><a class="headerlink" href="#code-telport4" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -434,12 +467,12 @@ effect of a jump.</p>
 </div>
 </div>
 <div class="section" id="create-a-block">
-<h2><span class="section-number">13.8. </span>Create a block<a class="headerlink" href="#create-a-block" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.8. </span>Create a block<a class="headerlink" href="#create-a-block" title="Permalink to this headline"></a></h2>
 <p>This program creates a block. Each type of block has it’s own number,
 but if we import <code class="docutils literal notranslate"><span class="pre">mcpi.block</span></code> we can use names instead remembering
 numbers.</p>
 <div class="literal-block-wrapper docutils container" id="code-create-block">
-<div class="code-block-caption"><span class="caption-text">Create a block</span><a class="headerlink" href="#code-create-block" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.7 </span><span class="caption-text">Create a block</span><a class="headerlink" href="#code-create-block" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -468,7 +501,7 @@ numbers.</p>
 </div>
 </div>
 <div class="section" id="types-of-block">
-<h2><span class="section-number">13.9. </span>Types of block<a class="headerlink" href="#types-of-block" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.9. </span>Types of block<a class="headerlink" href="#types-of-block" title="Permalink to this headline"></a></h2>
 <table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 33%" />
@@ -576,11 +609,11 @@ numbers.</p>
 </table>
 </div>
 <div class="section" id="create-a-block-inside-a-loop">
-<h2><span class="section-number">13.10. </span>Create a block inside a loop<a class="headerlink" href="#create-a-block-inside-a-loop" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.10. </span>Create a block inside a loop<a class="headerlink" href="#create-a-block-inside-a-loop" title="Permalink to this headline"></a></h2>
 <p>This program creates a block over and over again in a loop. Move around
 to see it.</p>
 <div class="literal-block-wrapper docutils container" id="code-create-block-loop">
-<div class="code-block-caption"><span class="caption-text">Block loop</span><a class="headerlink" href="#code-create-block-loop" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.8 </span><span class="caption-text">Block loop</span><a class="headerlink" href="#code-create-block-loop" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -617,10 +650,10 @@ to see it.</p>
 </div>
 </div>
 <div class="section" id="create-a-tower-of-blocks">
-<h2><span class="section-number">13.11. </span>Create a tower of blocks<a class="headerlink" href="#create-a-tower-of-blocks" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.11. </span>Create a tower of blocks<a class="headerlink" href="#create-a-tower-of-blocks" title="Permalink to this headline"></a></h2>
 <p>We will use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to easily build a tower of blocks.</p>
 <div class="literal-block-wrapper docutils container" id="code-e08-tower">
-<div class="code-block-caption"><span class="caption-text">Tower of blocks</span><a class="headerlink" href="#code-e08-tower" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.9 </span><span class="caption-text">Tower of blocks</span><a class="headerlink" href="#code-e08-tower" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -653,7 +686,7 @@ to see it.</p>
 </div>
 </div>
 <div class="section" id="clear-space">
-<h2><span class="section-number">13.12. </span>Clear space<a class="headerlink" href="#clear-space" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.12. </span>Clear space<a class="headerlink" href="#clear-space" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">setBlocks()</span></code> function lets us create a large cube of blocks. If
 we create blocks of type <code class="docutils literal notranslate"><span class="pre">AIR</span></code> this has the effect of removing all
 blocks! This is such a useful thing that we will need it in the future,
@@ -661,7 +694,7 @@ therefore in this program we put it in its own <em>function</em>. Make sure to s
 program as <code class="docutils literal notranslate"><span class="pre">clear_space.py</span></code> so you can <code class="docutils literal notranslate"><span class="pre">import</span></code> it into the next
 program.</p>
 <div class="literal-block-wrapper docutils container" id="code-e09-clear-space">
-<div class="code-block-caption"><span class="caption-text">Clear space</span><a class="headerlink" href="#code-e09-clear-space" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.10 </span><span class="caption-text">Clear space</span><a class="headerlink" href="#code-e09-clear-space" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -688,12 +721,12 @@ program.</p>
 </div>
 </div>
 <div class="section" id="build-a-house">
-<h2><span class="section-number">13.13. </span>Build a house<a class="headerlink" href="#build-a-house" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.13. </span>Build a house<a class="headerlink" href="#build-a-house" title="Permalink to this headline"></a></h2>
 <p>Make sure you have saved the previous <code class="xref std std-numref docutils literal notranslate"><span class="pre">code-e09_clear_space</span></code> to the same directory before you run
 this program because we are going to <code class="docutils literal notranslate"><span class="pre">import</span></code> the function from
 <code class="docutils literal notranslate"><span class="pre">clear_space.py</span></code>. Save this program as <code class="docutils literal notranslate"><span class="pre">house.py</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-e10-basic-house">
-<div class="code-block-caption"><span class="caption-text">A simple house</span><a class="headerlink" href="#code-e10-basic-house" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.11 </span><span class="caption-text">A simple house</span><a class="headerlink" href="#code-e10-basic-house" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -774,13 +807,13 @@ this program because we are going to <code class="docutils literal notranslate">
 </div>
 </div>
 <div class="section" id="build-a-street-of-houses">
-<h2><span class="section-number">13.14. </span>Build a street of houses<a class="headerlink" href="#build-a-street-of-houses" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.14. </span>Build a street of houses<a class="headerlink" href="#build-a-street-of-houses" title="Permalink to this headline"></a></h2>
 <p>Make sure you have saved the previous <code class="xref std std-numref docutils literal notranslate"><span class="pre">code-e10_basic_house</span></code>
 to the same directory before you run
 this program because we are going to <code class="docutils literal notranslate"><span class="pre">import</span></code> the function from
 <code class="docutils literal notranslate"><span class="pre">house.py</span></code>.</p>
 <div class="literal-block-wrapper docutils container" id="code-e11-street">
-<div class="code-block-caption"><span class="caption-text">A street of houses</span><a class="headerlink" href="#code-e11-street" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.12 </span><span class="caption-text">A street of houses</span><a class="headerlink" href="#code-e11-street" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -857,12 +890,12 @@ this program because we are going to <code class="docutils literal notranslate">
 </div>
 </div>
 <div class="section" id="chat-commands">
-<h2><span class="section-number">13.15. </span>Chat commands<a class="headerlink" href="#chat-commands" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.15. </span>Chat commands<a class="headerlink" href="#chat-commands" title="Permalink to this headline"></a></h2>
 <p>This program can read chat messages posted by players. It builds a block
 next to any player who says “build”. This is the first example that will
 work for more than one player.</p>
 <div class="literal-block-wrapper docutils container" id="code-e12-chat">
-<div class="code-block-caption"><span class="caption-text">Chat commands</span><a class="headerlink" href="#code-e12-chat" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.13 </span><span class="caption-text">Chat commands</span><a class="headerlink" href="#code-e12-chat" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -912,7 +945,7 @@ work for more than one player.</p>
 </div>
 </div>
 <div class="section" id="turtle">
-<h2><span class="section-number">13.16. </span>Turtle<a class="headerlink" href="#turtle" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">14.16. </span>Turtle<a class="headerlink" href="#turtle" title="Permalink to this headline"></a></h2>
 <p><em>This requires the</em> <strong>minecraftstuff</strong> <em>package to work.</em> You can install it
 in Mu by clicking in the bottom right gadget and adding
 <code class="docutils literal notranslate"><span class="pre">minecraftstuff</span></code> to list of third party packages</p>
@@ -920,7 +953,7 @@ in Mu by clicking in the bottom right gadget and adding
 done similar on the screen in Python or Scratch.  This is the same but
 in Minecraft.</p>
 <div class="literal-block-wrapper docutils container" id="code-e13-turtle">
-<div class="code-block-caption"><span class="caption-text">Turtle</span><a class="headerlink" href="#code-e13-turtle" title="Permalink to this code"></a></div>
+<div class="code-block-caption"><span class="caption-number">Program 14.14 </span><span class="caption-text">Turtle</span><a class="headerlink" href="#code-e13-turtle" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -973,7 +1006,9 @@ in Minecraft.</p>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="advanced.html" class="btn btn-neutral float-left" title="13. Advanced topics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

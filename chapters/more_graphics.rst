@@ -147,9 +147,11 @@ same way.
 Animation
 ----------------
 
-*Animation* is a RLZero class that makes it easy to show a sequence of different
-images on the same Sprite.  You need to give it the image file names and the number
-of frames-per-second you want.
+We did some animation ourselves in :numref:`code-collisions2`.
+
+*Animation* is a RLZero class that makes it easier to show a sequence of different
+images on the same Sprite.  You just need to give it the image file names and the number
+of frames-per-second you want and then call its update method.
 
 .. literalinclude:: programs/animation.py
    :caption: Animation

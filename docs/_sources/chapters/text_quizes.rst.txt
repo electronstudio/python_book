@@ -139,7 +139,7 @@ Improved guessing game
 greater or lesser than the answer.
 
 .. literalinclude:: programs/07_loop2.py
-   :caption: GImproved guessing game
+   :caption: Improved guessing game
    :name: code-loop2
    :linenos:
 

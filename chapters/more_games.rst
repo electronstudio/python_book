@@ -30,16 +30,52 @@ list. When the mouse is clicked we add a new alien to the list.
    add a new bullet to the list.
 
 
-Animation
----------
+Timed callbacks
+---------------
 
-Animation is another use for functions. (See
-:numref:`code-functions`) We define our own function
-and then ask Pygame to *call it back* every 0.2 seconds. Most of this
+So far we have been using certain functions as *callbacks*: ``update()``, ``draw()`` etc.  These are called automatically
+for us by RLZero every frame.  However, you can also create your own callbacks, and ask RLZero to call them back
+for you at a certain time.
+
+.. WARNING:: Using a large number of callbacks can be confusing for the programmer.  Especially you should avoid creating a callback
+   from inside a callback function.
+
+
+.. literalinclude:: programs/29_timer2.py
+   :caption: Callbacks
+   :name: code-timer2
+   :linenos:
+
+
+
+.. topic:: Exercise
+
+    Make the aliens appear more often.
+
+
+.. topic:: Advanced
+
+   Use ``len(aliens)`` to print how many aliens there are
+
+
+.. topic:: Advanced
+
+   When there are too many aliens, stop adding them using this code::
+
+      schedule_cancel(add_alien)
+
+
+
+
+Callbacks for animation
+-----------------------
+
+Instead of using the *Animation* class, in this program we define our own function for animation
+and then ask RLzero to *call it back* every 0.2 seconds. Most of this
 code is from :numref:`code-collisions`.
 
 .. literalinclude:: programs/22_animation.py
-   :caption: Animation
+   :caption: Animation via callbacks
    :name: code-animation
    :linenos:
 
@@ -114,7 +150,7 @@ Bat and ball game
 
 .. topic:: Advanced
 
-   Add bricks (Rects) that disappear when the ball hits them.
+   Add bricks (Rectangles) that disappear when the ball hits them.
 
 
 
@@ -122,13 +158,13 @@ Bat and ball game
 Timer
 -----
 
-The ``update()`` and ``draw()`` functions are called by Pygame many
+The ``update()`` and ``draw()`` functions are called by RLZero many
 times every second. Each time ``draw()`` is called we say it draws one
 *frame*. The exact number of frames per second is called the *framerate*
 and it will vary from one computer to another. Therefore counting frames
 is not the most reliable way of keeping time.
 
-Fortunately Pygame can tell us exactly how much many seconds have passed
+Fortunately RLZero can tell us exactly how much many seconds have passed
 since the last frame in a parameter to our update function. We use this
 *delta time* to keep a timer.
 
@@ -151,39 +187,7 @@ since the last frame in a parameter to our update function. We use this
 
 .. topic:: Advanced
 
-   Add a timer to :numref:`code-arrays` that deletes one of the aliens when the timer runs out, then starts the timer again.
+   Add a timer to :numref:`code-arrays2` that deletes one of the aliens when the timer runs out, then starts the timer again.
 
-
-
-
-Callbacks: another kind of timer
---------------------------------
-
-Pygame has its own clock which we can use by asking it to *callback* one
-of our functions at a certain time, or regularly over and over at an
-interval.
-
-.. literalinclude:: programs/29_timer2.py
-   :caption: Timer with callback functions
-   :name: code-timer2
-   :linenos:
-
-
-
-.. topic:: Exercise
-
-    Make the aliens appear more often.
-
-
-.. topic:: Advanced
-
-   Use ``len(aliens)`` to print how many aliens there are
-
-
-.. topic:: Advanced
-
-   When there are too many aliens, stop adding them using this code::
-
-      clock.unschedule(add_alien)
 
 

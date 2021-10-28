@@ -4,7 +4,7 @@ Arcade games
 Collisions
 ----------
 
-Arcade games need to know when one Actor sprite has hit another Actor
+Arcade games need to know when one sprite has hit another
 sprite. Most of this code is copied from
 :numref:`code-moving_boxes` and
 :numref:`code-keyboard_input`.
@@ -18,7 +18,7 @@ sprite. Most of this code is copied from
 
 .. topic:: Exercise
 
-   Add vertical movement (as you did in Exercise \ref{exercise:updown}).
+   Add vertical movement (as you did in Exercise :numref:`code-keyboard_input`).
 
 
 .. topic:: Advanced
@@ -43,7 +43,8 @@ New lines are highlighted. We have also changed what happens when the
 box catches the alien: the program now exits and you must run it again
 to play again. This may not be what you want in your game!
 
-.. literalinclude:: programs/15b_chase.py, options: "hl_lines": [18, 19, 20, 21, 22, 23]
+.. literalinclude:: programs/15b_chase.py
+   :emphasize-lines: 19-24
    :caption: Alien chase
    :name: code-chase
    :linenos:
@@ -52,7 +53,7 @@ to play again. This may not be what you want in your game!
 
 .. topic:: Exercise
 
-   Add vertical movement (as you did in Exercise \ref{exercise:updown}).
+   Add vertical movement (as you did in previous exercise).
 
 
 .. topic:: Advanced
@@ -77,36 +78,62 @@ collect. When he does it disappears and moves to a new location.
 
 .. topic:: Exercise
 
-   Add vertical movement (as you did in Exercise \ref{exercise:updown}).
+   Add vertical movement.
 
 
 
 
 .. topic:: Exercise
 
-   Draw a new powerup image.  Save it as `powerup.png` in your `mu_code/images` folder. Load it as an `Actor('powerup')` instead of the `Rect()`.
+   Draw a new powerup image.  Save it as ``powerup.png`` in the same folder as your program. Load it as a ``Sprite("powerup.png")`` instead of the ``Rectangle()``.
 
 
 .. topic:: Advanced
 
-   Combine this program with the enemy from  Program~\ref{code:chase} and the background from :numref:`code-background` and whatever else you want to make your own game.
+   Combine this program with the enemy from  Program :numref:`code-chase` and the background from :numref:`code-background` and whatever else you want to make your own game.
 
 
-
-
-Sound and animation
+Sounds
 -------------------
 
-Pygame Zero comes with one other image ``alien_hurt.png`` and one sound
-``eep.wav``. If you want more you will have to add them to the
-``sounds`` and ``images`` folders.
+RLZero comes one sound effect:
+``eep.wav``. If you want more you will have to create them (or download them)
+yourself and save them in the same folder as your program.
+
+This program plays a sound when you press space.
+
+.. literalinclude:: programs/16_sound.py
+   :caption: Sound
+   :name: code-sound
+   :linenos:
+
+
+
+.. topic:: Exercise
+
+   Download a ``.wav`` audio file and play it in the program.
+
+
+
+
+
+
+Simple animation
+-------------------
+
+This program changes the image of the Sprite to create a simple animation when he is hit.
+
+RLZero comes with the image file ``alien_hurt.png``.
+If you want more you will have to create them (or download them)
+yourself and save them in the same folder as your program.
 
 Most of this code is copied from
 :numref:`code-collisions`
 
-.. literalinclude:: programs/16_collisions2_sound_animation.py, options: "hl_lines": [21, 22, 23, 24]
+.. literalinclude:: programs/16_collisions2_sound_animation.py
+   :emphasize-lines: 22-26
    :caption: Sound and animation upon collision
-   :name: code-collisions2_sound_animation
+   :name: code-collisions2
    :linenos:
 
 
@@ -131,8 +158,8 @@ Most of this code is copied from
 Mouse clicks
 ------------
 
-This uses a *function call-back* for event-based input. It is similiar
-to :numref:`code-collisions2_sound_animation` but:
+This uses a *function call-back* for event-based input. It is similar
+to :numref:`code-collisions2` but:
 
 -  The box has been removed.
 -  There is an ``on_mouse_down()`` special function that is called
@@ -158,13 +185,6 @@ Mouse movement
    :name: code-mouse_movement
    :linenos:
 
-
-
-.. topic:: Exercise
-
-   What happens if you delete line 8 and replace it with this::
-
-        animate(alien, pos=pos, duration=1, tween='bounce_end')
 
 
 
