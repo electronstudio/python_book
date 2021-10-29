@@ -1,3 +1,4 @@
+from rlzero import *
 import random
 
 WIDTH = 600
@@ -8,14 +9,13 @@ level = 1
 lives = 3
 score = 0
 
-background = Actor("background")
-player = Actor("player", (200, 780))
+background = Sprite("background.png")
+player = Sprite("player.png", (200, 730))
 enemies = []
 bullets = []
 bombs = []
 
 def draw():
-    screen.clear()
     background.draw()
     player.draw()
     for enemy in enemies:
@@ -24,7 +24,7 @@ def draw():
         bullet.draw()
     for bomb in bombs:
         bomb.draw()
-    draw_text()
+    draw_gui()
 
 
 def update(delta):
@@ -55,7 +55,7 @@ def move_bullets():
 def create_bombs():
     if random.randint(0, 100 - level * 6) == 0:
         enemy = random.choice(enemies)
-        bomb = Actor("player", enemy.pos)
+        bomb = Sprite("player.png", enemy.pos)
         bombs.append(bomb)
 
 
@@ -75,7 +75,7 @@ def move_enemies():
         enemy.x = enemy.x + enemy.vx
         if enemy.x > WIDTH or enemy.x < 0:
             enemy.vx = -enemy.vx
-            animate(enemy, duration=0.1, y=enemy.y + 60)
+            enemy.y += 60
         for bullet in bullets:
             if bullet.colliderect(enemy):
                 enemies.remove(enemy)
@@ -90,23 +90,25 @@ def check_for_end_of_level():
         level = level + 1
         create_enemies()
 
-def draw_text():
-    screen.draw.text("Level " + str(level), (0, 0), color="red")
-    screen.draw.text("Score " + str(score), (100, 0), color="red")
-    screen.draw.text("Lives " + str(lives), (200, 0), color="red")
+def draw_gui():
+    draw_text("Level " + str(level), 0, 0, 20, RED)
+    draw_text("Score " + str(score), 100, 0, 20, RED)
+    draw_text("Lives " + str(lives), 200, 0, 20, RED)
 
 
 def create_enemies():
     for x in range(0, 600, 60):
         for y in range(0, 200, 60):
-            enemy = Actor("alien", (x, y))
+            enemy = Sprite("alien.png", (x, y))
             enemy.vx = level * 2
             enemies.append(enemy)
 
 
 create_enemies()
 
-def on_key_down(key):
-    if key == keys.SPACE and len(bullets) < MAX_BULLETS:
-        bullet = Actor("alien", pos=(player.x, player.y))
+def on_key_pressed(key):
+    if key == keys.space and len(bullets) < MAX_BULLETS:
+        bullet = Sprite("alien", pos=(player.x, player.y))
         bullets.append(bullet)
+
+run()

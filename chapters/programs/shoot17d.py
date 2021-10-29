@@ -17,5 +17,7 @@ def move_bombs():
 def check_for_end_of_level():
     pass
 
-def draw_text():
+def draw_gui():
     pass
+
+run()

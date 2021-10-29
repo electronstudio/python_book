@@ -1,6 +1,4 @@
-
 def draw():
-    screen.clear()
     background.draw()
     player.draw()
     for enemy in enemies:
@@ -9,4 +7,4 @@ def draw():
         bullet.draw()
     for bomb in bombs:
         bomb.draw()
-    draw_text()
+    draw_gui()
