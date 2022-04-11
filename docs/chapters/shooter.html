@@ -69,6 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="fractals.html">12. Tutorial: Fractals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">13. Advanced topics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="minecraft.html">14. Python in Minecraft</a></li>
+<li class="toctree-l1"><a class="reference internal" href="revision_notes.html">15. Revision notes</a></li>
 </ul>
 
         </div>
@@ -296,7 +297,7 @@ anything.</p>
 <div class="section" id="create-enemies">
 <h2><span class="section-number">10.5. </span>Create enemies<a class="headerlink" href="#create-enemies" title="Permalink to this headline"></a></h2>
 <p>Add this new function to the end of the program, and then call it
-immediately. It uses a loop within a loop to create enemy Actors and put
+immediately. It uses a loop within a loop to create enemy Sprites and put
 them in the <code class="docutils literal notranslate"><span class="pre">enemies</span></code> list. The reason we put this in a function is we
 will need to call it again at the start of each level.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="k">def</span> <span class="nf">create_enemies</span><span class="p">():</span>
@@ -364,7 +365,7 @@ cannot be two ``move_player()`` function definitions.</em></p>
 us automatically when a key is pressed.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_key_pressed</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">keys</span><span class="o">.</span><span class="n">space</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">bullets</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">MAX_BULLETS</span><span class="p">:</span>
-        <span class="n">bullet</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;bullet&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+        <span class="n">bullet</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;bullet.png&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
         <span class="n">bullets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bullet</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -415,10 +416,10 @@ this:</p>
 <div class="section" id="ideas-for-extension">
 <h2><span class="section-number">10.12. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
 <ul class="simple">
-<li><p>Draw an explosion image and create an explosion Actor every time an
+<li><p>Draw an explosion image and create an explosion Sprite every time an
 alien dies.</p></li>
-<li><p>Make the explosion Actor disappear after a short time.</p></li>
-<li><p>Draw several explosion images, put them in a list and make the Actor
+<li><p>Make the explosion Sprite disappear after a short time.</p></li>
+<li><p>Draw several explosion images, put them in a list and make the Sprite
 animate displaying each of them in order.</p></li>
 <li><p>The player can only fire 3 bullets at a time. Create a powerup that
 allows him to fire additional bullets.</p></li>

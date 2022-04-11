@@ -1,10 +1,11 @@
+from rlzero import *
 import random
 import math
 
 WIDTH = 600
-HEIGHT = 600
+HEIGHT = 800
 
-player = Actor("alien", (300, 580))
+player = Sprite("alien.png", (300, 780))
 player.vx = 0   # horizontal velocity
 player.vy = 1   # vertical velocity
 
@@ -17,24 +18,22 @@ playing = False     # True when in game, False when on title screen
 best_distance = 0   # remember the highest distance scored
 
 def draw():
-    screen.clear()
     if playing: # we are in game
         for i in range(0, len(lines)): # draw the walls
             x, x2, color = lines[i]
-            screen.draw.line((0, i), (x, i), color)
-            screen.draw.line((x + x2, i), (WIDTH, i), color)
+            draw_line(0, i, int(x), i, color)
+            draw_line(int(x + x2), i, WIDTH, i, color)
         player.draw()
     else:   # we are on title screen
-        screen.draw.text("PRESS SPACE TO START",
-            (150, 300),color="green",fontsize=40)
-        screen.draw.text("BEST DISTANCE: "+str(int(best_distance / 10)),
-            (170, 400), color="green", fontsize=40)
-    screen.draw.text("SPEED: " + str(int(player.vy)),
-        (0, 0), color="green", fontsize=40)
-    screen.draw.text("DISTANCE: " + str(int(distance / 10)),
-        (200, 0), color="green", fontsize=40)
-    screen.draw.text("TIME: " + str(int(time)),
-        (480, 0), color="green", fontsize=40)
+        draw_text("PRESS SPACE TO START", 150, 300, 30, GREEN)
+        draw_text("BEST DISTANCE: "+str(int(best_distance / 10)),
+                  170, 400,  30, GREEN)
+    draw_text("SPEED: " + str(int(player.vy)),
+              0, 0, 30, GREEN)
+    draw_text("DISTANCE: " + str(int(distance / 10)),
+              200, 0, 30, GREEN)
+    draw_text("TIME: " + str(int(time)),
+              480, 0, 30, GREEN)
 
 
 def update(delta):

@@ -28,5 +28,6 @@ Learn to code with Python and Raylib
    chapters/fractals
    chapters/advanced
    chapters/minecraft
+   chapters/revision_notes
 
 

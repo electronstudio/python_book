@@ -88,7 +88,7 @@ Create enemies
 --------------
 
 Add this new function to the end of the program, and then call it
-immediately. It uses a loop within a loop to create enemy Actors and put
+immediately. It uses a loop within a loop to create enemy Sprites and put
 them in the ``enemies`` list. The reason we put this in a function is we
 will need to call it again at the start of each level.
 
@@ -171,7 +171,7 @@ us automatically when a key is pressed.
 
     def on_key_pressed(key):
         if key == keys.space and len(bullets) < MAX_BULLETS:
-            bullet = Sprite("bullet", pos=(player.x, player.y))
+            bullet = Sprite("bullet.png", pos=(player.x, player.y))
             bullets.append(bullet))
 
 Replace the ``move_bullets()`` dummy function definition with this:
@@ -230,12 +230,12 @@ this:
 Ideas for extension
 -------------------
 
--  Draw an explosion image and create an explosion Actor every time an
+-  Draw an explosion image and create an explosion Sprite every time an
    alien dies.
 
--  Make the explosion Actor disappear after a short time.
+-  Make the explosion Sprite disappear after a short time.
 
--  Draw several explosion images, put them in a list and make the Actor
+-  Draw several explosion images, put them in a list and make the Sprite
    animate displaying each of them in order.
 
 -  The player can only fire 3 bullets at a time. Create a powerup that

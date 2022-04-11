@@ -5,10 +5,10 @@ HEIGHT = 500
 
 alan = Sprite('alien.png')
 alan.pos = (400, 50)
-box = screen.Rectangle(20, 20, 100, 100)
+box = Rectangle(20, 20, 100, 100)
 
 def draw():
-    screen.draw_rectangle_rec(box, RED)
+    draw_rectangle_rec(box, RED)
     alan.draw()
 
 def update():

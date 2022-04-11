@@ -142,7 +142,7 @@ You will often see this used for counting:
    total = total + 1
    total = total + 1
    total = total + 1
-   print(x)
+   print(total)
 
 .. topic:: Question
 
@@ -196,7 +196,7 @@ statement, the indented code block is only run if the boolean is
 .. code:: python
 
    sunny = True
-   if a:
+   if sunny:
        print("Let's go to the park")
 
 You could write it like this:
@@ -224,9 +224,8 @@ indented code block under ``else`` is run instead.
 Comparison operators
 --------------------
 
-Comparison operators take two numbers, strings or other variables,
-compare them, and then return a *boolean* ``True`` or ``False`` from
-them.
+A comparison operator takes two things (e.g. numbers, strings, variables),
+compares them, and then returns a *boolean* ``True`` or ``False``.
 
 ===================== ======
 Operator              Symbol

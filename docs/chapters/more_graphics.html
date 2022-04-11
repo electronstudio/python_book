@@ -63,6 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="fractals.html">12. Tutorial: Fractals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">13. Advanced topics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="minecraft.html">14. Python in Minecraft</a></li>
+<li class="toctree-l1"><a class="reference internal" href="revision_notes.html">15. Revision notes</a></li>
 </ul>
 
         </div>
@@ -174,17 +175,19 @@ mix together.</p>
 18
 19
 20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="c1"># my_colour = (0,0,0) # makes black</span>
-<span class="c1"># my_colour = (255,255,255) # makes white</span>
+<span class="c1"># my_colour = Color(0,0,0,255) # makes black</span>
+<span class="c1"># my_colour = Color(255,255,255,255) # makes white</span>
 
 <span class="n">red_amount</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">green_amount</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">blue_amount</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alpha_amount</span> <span class="o">=</span> <span class="mi">255</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-    <span class="n">my_colour</span> <span class="o">=</span> <span class="p">(</span><span class="n">red_amount</span><span class="p">,</span> <span class="n">green_amount</span><span class="p">,</span> <span class="n">blue_amount</span><span class="p">)</span>
+    <span class="n">my_colour</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="n">red_amount</span><span class="p">,</span> <span class="n">green_amount</span><span class="p">,</span> <span class="n">blue_amount</span><span class="p">,</span> <span class="n">alpha_amount</span><span class="p">)</span>
     <span class="n">clear_background</span><span class="p">(</span><span class="n">my_colour</span><span class="p">)</span>
 
 <span class="c1"># This function makes the colour change every frame</span>

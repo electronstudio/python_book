@@ -1,10 +1,11 @@
+from rlzero import *
 import random
 import math
 
 WIDTH = 600
 HEIGHT = 800
 
-player = Actor("alien", (300, 780))
+player = Sprite("alien.png", (300, 780))
 player.vx = 0   # horizontal velocity
 player.vy = 1   # vertical velocity
 
@@ -17,24 +18,22 @@ playing = False     # True when in game, False when on title screen
 best_distance = 0   # remember the highest distance scored
 
 def draw():
-    screen.clear()
     if playing: # we are in game
         for i in range(0, len(lines)): # draw the walls
             x, x2, color = lines[i]
-            screen.draw.line((0, i), (x, i), color)
-            screen.draw.line((x + x2, i), (WIDTH, i), color)
+            draw_line(0, i, int(x), i, color)
+            draw_line(int(x + x2), i, WIDTH, i, color)
         player.draw()
     else:   # we are on title screen
-        screen.draw.text("PRESS SPACE TO START",
-            (150, 300),color="green",fontsize=40)
-        screen.draw.text("BEST DISTANCE: "+str(int(best_distance / 10)),
-            (170, 400), color="green", fontsize=40)
-    screen.draw.text("SPEED: " + str(int(player.vy)),
-        (0, 0), color="green", fontsize=40)
-    screen.draw.text("DISTANCE: " + str(int(distance / 10)),
-        (200, 0), color="green", fontsize=40)
-    screen.draw.text("TIME: " + str(int(time)),
-        (480, 0), color="green", fontsize=40)
+        draw_text("PRESS SPACE TO START", 150, 300, 30, GREEN)
+        draw_text("BEST DISTANCE: "+str(int(best_distance / 10)),
+            170, 400,  30, GREEN)
+    draw_text("SPEED: " + str(int(player.vy)),
+        0, 0, 30, GREEN)
+    draw_text("DISTANCE: " + str(int(distance / 10)),
+        200, 0, 30, GREEN)
+    draw_text("TIME: " + str(int(time)),
+        480, 0, 30, GREEN)
 
 
 def update(delta):
@@ -68,7 +67,7 @@ def generate_lines():
     global wall_gradient, left_wall_x
     gap_width = 300 + math.sin(distance / 3000) * 100
     while len(lines) < HEIGHT:
-        pretty_colour = (255, min(left_wall_x, 255), min(time * 5, 255))
+        pretty_colour = Color(255, int(min(left_wall_x, 255)), int(min(time * 5, 255)), 255)
         lines.insert(0, (left_wall_x, gap_width, pretty_colour))
         left_wall_x += wall_gradient
         if left_wall_x < 0:
@@ -109,3 +108,5 @@ def on_mouse_move(pos):
     x, y = pos
     player.x = x
     player.vy = (HEIGHT - y) / 20
+
+run()
