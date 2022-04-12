@@ -24,7 +24,7 @@ window. Click **third party packages**. Type
 
 ::
 
-   rlzero>=0.2<0.3
+   rlzero>=0.3<0.4
 
 into the box. Click **OK**. The library will download.
 

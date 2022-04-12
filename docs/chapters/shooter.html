@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10. Tutorial: Shooting game &mdash; Learn to code with Python and Raylib  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>10. Tutorial: Shooting game &mdash; Learn to code with Python and Raylib  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -39,7 +39,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview of Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fundamentals.html">2. Python Fundamentals</a></li>
@@ -70,6 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="advanced.html">13. Advanced topics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="minecraft.html">14. Python in Minecraft</a></li>
 <li class="toctree-l1"><a class="reference internal" href="revision_notes.html">15. Revision notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sockets/sockets.html">16. Tutorial: Network coding</a></li>
 </ul>
 
         </div>
@@ -144,39 +145,24 @@ others are lists which we initialize to the empty list <code class="docutils lit
 will be appended to the lists later.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17a">
 <div class="code-block-caption"><span class="caption-number">Program 10.1 </span><span class="caption-text">Shooter game part 1 of 4</span><a class="headerlink" href="#code-shoot17a" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">600</span>
-<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
-<span class="n">MAX_BULLETS</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="n">level</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">lives</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="n">background</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;background.png&quot;</span><span class="p">)</span>
-<span class="n">player</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;player.png&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">730</span><span class="p">))</span>
-<span class="n">enemies</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">bullets</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">bombs</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">random</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="linenos"> 5</span><span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+<span class="linenos"> 6</span><span class="n">MAX_BULLETS</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="n">level</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="linenos"> 9</span><span class="n">lives</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="linenos">10</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="n">background</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;background.png&quot;</span><span class="p">)</span>
+<span class="linenos">13</span><span class="n">player</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;player.png&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">730</span><span class="p">))</span>
+<span class="linenos">14</span><span class="n">enemies</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">15</span><span class="n">bullets</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">16</span><span class="n">bombs</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 <div class="section" id="step-2-draw-your-sprites">
@@ -185,27 +171,18 @@ will be appended to the lists later.</p>
 the Sprites we created above.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17b">
 <div class="code-block-caption"><span class="caption-number">Program 10.2 </span><span class="caption-text">Shooter game part 2 of 4</span><a class="headerlink" href="#code-shoot17b" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-    <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">enemy</span> <span class="ow">in</span> <span class="n">enemies</span><span class="p">:</span>
-        <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">bullet</span> <span class="ow">in</span> <span class="n">bullets</span><span class="p">:</span>
-        <span class="n">bullet</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">bomb</span> <span class="ow">in</span> <span class="n">bombs</span><span class="p">:</span>
-        <span class="n">bomb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="n">draw_gui</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="linenos"> 2</span>    <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos"> 3</span>    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos"> 4</span>    <span class="k">for</span> <span class="n">enemy</span> <span class="ow">in</span> <span class="n">enemies</span><span class="p">:</span>
+<span class="linenos"> 5</span>        <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos"> 6</span>    <span class="k">for</span> <span class="n">bullet</span> <span class="ow">in</span> <span class="n">bullets</span><span class="p">:</span>
+<span class="linenos"> 7</span>        <span class="n">bullet</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos"> 8</span>    <span class="k">for</span> <span class="n">bomb</span> <span class="ow">in</span> <span class="n">bombs</span><span class="p">:</span>
+<span class="linenos"> 9</span>        <span class="n">bomb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos">10</span>    <span class="n">draw_gui</span><span class="p">()</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 <div class="section" id="step-3-move-your-sprites">
@@ -214,21 +191,15 @@ the Sprites we created above.</p>
 check for collisions, etc.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17c">
 <div class="code-block-caption"><span class="caption-number">Program 10.3 </span><span class="caption-text">Shooter game part 3 of 4</span><a class="headerlink" href="#code-shoot17c" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
-    <span class="n">move_player</span><span class="p">()</span>
-    <span class="n">move_bullets</span><span class="p">()</span>
-    <span class="n">move_enemies</span><span class="p">()</span>
-    <span class="n">create_bombs</span><span class="p">()</span>
-    <span class="n">move_bombs</span><span class="p">()</span>
-    <span class="n">check_for_end_of_level</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
+<span class="linenos">2</span>    <span class="n">move_player</span><span class="p">()</span>
+<span class="linenos">3</span>    <span class="n">move_bullets</span><span class="p">()</span>
+<span class="linenos">4</span>    <span class="n">move_enemies</span><span class="p">()</span>
+<span class="linenos">5</span>    <span class="n">create_bombs</span><span class="p">()</span>
+<span class="linenos">6</span>    <span class="n">move_bombs</span><span class="p">()</span>
+<span class="linenos">7</span>    <span class="n">check_for_end_of_level</span><span class="p">()</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 </div>
 <div class="section" id="step-4-define-your-functions">
@@ -241,53 +212,31 @@ Therefore we use the <code class="docutils literal notranslate"><span class="pre
 anything.</p>
 <div class="literal-block-wrapper docutils container" id="code-shoot17d">
 <div class="code-block-caption"><span class="caption-number">Program 10.4 </span><span class="caption-text">Shooter game part 4 of 4</span><a class="headerlink" href="#code-shoot17d" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">move_player</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">move_enemies</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">move_bullets</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">create_bombs</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">move_bombs</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">check_for_end_of_level</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="k">def</span> <span class="nf">draw_gui</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="n">run</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>
+<span class="linenos"> 2</span><span class="k">def</span> <span class="nf">move_player</span><span class="p">():</span>
+<span class="linenos"> 3</span>    <span class="k">pass</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="k">def</span> <span class="nf">move_enemies</span><span class="p">():</span>
+<span class="linenos"> 6</span>    <span class="k">pass</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="k">def</span> <span class="nf">move_bullets</span><span class="p">():</span>
+<span class="linenos"> 9</span>    <span class="k">pass</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="nf">create_bombs</span><span class="p">():</span>
+<span class="linenos">12</span>    <span class="k">pass</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="k">def</span> <span class="nf">move_bombs</span><span class="p">():</span>
+<span class="linenos">15</span>    <span class="k">pass</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="k">def</span> <span class="nf">check_for_end_of_level</span><span class="p">():</span>
+<span class="linenos">18</span>    <span class="k">pass</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="k">def</span> <span class="nf">draw_gui</span><span class="p">():</span>
+<span class="linenos">21</span>    <span class="k">pass</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>

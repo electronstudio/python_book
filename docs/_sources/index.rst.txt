@@ -29,5 +29,6 @@ Learn to code with Python and Raylib
    chapters/advanced
    chapters/minecraft
    chapters/revision_notes
+   chapters/sockets/sockets
 
 

@@ -80,7 +80,7 @@ pixel or a white pixel.
 
 .. figure:: images/Mandelset_hires.png
    :width: 50%
-   :alt: Complex plaine
+   :alt: Complex plain
 
    Complex plain
 

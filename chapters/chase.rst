@@ -28,8 +28,7 @@ whatever you want, but it must be the same size as the game window,
 which will be 600×600 pixels.
 
 .. figure:: images/figures/krita.png
-   :alt: New image in Krita, 600×600
-   pixels
+   :alt: New image in Krita, 600×600 pixels
 
    New image in Krita, 600×600 pixels
 

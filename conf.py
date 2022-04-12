@@ -77,7 +77,7 @@ latex_elements = {
 
     'releasename': 'release',
 
-    'geometry':  "\\usepackage[paperwidth=6in,paperheight=9in]{geometry}",
+    #'geometry':  "\\usepackage[paperwidth=6in,paperheight=9in]{geometry}",
 
 
     'preamble': r'''

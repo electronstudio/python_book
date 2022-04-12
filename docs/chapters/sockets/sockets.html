@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>16. Tutorial: Network coding &mdash; Learn to code with Python and Raylib  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="15. Revision notes" href="../revision_notes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Learn to code with Python and Raylib
+          </a>
+              <div class="version">
+                3
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">1. Overview of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals.html">2. Python Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../text_quizes.html">3. Text-based quiz games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphics.html">4. Drawing graphics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simple_games.html">5. Arcade games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more_graphics.html">6. Improving your games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more_games.html">7. More advanced games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chase.html">8. Tutorial: Chase game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maze.html">9. Tutorial: Maze game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shooter.html">10. Tutorial: Shooting game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../race.html">11. Tutorial: Race game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fractals.html">12. Tutorial: Fractals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced.html">13. Advanced topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../minecraft.html">14. Python in Minecraft</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../revision_notes.html">15. Revision notes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">16. Tutorial: Network coding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sockets">16.1. Sockets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gopher">16.2. Gopher</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Learn to code with Python and Raylib</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">16. </span>Tutorial: Network coding</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/sockets/sockets.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="tutorial-network-coding">
+<h1><span class="section-number">16. </span>Tutorial: Network coding<a class="headerlink" href="#tutorial-network-coding" title="Permalink to this headline"></a></h1>
+<div class="section" id="sockets">
+<h2><span class="section-number">16.1. </span>Sockets<a class="headerlink" href="#sockets" title="Permalink to this headline"></a></h2>
+<p>A socket connects a program on one computer to a program running on another computer.  One program writes data into its socket.  The data may be raw bytes, or any
+of the datatypes we have seen (e.g. integer, string, etc.)The data travels across the network.  The program
+on the other computer reads the data from its socket.</p>
+<p>Connecting a socket is a bit like making a phone call.  The program that is waiting to receive the call is the <em>server</em>.  The program
+that makes the call is the <em>client</em>.  Once the call is connected they can both speak to each other.</p>
+<p>If possible, you should run the server program on one computer and the client program on a different computer,
+both connected to the same network.  If you don’t have two computers you can run both programs on the same computer.
+Using Mu, you will have to load two copies of Mu in order to run two programs at the same time.</p>
+<p>First find out the IP address of your server computer and write it down.  The easiest way to open a command terminal
+and type a command.  Possible commands:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ipconfig</span></code> (Windows)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ifconfig</span></code> (Mac)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">address</span></code> (Linux)</p></li>
+</ul>
+<p>The IP address will look similar to this: <em>192.168.0.105</em></p>
+<p>Enter and run the server program:</p>
+<div class="literal-block-wrapper docutils container" id="code-server">
+<div class="code-block-caption"><span class="caption-number">Program 16.1 </span><span class="caption-text">Socket server</span><a class="headerlink" href="#code-server" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span> <span class="mi">65439</span><span class="p">))</span>
+<span class="linenos">5</span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="linenos">6</span>    <span class="n">sock</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+<span class="linenos">7</span>    <span class="n">connection</span><span class="p">,</span> <span class="n">address</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+<span class="linenos">8</span>    <span class="n">message</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">makefile</span><span class="p">()</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="linenos">9</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;received: &quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="s2">&quot;from:&quot;</span><span class="p">,</span> <span class="n">address</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>After creating the socket, we <em>bind()</em> it to an <em>internet address</em>.  <strong>0.0.0.0</strong> is a special address that means “any address belonging
+to this computer”.  We also give a <em>port number</em>, <strong>65439</strong>.  This can be (almost) any number, but it must match on the client
+and server.</p>
+<p>Then we <em>listen()</em>, which pauses the program until a connection arrives.  Then we read a line from the socket connection
+and print it out.</p>
+<p>Enter and run the client program.  We have put the address of the server in a variable.  If your server is on a different
+computer, use the address of that computer.  If it on the same computer, use the special address <strong>127.0.0.1</strong>.</p>
+<div class="literal-block-wrapper docutils container" id="code-client1">
+<div class="code-block-caption"><span class="caption-number">Program 16.2 </span><span class="caption-text">Socket client</span><a class="headerlink" href="#code-client1" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">server</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="mi">65439</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="linenos">5</span><span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">server</span><span class="p">)</span>
+<span class="linenos">6</span><span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="linenos">7</span><span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="linenos">8</span>
+</pre></div>
+</div>
+</div>
+<p>Note that we send a string, but we prefix it with <em>b</em> to convert it into bytes.  We close the socket after
+we are finished to end the connection.</p>
+<p>You should see the string appear on the server program output.</p>
+<div class="topic">
+<p class="topic-title">Exercise</p>
+<p>Send a different message from the client to the server.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Exercise</p>
+<p>Make the client program ask the user to input a message, and then send it to the server.  Make a loop so it keeps
+asking and sending.</p>
+</div>
+</div>
+<div class="section" id="gopher">
+<h2><span class="section-number">16.2. </span>Gopher<a class="headerlink" href="#gopher" title="Permalink to this headline"></a></h2>
+<p>Gopher is a hypertext system, similar to the World Wide Web.  However Gopher is older than the web, and its protocol
+is simpler, which makes it easier for us to implement.  A <em>protocol</em> is just an agreement between the client and server
+on what sort of data they are allowed to send and receive.</p>
+<p>We are going to write a Gopher client, connect it to a Gopher server, and see if we can figure out the protocol.</p>
+<div class="literal-block-wrapper docutils container" id="code-gopher">
+<div class="code-block-caption"><span class="caption-number">Program 16.3 </span><span class="caption-text">Gopher client</span><a class="headerlink" href="#code-gopher" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="linenos">2</span><span class="n">server</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;gopher.floodgap.com&quot;</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
+<span class="linenos">3</span><span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="linenos">4</span><span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">server</span><span class="p">)</span>
+<span class="linenos">5</span><span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos">6</span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sock</span><span class="o">.</span><span class="n">makefile</span><span class="p">()</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+<span class="linenos">7</span>    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="linenos">8</span><span class="n">sock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="linenos">9</span>
+</pre></div>
+</div>
+</div>
+<p>You can change the server to connect to any gopher server, but we are using <em>gopher.floodgap.com</em> because it is popular.</p>
+<p>When you run the program, it simply sends <strong>“\r\n”</strong> which means a return followed by a newline.  It then prints
+the lines it gets back from the server.  You should get some output that looks a bit like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">iWelcome</span> <span class="n">to</span> <span class="n">Floodgap</span> <span class="n">Systems</span><span class="s1">&#39; official gopher server.                error.host      1</span>
+
+<span class="n">iFloodgap</span> <span class="n">has</span> <span class="n">served</span> <span class="n">the</span> <span class="n">gopher</span> <span class="n">community</span> <span class="n">since</span> <span class="mi">1999</span>         <span class="n">error</span><span class="o">.</span><span class="n">host</span>      <span class="mi">1</span>
+
+<span class="n">i</span><span class="p">(</span><span class="n">formerly</span> <span class="n">gopher</span><span class="o">.</span><span class="n">ptloma</span><span class="o">.</span><span class="n">edu</span><span class="p">)</span><span class="o">.</span>               <span class="n">error</span><span class="o">.</span><span class="n">host</span>      <span class="mi">1</span>
+</pre></div>
+</div>
+<p>This is readable, but we can improve it.  You might notice that every line starts with a special character,
+usually an <strong>i</strong> (meaning <em>info</em>).  This isn’t part of the text, so we will chop it off.</p>
+<p>Python lists and strings allow us <em>slice</em> them up.  For example, if you have a string</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+</pre></div>
+</div>
+<p>Then these some slices you could make:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;H&quot;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;e&quot;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Hell&quot;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">==</span> <span class="s2">&quot;ello&quot;</span>
+<span class="n">s</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;He&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../revision_notes.html" class="btn btn-neutral float-left" title="15. Revision notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Richard Smith.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
