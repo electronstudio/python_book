@@ -50,7 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="more_graphics.html">6. Improving your games</a></li>
 <li class="toctree-l1"><a class="reference internal" href="more_games.html">7. More advanced games</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">8. Tutorial: Chase game</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#moving-actor-over-a-background">8.1. Moving Actor over a background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#moving-a-sprite-over-a-background">8.1. Moving a Sprite over a background</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#screen-wrap-around">8.2. Screen wrap-around</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#enemy-chases-the-player">8.3. Enemy chases the player</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#collecting-items">8.4. Collecting items</a></li>
@@ -105,16 +105,17 @@ loops.</p>
 <a class="reference internal" href="graphics.html#code-keyboard-input"><span class="std std-numref">Program 4.6</span></a>,
 <a class="reference internal" href="simple_games.html#code-collisions"><span class="std std-numref">Program 5.1</span></a> and <a class="reference internal" href="simple_games.html#code-chase"><span class="std std-numref">Program 5.2</span></a></p>
 <p>Now we will show you how to put them all together in one program.</p>
-<section id="moving-actor-over-a-background">
-<h2><span class="section-number">8.1. </span>Moving Actor over a background<a class="headerlink" href="#moving-actor-over-a-background" title="Permalink to this headline"></a></h2>
+<section id="moving-a-sprite-over-a-background">
+<h2><span class="section-number">8.1. </span>Moving a Sprite over a background<a class="headerlink" href="#moving-a-sprite-over-a-background" title="Permalink to this headline"></a></h2>
 <p>We must create two image files for our game. You can use a program such
-as Krita <a class="footnote-reference brackets" href="#id2" id="id1">1</a> to draw them and save them in the <code class="docutils literal notranslate"><span class="pre">mu_code/images</span></code>
-folder (accessible with the <code class="docutils literal notranslate"><span class="pre">images</span></code> button in Mu). One is the player,
+as Krita <a class="footnote-reference brackets" href="#id2" id="id1">1</a> to draw them and save them in the same directory as
+the Python script.</p>
+<p>One is the player,
 called <code class="docutils literal notranslate"><span class="pre">player.png</span></code>. It should be small, about 64×64 pixels. Ideally
 it should have a transparent background.</p>
 <p>The other is the background for the game itself. It can look like
 whatever you want, but it must be the same size as the game window,
-which will be 600×600 pixels.</p>
+which will be 600×600 pixels.  Save it as <code class="docutils literal notranslate"><span class="pre">background.png</span></code></p>
 <figure class="align-default" id="id3">
 <img alt="New image in Krita, 600×600 pixels" src="../_images/krita.png" />
 <figcaption>
@@ -123,37 +124,38 @@ which will be 600×600 pixels.</p>
 </figure>
 <div class="literal-block-wrapper docutils container" id="code-chase1">
 <div class="code-block-caption"><span class="caption-number">Program 8.1 </span><span class="caption-text">Chase game</span><a class="headerlink" href="#code-chase1" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">600</span>
-<span class="linenos"> 2</span><span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
-<span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="n">background</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s2">&quot;background&quot;</span><span class="p">)</span>
-<span class="linenos"> 5</span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
-<span class="linenos"> 6</span><span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="linenos"> 7</span><span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-<span class="linenos">10</span>    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="linenos">11</span>    <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="linenos">12</span>    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="linenos">13</span>
-<span class="linenos">14</span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-<span class="linenos">15</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-<span class="linenos">16</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span>
-<span class="linenos">17</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-<span class="linenos">18</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
-<span class="linenos">19</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">down</span><span class="p">:</span>
-<span class="linenos">20</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span>
-<span class="linenos">21</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">up</span><span class="p">:</span>
-<span class="linenos">22</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">4</span>
-<span class="linenos">23</span>
-<span class="linenos">24</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="linenos"> 4</span><span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="n">background</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;background&quot;</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="n">player</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="linenos"> 9</span><span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="linenos">12</span>    <span class="n">clear</span><span class="p">()</span>
+<span class="linenos">13</span>    <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos">14</span>    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="linenos">17</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+<span class="linenos">18</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="linenos">19</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+<span class="linenos">20</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
+<span class="linenos">21</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">down</span><span class="p">:</span>
+<span class="linenos">22</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="linenos">23</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">up</span><span class="p">:</span>
+<span class="linenos">24</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">4</span>
 <span class="linenos">25</span>
+<span class="linenos">26</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>
-<p>Run the program and move the Actor around with the keys.</p>
+<p>Run the program and move the Sprite around with the keys.</p>
 </div>
 </section>
 <section id="screen-wrap-around">
@@ -183,7 +185,7 @@ becomes part of the <code class="docutils literal notranslate"><span class="pre"
 <h2><span class="section-number">8.3. </span>Enemy chases the player<a class="headerlink" href="#enemy-chases-the-player" title="Permalink to this headline"></a></h2>
 <p>Let’s add an enemy to chase the player. At the top of the program,
 create a variable to store the enemy Actor:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enemy</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enemy</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>At the end of the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function (but still indented so part of the
@@ -192,7 +194,7 @@ function), draw the enemy. Remember there is only ever one single
 function.</p>
 <p>Here is the complete function including the new line at the end:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">clear</span><span class="p">()</span>
     <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
@@ -222,16 +224,16 @@ the function), add these lines to move the enemy:</p>
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>
-<p>Create an image file <cite>enemy.png</cite> and save it in the <cite>images</cite> folder.  Change the code so it loads <cite>“enemy”</cite> instead of <cite>“alien”</cite>.</p>
+<p>Create an image file <cite>enemy.png</cite> and save it in the program folder.  Change the code so it loads <cite>“enemy”</cite> instead of <cite>“alien”</cite>.</p>
 </div>
 </section>
 <section id="collecting-items">
 <h2><span class="section-number">8.4. </span>Collecting items<a class="headerlink" href="#collecting-items" title="Permalink to this headline"></a></h2>
-<p>Create a small image file <code class="docutils literal notranslate"><span class="pre">coin.png</span></code> and save it in the <code class="docutils literal notranslate"><span class="pre">images</span></code>
+<p>Create a small image file <code class="docutils literal notranslate"><span class="pre">coin.png</span></code> and save it in the program
 folder. It should look like a coin or something else you would like to
 collect. We will also need a variable to store the <em>score</em>, i.e. number
 of coins collected.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">coin</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s2">&quot;coin&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">300</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">coin</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;coin&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">300</span><span class="p">))</span>
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 </div>
@@ -241,7 +243,7 @@ function), draw the coin. Remember there is only ever one single
 function.</p>
 <p>Here is the complete function including the new line at the end:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">clear</span><span class="p">()</span>
     <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
@@ -301,14 +303,14 @@ our intention to modify a global variable:</p>
 <h2><span class="section-number">8.5. </span>Player 2<a class="headerlink" href="#player-2" title="Permalink to this headline"></a></h2>
 <p>We can make any game into a two player game. At the top of the program,
 create a variable to store the Actor for the second player:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player2</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player2</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>At the end of the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function (but still indented so part of the
 function), draw the enemy. Here is the complete function with the new
 line at the end:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">clear</span><span class="p">()</span>
     <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
@@ -339,14 +341,14 @@ the function), add these lines to move the second player:</p>
 <h2><span class="section-number">8.6. </span>Showing the score on the screen<a class="headerlink" href="#showing-the-score-on-the-screen" title="Permalink to this headline"></a></h2>
 <p>At the end of the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function (but still indented so part of the
 function), draw a title on the screen:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;My game&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">draw_text</span><span class="p">(</span><span class="s2">&quot;My game&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">draw.text()</span></code> function is not like <code class="docutils literal notranslate"><span class="pre">print()</span></code> - it can only print
 strings of text, not numbers. Therefore we must convert the score into a
 string. Add these lines to the end of the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">score_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
-<span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">score_string</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">draw_text</span><span class="p">(</span><span class="n">score_string</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="topic">
@@ -359,7 +361,7 @@ string. Add these lines to the end of the <code class="docutils literal notransl
 </div>
 <div class="topic">
 <p class="topic-title">Advanced</p>
-<p>When the <cite>score</cite> reaches 10, show a message on the screen to congratulate the player</p>
+<p>When the <cite>score</cite> reaches 10, show a message on the screen to congratulate the player.</p>
 </div>
 </section>
 <section id="timer">
@@ -370,7 +372,7 @@ in the game:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="o">=</span> <span class="mi">20</span>
 </pre></div>
 </div>
-<p>Pygame Zero calls our <code class="docutils literal notranslate"><span class="pre">update()</span></code> function many times per second. We
+<p>RLZero calls our <code class="docutils literal notranslate"><span class="pre">update()</span></code> function many times per second. We
 can ask it to tell us how much time has passed by adding a <em>parameter</em>
 to the function, <code class="docutils literal notranslate"><span class="pre">delta</span></code>. We then subtract this from the remaining
 time. Modify <code class="docutils literal notranslate"><span class="pre">update()</span></code> so the first lines look like this:</p>
@@ -384,17 +386,17 @@ time. Modify <code class="docutils literal notranslate"><span class="pre">update
 <p>We can also display the time on the screen. At the end of the <code class="docutils literal notranslate"><span class="pre">draw()</span></code>
 function (but still indented so part of the function) add these lines:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
-<span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">time_string</span><span class="p">,</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">draw_text</span><span class="p">(</span><span class="n">time_string</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>
-<p>Run the program.  Could the displayed time be improved?</p>
+<p>Run the program.  Could the displayed time be improved (maybe you could use the <code class="docutils literal notranslate"><span class="pre">round()</span></code> function somehow?)</p>
 </div>
 <p>We don’t need to see the decimal places in the time. Modify those lines
 to use the <code class="docutils literal notranslate"><span class="pre">round()</span></code> function, like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="p">))</span>
-<span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">time_string</span><span class="p">,</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">draw_text</span><span class="p">(</span><span class="n">time_string</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -403,98 +405,93 @@ to use the <code class="docutils literal notranslate"><span class="pre">round()<
 <p>Here is the finished game with all the changes included:</p>
 <div class="literal-block-wrapper docutils container" id="code-chaser7">
 <div class="code-block-caption"><span class="caption-number">Program 8.2 </span><span class="caption-text">Finished chase game</span><a class="headerlink" href="#code-chaser7" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 2</span>
-<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">random</span>
-<span class="linenos"> 4</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">600</span>
-<span class="linenos"> 7</span><span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
-<span class="linenos"> 8</span><span class="n">DATA_DIR</span> <span class="o">=</span> <span class="s2">&quot;.&quot;</span>
-<span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="n">background</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;background&quot;</span><span class="p">)</span>
-<span class="linenos">11</span><span class="n">player</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
-<span class="linenos">12</span><span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="linenos">13</span><span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="linenos">14</span><span class="n">player</span><span class="o">.</span><span class="n">rotation_angle</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos">15</span><span class="n">player</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="linenos">16</span>
-<span class="linenos">17</span><span class="n">enemy</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
-<span class="linenos">18</span><span class="n">player2</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
-<span class="linenos">19</span><span class="n">coin</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">300</span><span class="p">))</span>
-<span class="linenos">20</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos">21</span><span class="n">time</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="linenos">22</span>
-<span class="linenos">23</span>
-<span class="linenos">24</span><span class="k">def</span> <span class="nf">draw2d</span><span class="p">():</span>
-<span class="linenos">25</span>    <span class="n">clear</span><span class="p">()</span>
-<span class="linenos">26</span>    <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="linenos">27</span>    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="linenos">28</span>    <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="linenos">29</span>    <span class="n">player2</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="linenos">30</span>    <span class="n">coin</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-<span class="linenos">31</span>    <span class="n">draw_text</span><span class="p">(</span><span class="s2">&quot;My game&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
-<span class="linenos">32</span>    <span class="n">score_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
-<span class="linenos">33</span>    <span class="n">draw_text</span><span class="p">(</span><span class="n">score_string</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
-<span class="linenos">34</span>    <span class="n">time_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="p">))</span>
-<span class="linenos">35</span>    <span class="n">draw_text</span><span class="p">(</span><span class="n">time_string</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
-<span class="linenos">36</span>
-<span class="linenos">37</span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
-<span class="linenos">38</span>    <span class="k">global</span> <span class="n">score</span><span class="p">,</span> <span class="n">time</span>
-<span class="linenos">39</span>    <span class="n">time</span> <span class="o">=</span> <span class="n">time</span> <span class="o">-</span> <span class="n">delta</span>
-<span class="linenos">40</span>    <span class="k">if</span> <span class="n">time</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-<span class="linenos">41</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;time out&quot;</span><span class="p">)</span>
-<span class="linenos">42</span>        <span class="n">exit</span><span class="p">()</span>
-<span class="linenos">43</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
-<span class="linenos">44</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span>
-<span class="linenos">45</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
-<span class="linenos">46</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
-<span class="linenos">47</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">down</span><span class="p">:</span>
-<span class="linenos">48</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span>
-<span class="linenos">49</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">up</span><span class="p">:</span>
-<span class="linenos">50</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">4</span>
-<span class="linenos">51</span>
-<span class="linenos">52</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
-<span class="linenos">53</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos">54</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="linenos">55</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span>
-<span class="linenos">56</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="linenos">57</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span>
-<span class="linenos">58</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">HEIGHT</span><span class="p">:</span>
-<span class="linenos">59</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="linenos">60</span>
-<span class="linenos">61</span>    <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span><span class="p">:</span>
-<span class="linenos">62</span>        <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="linenos">63</span>    <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span><span class="p">:</span>
-<span class="linenos">64</span>        <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="linenos">65</span>    <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
-<span class="linenos">66</span>        <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="linenos">67</span>    <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
-<span class="linenos">68</span>        <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="linenos">69</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
-<span class="linenos">70</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;player 1 hit enemy&quot;</span><span class="p">)</span>
-<span class="linenos">71</span>        <span class="n">exit</span><span class="p">()</span>
-<span class="linenos">72</span>
-<span class="linenos">73</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
-<span class="linenos">74</span>        <span class="n">player2</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span>
-<span class="linenos">75</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
-<span class="linenos">76</span>        <span class="n">player2</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
-<span class="linenos">77</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
-<span class="linenos">78</span>        <span class="n">player2</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span>
-<span class="linenos">79</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
-<span class="linenos">80</span>        <span class="n">player2</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">4</span>
-<span class="linenos">81</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">player2</span><span class="p">):</span>
-<span class="linenos">82</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;player1 hit player 2&quot;</span><span class="p">)</span>
-<span class="linenos">83</span>        <span class="n">exit</span><span class="p">()</span>
-<span class="linenos">84</span>
-<span class="linenos">85</span>    <span class="k">if</span> <span class="n">coin</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">player</span><span class="p">):</span>
-<span class="linenos">86</span>        <span class="n">coin</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
-<span class="linenos">87</span>        <span class="n">coin</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)</span>
-<span class="linenos">88</span>        <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="linenos">89</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score:&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
-<span class="linenos">90</span>
-<span class="linenos">91</span>
-<span class="linenos">92</span><span class="n">run</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">random</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="linenos"> 5</span><span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="n">background</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;background&quot;</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="n">player</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="linenos">10</span><span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="n">enemy</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;alien&quot;</span><span class="p">)</span>
+<span class="linenos">13</span><span class="n">player2</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;player&quot;</span><span class="p">)</span>
+<span class="linenos">14</span><span class="n">coin</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span><span class="s2">&quot;coin&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="mi">300</span><span class="p">))</span>
+<span class="linenos">15</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">16</span><span class="n">time</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="k">def</span> <span class="nf">draw2d</span><span class="p">():</span>
+<span class="linenos">20</span>    <span class="n">clear</span><span class="p">()</span>
+<span class="linenos">21</span>    <span class="n">background</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos">22</span>    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos">23</span>    <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos">24</span>    <span class="n">player2</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos">25</span>    <span class="n">coin</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="linenos">26</span>    <span class="n">draw_text</span><span class="p">(</span><span class="s2">&quot;My game&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
+<span class="linenos">27</span>    <span class="n">score_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+<span class="linenos">28</span>    <span class="n">draw_text</span><span class="p">(</span><span class="n">score_string</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
+<span class="linenos">29</span>    <span class="n">time_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">time</span><span class="p">))</span>
+<span class="linenos">30</span>    <span class="n">draw_text</span><span class="p">(</span><span class="n">time_string</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">delta</span><span class="p">):</span>
+<span class="linenos">33</span>    <span class="k">global</span> <span class="n">score</span><span class="p">,</span> <span class="n">time</span>
+<span class="linenos">34</span>    <span class="n">time</span> <span class="o">=</span> <span class="n">time</span> <span class="o">-</span> <span class="n">delta</span>
+<span class="linenos">35</span>    <span class="k">if</span> <span class="n">time</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">36</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;time out&quot;</span><span class="p">)</span>
+<span class="linenos">37</span>        <span class="n">exit</span><span class="p">()</span>
+<span class="linenos">38</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span>
+<span class="linenos">39</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="linenos">40</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span>
+<span class="linenos">41</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
+<span class="linenos">42</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">down</span><span class="p">:</span>
+<span class="linenos">43</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="linenos">44</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">up</span><span class="p">:</span>
+<span class="linenos">45</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">4</span>
+<span class="linenos">46</span>
+<span class="linenos">47</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
+<span class="linenos">48</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">49</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">50</span>        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span>
+<span class="linenos">51</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">52</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span>
+<span class="linenos">53</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">HEIGHT</span><span class="p">:</span>
+<span class="linenos">54</span>        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">55</span>
+<span class="linenos">56</span>    <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span><span class="p">:</span>
+<span class="linenos">57</span>        <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos">58</span>    <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span><span class="p">:</span>
+<span class="linenos">59</span>        <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="linenos">60</span>    <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
+<span class="linenos">61</span>        <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos">62</span>    <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span><span class="p">:</span>
+<span class="linenos">63</span>        <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="linenos">64</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
+<span class="linenos">65</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;player 1 hit enemy&quot;</span><span class="p">)</span>
+<span class="linenos">66</span>        <span class="n">exit</span><span class="p">()</span>
+<span class="linenos">67</span>
+<span class="linenos">68</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+<span class="linenos">69</span>        <span class="n">player2</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="linenos">70</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+<span class="linenos">71</span>        <span class="n">player2</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
+<span class="linenos">72</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+<span class="linenos">73</span>        <span class="n">player2</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="linenos">74</span>    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+<span class="linenos">75</span>        <span class="n">player2</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">4</span>
+<span class="linenos">76</span>    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">player2</span><span class="p">):</span>
+<span class="linenos">77</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;player1 hit player 2&quot;</span><span class="p">)</span>
+<span class="linenos">78</span>        <span class="n">exit</span><span class="p">()</span>
+<span class="linenos">79</span>
+<span class="linenos">80</span>    <span class="k">if</span> <span class="n">coin</span><span class="o">.</span><span class="n">colliderect</span><span class="p">(</span><span class="n">player</span><span class="p">):</span>
+<span class="linenos">81</span>        <span class="n">coin</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+<span class="linenos">82</span>        <span class="n">coin</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)</span>
+<span class="linenos">83</span>        <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos">84</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score:&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+<span class="linenos">85</span>
+<span class="linenos">86</span>
+<span class="linenos">87</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>

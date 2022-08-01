@@ -1,22 +1,17 @@
-from rlzero import *
-
 import random
-
+from rlzero import *
 
 WIDTH = 600
 HEIGHT = 600
-DATA_DIR = "."
 
 background = Sprite("background")
 player = Sprite("player")
 player.x = 200
 player.y = 200
-player.rotation_angle = 0
-player.scale = 2
 
 enemy = Sprite("alien")
 player2 = Sprite("player")
-coin = Sprite("alien", pos=(300,300))
+coin = Sprite("coin", pos=(300,300))
 score = 0
 time = 20
 

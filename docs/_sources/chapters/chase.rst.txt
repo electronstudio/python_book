@@ -14,18 +14,20 @@ Now we will show you how to put them all together in one program.
 
 
 
-Moving Actor over a background
-------------------------------
+Moving a Sprite over a background
+---------------------------------
 
 We must create two image files for our game. You can use a program such
-as Krita [1]_ to draw them and save them in the ``mu_code/images``
-folder (accessible with the ``images`` button in Mu). One is the player,
+as Krita [1]_ to draw them and save them in the same directory as
+the Python script.
+
+One is the player,
 called ``player.png``. It should be small, about 64×64 pixels. Ideally
 it should have a transparent background.
 
 The other is the background for the game itself. It can look like
 whatever you want, but it must be the same size as the game window,
-which will be 600×600 pixels.
+which will be 600×600 pixels.  Save it as ``background.png``
 
 .. figure:: images/figures/krita.png
    :alt: New image in Krita, 600×600 pixels
@@ -41,7 +43,7 @@ which will be 600×600 pixels.
 
 .. topic:: Exercise
 
-   Run the program and move the Actor around with the keys.
+   Run the program and move the Sprite around with the keys.
 
 
 Screen wrap-around
@@ -78,7 +80,7 @@ create a variable to store the enemy Actor:
 
 .. code:: python
 
-   enemy = Actor("alien")
+   enemy = Sprite("alien")
 
 At the end of the ``draw()`` function (but still indented so part of the
 function), draw the enemy. Remember there is only ever one single
@@ -90,7 +92,7 @@ Here is the complete function including the new line at the end:
 .. code:: python
 
    def draw():
-       screen.clear()
+       clear()
        background.draw()
        player.draw()
        enemy.draw()
@@ -123,20 +125,20 @@ the function), add these lines to move the enemy:
 
 .. topic:: Exercise
 
-   Create an image file `enemy.png` and save it in the `images` folder.  Change the code so it loads `"enemy"` instead of `"alien"`.
+   Create an image file `enemy.png` and save it in the program folder.  Change the code so it loads `"enemy"` instead of `"alien"`.
 
 
 Collecting items
 ----------------
 
-Create a small image file ``coin.png`` and save it in the ``images``
+Create a small image file ``coin.png`` and save it in the program
 folder. It should look like a coin or something else you would like to
 collect. We will also need a variable to store the *score*, i.e. number
 of coins collected.
 
 .. code:: python
 
-   coin = Actor("coin", pos=(300,300))
+   coin = Sprite("coin", pos=(300,300))
    score = 0
 
 At the end of the ``draw()`` function (but still indented so part of the
@@ -149,7 +151,7 @@ Here is the complete function including the new line at the end:
 .. code:: python
 
    def draw():
-       screen.clear()
+       clear()
        background.draw()
        player.draw()
        enemy.draw()
@@ -225,7 +227,7 @@ create a variable to store the Actor for the second player:
 
 .. code:: python
 
-   player2 = Actor("alien")
+   player2 = Sprite("alien")
 
 At the end of the ``draw()`` function (but still indented so part of the
 function), draw the enemy. Here is the complete function with the new
@@ -234,7 +236,7 @@ line at the end:
 .. code:: python
 
    def draw():
-       screen.clear()
+       clear()
        background.draw()
        player.draw()
        enemy.draw()
@@ -270,7 +272,7 @@ function), draw a title on the screen:
 
 .. code:: python
 
-       screen.draw.text("My game", (200,0), color='red')
+       draw_text("My game", 200, 0, 20, RED)
 
 The ``draw.text()`` function is not like ``print()`` - it can only print
 strings of text, not numbers. Therefore we must convert the score into a
@@ -279,7 +281,7 @@ string. Add these lines to the end of the ``draw()`` function:
 .. code:: python
 
        score_string = str(score)
-       screen.draw.text(score_string, (0,0), color='green')
+       draw_text(score_string, 0, 0, 20, GREEN)
 
 .. topic:: Exercise
 
@@ -293,7 +295,7 @@ string. Add these lines to the end of the ``draw()`` function:
 
 .. topic:: Advanced
 
-   When the `score` reaches 10, show a message on the screen to congratulate the player
+   When the `score` reaches 10, show a message on the screen to congratulate the player.
 
 
 Timer
@@ -307,7 +309,7 @@ in the game:
 
    time = 20
 
-Pygame Zero calls our ``update()`` function many times per second. We
+RLZero calls our ``update()`` function many times per second. We
 can ask it to tell us how much time has passed by adding a *parameter*
 to the function, ``delta``. We then subtract this from the remaining
 time. Modify ``update()`` so the first lines look like this:
@@ -326,11 +328,11 @@ function (but still indented so part of the function) add these lines:
 .. code:: python
 
        time_string = str(time)
-       screen.draw.text(time_string, (50,0), color='green')
+       draw_text(time_string, 50, 0, 20, GREEN)
 
 .. topic:: Exercise
 
-   Run the program.  Could the displayed time be improved?
+   Run the program.  Could the displayed time be improved (maybe you could use the ``round()`` function somehow?)
 
 
 We don’t need to see the decimal places in the time. Modify those lines
@@ -339,7 +341,7 @@ to use the ``round()`` function, like this:
 .. code:: python
 
        time_string = str(round(time))
-       screen.draw.text(time_string, (50,0), color='green')
+       draw_text(time_string, 50, 0, 20, GREEN)
 
 Finished game
 -------------
