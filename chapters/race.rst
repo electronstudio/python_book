@@ -160,7 +160,7 @@ collide as a penalty.
            player.x += 5
            player.vx = player.vx * -0.5
            player.vy = 0
-       if player.x > a + b:
+       if player.x + 50 > a + b:
            player.x -= 5
            player.vx = player.vx * -0.5
            player.vy = 0

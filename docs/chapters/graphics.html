@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4. Drawing graphics &mdash; Learn to code with Python and Raylib  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -93,21 +94,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="drawing-graphics">
+  <section id="drawing-graphics">
 <h1><span class="section-number">4. </span>Drawing graphics<a class="headerlink" href="#drawing-graphics" title="Permalink to this headline"></a></h1>
 <p>To create graphics for our games we will use <a class="reference external" href="https://www.raylib.com/">Raylib</a>
 along with <a class="reference external" href="https://electronstudio.github.io/rlzero/">my RLZero
 library</a>. You will find
 the documentation on the websites useful!</p>
-<div class="section" id="installing-the-graphics-library">
+<section id="installing-the-graphics-library">
 <h2><span class="section-number">4.1. </span>Installing the graphics library<a class="headerlink" href="#installing-the-graphics-library" title="Permalink to this headline"></a></h2>
 <p>Installing a Python package varies depending on what Python editor or IDE
 you are using.
 Here is how you do it if you are using the Mu editor.</p>
 <p>Run <em>Mu</em>. Click <strong>Mode</strong> and select <strong>Python3</strong>.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference internal image-reference" href="../_images/mu1.png"><img alt="../_images/mu1.png" src="../_images/mu1.png" style="width: 70%;" /></a>
-</div>
+</figure>
 <p>Then click <em>the small gadget icon</em> in the bottom right
 hand corner of the
 window. Click <strong>third party packages</strong>. Type</p>
@@ -117,29 +118,28 @@ window. Click <strong>third party packages</strong>. Type</p>
 <p>into the box. Click <strong>OK</strong>. The library will download.</p>
 <p><em>If you are not using Mu</em> you can install from the
 command line like this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;rlzero&gt;=0.2&lt;0.3&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="s1">&#39;rlzero&gt;=0.3&lt;0.4&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="rlzero-and-raylib">
+</section>
+<section id="rlzero-and-raylib">
 <h2><span class="section-number">4.2. </span>RLZero and Raylib<a class="headerlink" href="#rlzero-and-raylib" title="Permalink to this headline"></a></h2>
 <p>Raylib is a graphics library.  RLZero adds some extra functions to Raylib to make
 it easier to use.  Once you have installed RLZero you are free to use <a class="reference external" href="https://electronstudio.github.io/raylib-python-cffi/pyray.html">all the
 functions of Raylib</a>- you don’t have to stick to the RLZero functions.</p>
-</div>
-<div class="section" id="pixels">
+</section>
+<section id="pixels">
 <h2><span class="section-number">4.3. </span>Pixels<a class="headerlink" href="#pixels" title="Permalink to this headline"></a></h2>
 <p>The smallest square that can be displayed on a monitor is called a
 <em>pixel</em>. This diagram shows a close-up view of a window that is 40
 pixels wide and 40 pixels high. At normal size you will not see the grid
 lines.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <a class="reference internal image-reference" href="../_images/pixelgrid.png"><img alt="../_images/pixelgrid.png" src="../_images/pixelgrid.png" style="width: 70%;" /></a>
-</div>
-<p>We can refer to any pixel by giving two co-ordinates, <em>(x,y)</em> Make sure
-you understand co-ordinates before moving on because everything we do in
-Pygame Zero will use it. (In maths this called a ‘Cartesian coordinate
-system’).</p>
+</figure>
+<p>We can refer to any pixel by giving two co-ordinates, <em>(x,y)</em> . Make sure
+you understand co-ordinates before moving on because everything we do will use them. (In maths this called a ‘Cartesian coordinate
+system’.)</p>
 <p>Now type in <a class="reference internal" href="#code-pixels"><span class="std std-numref">Program 4.1</span></a> and run it, to see a pixel.  It’s very small,
 so look carefully!</p>
 <div class="literal-block-wrapper docutils container" id="code-pixels">
@@ -161,8 +161,8 @@ so look carefully!</p>
 <p class="topic-title">Exercise</p>
 <p>Make this pixel blue.</p>
 </div>
-</div>
-<div class="section" id="lines-and-circles">
+</section>
+<section id="lines-and-circles">
 <h2><span class="section-number">4.4. </span>Lines and circles<a class="headerlink" href="#lines-and-circles" title="Permalink to this headline"></a></h2>
 <div class="literal-block-wrapper docutils container" id="code-lines-circles">
 <div class="code-block-caption"><span class="caption-number">Program 4.2 </span><span class="caption-text">Lines and circles</span><a class="headerlink" href="#code-lines-circles" title="Permalink to this code"></a></div>
@@ -189,8 +189,8 @@ so look carefully!</p>
 <p class="topic-title">Exercise</p>
 <p>Draw your own picture.</p>
 </div>
-</div>
-<div class="section" id="moving-rectangles">
+</section>
+<section id="moving-rectangles">
 <h2><span class="section-number">4.5. </span>Moving rectangles<a class="headerlink" href="#moving-rectangles" title="Permalink to this headline"></a></h2>
 <p>To make things move we need to add the special <code class="docutils literal notranslate"><span class="pre">update()</span></code> function. We
 don’t need to write our own loop because <em>RLZero calls this
@@ -229,8 +229,8 @@ function for us in its own loop</em>, over and over, many times per second.</p>
 <p class="topic-title">Exercise</p>
 <p>Make two boxes with different colours.</p>
 </div>
-</div>
-<div class="section" id="sprites">
+</section>
+<section id="sprites">
 <h2><span class="section-number">4.6. </span>Sprites<a class="headerlink" href="#sprites" title="Permalink to this headline"></a></h2>
 <p>Sprites are very similar to boxes, but are loaded from a <strong>png</strong> or <strong>jpg</strong> image file.
 RLZero has one such image built-in,
@@ -272,8 +272,8 @@ you download and install <a class="reference external" href="https://krita.org">
 <p class="topic-title">Exercise</p>
 <p>Draw or download your own image to use instead of alien.</p>
 </div>
-</div>
-<div class="section" id="background-image">
+</section>
+<section id="background-image">
 <h2><span class="section-number">4.7. </span>Background image<a class="headerlink" href="#background-image" title="Permalink to this headline"></a></h2>
 <p>We are going to add a background image to
 <a class="reference internal" href="#code-sprites"><span class="std std-numref">Program 4.4</span></a></p>
@@ -313,8 +313,8 @@ format.</p>
 <p class="topic-title">Exercise</p>
 <p>Create a picture to use a background.  Save it as <cite>background.png</cite>.  Run the program.</p>
 </div>
-</div>
-<div class="section" id="keyboard-input">
+</section>
+<section id="keyboard-input">
 <h2><span class="section-number">4.8. </span>Keyboard input<a class="headerlink" href="#keyboard-input" title="Permalink to this headline"></a></h2>
 <p>Alan moves when you press the cursor keys.</p>
 <div class="literal-block-wrapper docutils container" id="code-keyboard-input">
@@ -349,8 +349,8 @@ format.</p>
 <p class="topic-title">Exercise</p>
 <p>Use the <cite>or</cite> operator to allow WASD keys to move the alien in addition to the cursor keys (see <a class="reference internal" href="fundamentals.html#code-logic"><span class="std std-numref">Program 2.8</span></a>).</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

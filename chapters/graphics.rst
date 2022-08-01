@@ -33,7 +33,7 @@ command line like this:
 
 ::
 
-    python3 -m pip install 'rlzero>=0.2<0.3'
+    python3 -m pip install 'rlzero>=0.3<0.4'
 
 RLZero and Raylib
 -----------------
@@ -54,10 +54,9 @@ lines.
    :width: 70%
 
 
-We can refer to any pixel by giving two co-ordinates, *(x,y)* Make sure
-you understand co-ordinates before moving on because everything we do in
-Pygame Zero will use it. (In maths this called a ‘Cartesian coordinate
-system’).
+We can refer to any pixel by giving two co-ordinates, *(x,y)* . Make sure
+you understand co-ordinates before moving on because everything we do will use them. (In maths this called a ‘Cartesian coordinate
+system’.)
 
 Now type in :numref:`code-pixels` and run it, to see a pixel.  It's very small,
 so look carefully!

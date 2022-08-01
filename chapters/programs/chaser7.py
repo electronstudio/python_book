@@ -28,11 +28,11 @@ def draw2d():
     enemy.draw()
     player2.draw()
     coin.draw()
-    screen.draw_text("My game", 200, 0, 20, RED)
+    draw_text("My game", 200, 0, 20, RED)
     score_string = str(score)
-    screen.draw_text(score_string, 0,0, 20, GREEN)
+    draw_text(score_string, 0,0, 20, GREEN)
     time_string = str(round(time))
-    screen.draw_text(time_string, 50,0, 20, GREEN)
+    draw_text(time_string, 50,0, 20, GREEN)
 
 def update(delta):
     global score, time

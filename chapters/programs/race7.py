@@ -5,7 +5,7 @@ import math
 WIDTH = 600
 HEIGHT = 800
 
-player = Sprite("alien.png", (300, 780))
+player = Sprite("alien.png", (300, 750))
 player.vx = 0   # horizontal velocity
 player.vy = 1   # vertical velocity
 
@@ -69,3 +69,5 @@ def timer(delta):
 
 def on_mouse_move(pos):
     pass
+
+run()

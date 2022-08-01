@@ -88,7 +88,7 @@ random number, import the random library:
    print(randint(0,10))
 
 Other libraries are not supplied with Python and must be downloaded
-separately, such as the Minecraft, Pygame and Richlib libraries.
+separately, such as the Minecraft, Pygame and RLZero libraries.
 
 Names
 -----

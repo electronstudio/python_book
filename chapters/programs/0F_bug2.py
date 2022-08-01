@@ -1,4 +1,3 @@
-
 def myfunction:
     print "hello"
 

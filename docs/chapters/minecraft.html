@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>14. Python in Minecraft &mdash; Learn to code with Python and Raylib  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -108,7 +109,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="python-in-minecraft">
+  <section id="python-in-minecraft">
 <h1><span class="section-number">14. </span>Python in Minecraft<a class="headerlink" href="#python-in-minecraft" title="Permalink to this headline"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -116,20 +117,20 @@
 I highly recommend their book <em>Adventures in Minecraft</em> which contains a
 great deal more programs.</p>
 </div>
-<div class="section" id="setup">
+<section id="setup">
 <h2><span class="section-number">14.1. </span>Setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h2>
 <p>You will need to own Minecraft <a class="reference external" href="https://www.minecraft.net/en-us/store/minecraft-java-edition">Java Edition</a> (not Bedrock edition).</p>
 <p>If you already have a Mojang or Microsoft account, go to the Minecraft website and click login. If you haven’t
 accessed it for years you may need to reset your password. If you
 already own Minecraft it will then tell you. If you don’t have an
 account, create one, and buy Minecraft Java Edition.</p>
-<div class="section" id="setup-java">
+<section id="setup-java">
 <h3><span class="section-number">14.1.1. </span>Setup Java<a class="headerlink" href="#setup-java" title="Permalink to this headline"></a></h3>
 <p>You will need to download and install Java from <a class="reference external" href="https://adoptopenjdk.net">adoptopenjdk.net</a>.</p>
 <p>I recommend the <em>latest</em> (currently <strong>OpenJDK 16</strong>) because it will be useful for other things, but if you have problems you
 can fall back to using <strong>OpenJDK 8</strong>.  Choose <strong>HotSpot</strong> and click the button to download.</p>
-</div>
-<div class="section" id="setup-server">
+</section>
+<section id="setup-server">
 <h3><span class="section-number">14.1.2. </span>Setup Server<a class="headerlink" href="#setup-server" title="Permalink to this headline"></a></h3>
 <p>Download the <em>Adventures In Minecraft Starter Kit</em> from</p>
 <p><a class="reference external" href="https://adventuresinminecraft.github.io">https://adventuresinminecraft.github.io</a> and unpack it in a folder on
@@ -167,8 +168,8 @@ want to quit, first type</p>
 <p>Setup a more modern Minecraft server, such as <a class="reference external" href="https://papermc.io/">PaperMC</a>.</p>
 <p>Then try to get the <a class="reference external" href="https://dev.bukkit.org/projects/raspberryjuice">Raspberryjuice plugin</a> to work with it so you can use it with Python.  This is not easy; I couldn’t do it!</p>
 </div>
-</div>
-<div class="section" id="setup-minecraft">
+</section>
+<section id="setup-minecraft">
 <h3><span class="section-number">14.1.3. </span>Setup Minecraft<a class="headerlink" href="#setup-minecraft" title="Permalink to this headline"></a></h3>
 <p>Run the Minecraft launcher you downloaded from minecraft.net. We will
 not be using the default which is the latest version of Minecraft.
@@ -181,8 +182,8 @@ server address as</p>
 </pre></div>
 </div>
 <p>Click ‘done’. Click on your server to connect to it.</p>
-</div>
-<div class="section" id="setup-mu">
+</section>
+<section id="setup-mu">
 <h3><span class="section-number">14.1.4. </span>Setup Mu<a class="headerlink" href="#setup-mu" title="Permalink to this headline"></a></h3>
 <p>Mu is the Python editor we have already been using, so you probably
 already have it installed. However you need to make sure you have the
@@ -199,16 +200,16 @@ command line like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">mcpi</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="summary">
+</section>
+<section id="summary">
 <h3><span class="section-number">14.1.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline"></a></h3>
 <a class="reference internal image-reference" href="../_images/minecraft.png"><img alt="../_images/minecraft.png" class="align-center" src="../_images/minecraft.png" style="width: 50%;" /></a>
 <p>You need to have the Minecraft server, Minecraft (the client) and Mu all running at the same time.  It may be
 useful to arrange them in separate windows.  Your Python program will talk to the server, and Minecraft will also talk to the server,
 allowing you to see the results of your program in Mincraft.</p>
-</div>
-</div>
-<div class="section" id="hello-minecraft">
+</section>
+</section>
+<section id="hello-minecraft">
 <h2><span class="section-number">14.2. </span>Hello Minecraft<a class="headerlink" href="#hello-minecraft" title="Permalink to this headline"></a></h2>
 <p>This program tests you have a connection to the Minecraft server and
 displays a message on the client.</p>
@@ -220,8 +221,8 @@ displays a message on the client.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="coordinates">
+</section>
+<section id="coordinates">
 <h2><span class="section-number">14.3. </span>Coordinates<a class="headerlink" href="#coordinates" title="Permalink to this headline"></a></h2>
 <p>This program gets the player’s co-ordinates and prints them to the chat.</p>
 <div class="literal-block-wrapper docutils container" id="code-minecoordinates">
@@ -239,8 +240,8 @@ displays a message on the client.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="changing-the-players-position">
+</section>
+<section id="changing-the-players-position">
 <h2><span class="section-number">14.4. </span>Changing the player’s position<a class="headerlink" href="#changing-the-players-position" title="Permalink to this headline"></a></h2>
 <p>Find the coordinates of a location in your world, either by pressing F3
 in the game, or running <a class="reference internal" href="#code-minecoordinates"><span class="std std-numref">Program 14.2</span></a>
@@ -261,8 +262,8 @@ location.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="build-a-teleporter">
+</section>
+<section id="build-a-teleporter">
 <h2><span class="section-number">14.5. </span>Build a teleporter<a class="headerlink" href="#build-a-teleporter" title="Permalink to this headline"></a></h2>
 <p>Before you run this program, build two tiles in the game to be your
 teleporters and write down their co-ordinates.</p>
@@ -302,8 +303,8 @@ teleporters and write down their co-ordinates.</p>
 </div>
 <p>Then add another line that teleports the player somewhere else.</p>
 </div>
-</div>
-<div class="section" id="teleport-player-into-the-air">
+</section>
+<section id="teleport-player-into-the-air">
 <h2><span class="section-number">14.6. </span>Teleport player into the air<a class="headerlink" href="#teleport-player-into-the-air" title="Permalink to this headline"></a></h2>
 <div class="literal-block-wrapper docutils container" id="code-telport3">
 <div class="code-block-caption"><span class="caption-number">Program 14.5 </span><span class="caption-text">Teleport player into the air</span><a class="headerlink" href="#code-telport3" title="Permalink to this code"></a></div>
@@ -330,8 +331,8 @@ teleporters and write down their co-ordinates.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="teleport-jump">
+</section>
+<section id="teleport-jump">
 <h2><span class="section-number">14.7. </span>Teleport jump<a class="headerlink" href="#teleport-jump" title="Permalink to this headline"></a></h2>
 <p>This program does a series of teleports in quick succession to give the
 effect of a jump.</p>
@@ -385,8 +386,8 @@ effect of a jump.</p>
 <p class="topic-title">Advanced</p>
 <p>Instead of checking if player is on a single teleporter tile, check if player is within a larger area.  Use <cite>&lt;</cite>, <cite>and</cite>, <cite>&gt;</cite> operators.</p>
 </div>
-</div>
-<div class="section" id="create-a-block">
+</section>
+<section id="create-a-block">
 <h2><span class="section-number">14.8. </span>Create a block<a class="headerlink" href="#create-a-block" title="Permalink to this headline"></a></h2>
 <p>This program creates a block. Each type of block has it’s own number,
 but if we import <code class="docutils literal notranslate"><span class="pre">mcpi.block</span></code> we can use names instead remembering
@@ -410,8 +411,8 @@ numbers.</p>
 <p class="topic-title">Exercise</p>
 <p>Make the block appear a short distance from the player.</p>
 </div>
-</div>
-<div class="section" id="types-of-block">
+</section>
+<section id="types-of-block">
 <h2><span class="section-number">14.9. </span>Types of block<a class="headerlink" href="#types-of-block" title="Permalink to this headline"></a></h2>
 <table class="colwidths-given docutils align-default">
 <colgroup>
@@ -518,8 +519,8 @@ numbers.</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="create-a-block-inside-a-loop">
+</section>
+<section id="create-a-block-inside-a-loop">
 <h2><span class="section-number">14.10. </span>Create a block inside a loop<a class="headerlink" href="#create-a-block-inside-a-loop" title="Permalink to this headline"></a></h2>
 <p>This program creates a block over and over again in a loop. Move around
 to see it.</p>
@@ -548,8 +549,8 @@ to see it.</p>
 <p class="topic-title">Exercise</p>
 <p>Change the block to something else, e.g. <cite>ICE</cite></p>
 </div>
-</div>
-<div class="section" id="create-a-tower-of-blocks">
+</section>
+<section id="create-a-tower-of-blocks">
 <h2><span class="section-number">14.11. </span>Create a tower of blocks<a class="headerlink" href="#create-a-tower-of-blocks" title="Permalink to this headline"></a></h2>
 <p>We will use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to easily build a tower of blocks.</p>
 <div class="literal-block-wrapper docutils container" id="code-e08-tower">
@@ -575,8 +576,8 @@ to see it.</p>
 <p class="topic-title">Exercise</p>
 <p>Change the program to create <em>three</em> towers next to one another.</p>
 </div>
-</div>
-<div class="section" id="clear-space">
+</section>
+<section id="clear-space">
 <h2><span class="section-number">14.12. </span>Clear space<a class="headerlink" href="#clear-space" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">setBlocks()</span></code> function lets us create a large cube of blocks. If
 we create blocks of type <code class="docutils literal notranslate"><span class="pre">AIR</span></code> this has the effect of removing all
@@ -600,8 +601,8 @@ program.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="build-a-house">
+</section>
+<section id="build-a-house">
 <h2><span class="section-number">14.13. </span>Build a house<a class="headerlink" href="#build-a-house" title="Permalink to this headline"></a></h2>
 <p>Make sure you have saved the previous <a class="reference internal" href="#code-e09-clear-space"><span class="std std-numref">Program 14.10</span></a> to the same directory before you run
 this program because we are going to <code class="docutils literal notranslate"><span class="pre">import</span></code> the function from
@@ -661,8 +662,8 @@ this program because we are going to <code class="docutils literal notranslate">
 <p class="topic-title">Exercise</p>
 <p>Try filling a house with <cite>LAVA</cite>, or <cite>WATER</cite>, or <cite>TNT</cite> (Be careful with <cite>TNT</cite>, too much will crash your computer!)</p>
 </div>
-</div>
-<div class="section" id="build-a-street-of-houses">
+</section>
+<section id="build-a-street-of-houses">
 <h2><span class="section-number">14.14. </span>Build a street of houses<a class="headerlink" href="#build-a-street-of-houses" title="Permalink to this headline"></a></h2>
 <p>Make sure you have saved the previous <a class="reference internal" href="#code-e10-basic-house"><span class="std std-numref">Program 14.11</span></a>
 to the same directory before you run
@@ -721,8 +722,8 @@ this program because we are going to <code class="docutils literal notranslate">
 <p class="topic-title">Exercise</p>
 <p>Make your houses out of TNT.  Use flint tool on them.</p>
 </div>
-</div>
-<div class="section" id="chat-commands">
+</section>
+<section id="chat-commands">
 <h2><span class="section-number">14.15. </span>Chat commands<a class="headerlink" href="#chat-commands" title="Permalink to this headline"></a></h2>
 <p>This program can read chat messages posted by players. It builds a block
 next to any player who says “build”. This is the first example that will
@@ -761,8 +762,8 @@ work for more than one player.</p>
 <p>use <cite>mc.getPlayerEntityId(“fred”)</cite> to get the id of a certain player named Fred
 (or whatever your friend’s player name is).  Build something at the position of this player.</p>
 </div>
-</div>
-<div class="section" id="turtle">
+</section>
+<section id="turtle">
 <h2><span class="section-number">14.16. </span>Turtle<a class="headerlink" href="#turtle" title="Permalink to this headline"></a></h2>
 <p><em>This requires the</em> <strong>minecraftstuff</strong> <em>package to work.</em> You can install it
 in Mu by clicking in the bottom right gadget and adding
@@ -801,8 +802,8 @@ in Minecraft.</p>
 <p class="topic-title">Exercise</p>
 <p>What do turtle.up(90) and turtle.down(90) do?</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -76,7 +76,7 @@ pixel or a white pixel.
                             (IM_START + (y / HEIGHT) * IM_HEIGHT))
                 m = mandelbrot(c)
                 color = BLACK if m == MAX_ITER else WHITE
-                screen.draw_pixel(x, y, color)
+                draw_pixel(x, y, color)
 
 .. figure:: images/Mandelset_hires.png
    :width: 50%
@@ -123,7 +123,7 @@ Here is the modified function that does this,
                 m = mandelbrot(c)
                 i = 255 - int(255 * m / MAX_ITER)
                 color = (i, i, i, 255)
-                screen.draw_pixel(x, y, color)
+                draw_pixel(x, y, color)
 
 Modify your ``draw2d()`` function and run.
 
@@ -147,8 +147,8 @@ can be changed to produce completely different colours.
                 hue = int(255 * m / MAX_ITER)
                 saturation = 255
                 value = 255 if m < MAX_ITER else 0
-                color = screen.color_from_hsv(hue, saturation, value)
-                screen.draw_pixel(x, y, color)
+                color = color_from_hsv(hue, saturation, value)
+                draw_pixel(x, y, color)
 
 Modify your ``draw2d()`` function and run.
 
@@ -158,7 +158,7 @@ Zooming in
 Lets introduce a new variable, *zoom*.  We will multiply our co-ordinates by this factor to enable zooming.
 
 We will also add an ``update`` function.  This is called automatically and will handle input.  You can now
-hold down the space and enter to zoom in and out, and hold the cursor keys to move around.
+hold down the **space** and **enter** keys to zoom in and out, and hold the **cursor** keys to move around.
 
 .. literalinclude:: programs/mand5c.py
    :caption: Mandlebrot set with colour and zooming
@@ -168,7 +168,7 @@ hold down the space and enter to zoom in and out, and hold the cursor keys to mo
 
 This is the complete program.  Modify yours to match, or enter it again, and run it.
 
-.. note:: Zooming may be slow and you may have to hold for a long time.  We will try to improve this next.
+.. note:: Zooming will be slow and you may have to **hold keys down** for a long time before anything happens!  We will try to improve this next.
 
 Performance
 -----------
@@ -191,10 +191,10 @@ an ``image`` object and plot to this.
                 saturation = 255
                 value = 255 if m < MAX_ITER else 0
                 color = pyray.color_from_hsv(hue, saturation, value)
-                screen.image_draw_pixel(image, x, y, color)
+                image_draw_pixel(image, x, y, color)
 
 
-    image = screen.gen_image_color(WIDTH, HEIGHT, GREEN)
+    image = gen_image_color(WIDTH, HEIGHT, GREEN)
     plot_image()
 
 We can't draw the ``image`` directly to the screen; it must be converted into a ``texture`` first.  Unfortunately we can't create
@@ -205,8 +205,8 @@ function which RLZero calls automatically after initialization.
 
     def init():
         global texture
-        texture = screen.load_texture_from_image(image)
-        screen.set_texture_filter(texture, screen.TEXTURE_FILTER_BILINEAR)
+        texture = load_texture_from_image(image)
+        set_texture_filter(texture, TEXTURE_FILTER_BILINEAR)
 
 Now our ``draw2d()`` function only has to update the ``texture`` based on the latest ``image`` and draw it to the screen, which
 is much faster than re-plotting the whole thing.
@@ -214,8 +214,8 @@ is much faster than re-plotting the whole thing.
 ..  code-block::
 
     def draw2d():
-        screen.update_texture(texture, image.data)
-        screen.draw_texture_ex(texture, (0, 0), 0, 1, WHITE)
+        update_texture(texture, image.data)
+        draw_texture_ex(texture, (0, 0), 0, 1, WHITE)
 
 Finally, we must remember to re-plot the image if the user presses any keys:
 
@@ -241,6 +241,8 @@ Finally, we must remember to re-plot the image if the user presses any keys:
         elif keyboard.right:
             RE_START += 0.2
             plot_image()
+
+Complete program:
 
 .. literalinclude:: programs/mand5e.py
    :caption: Mandlebrot set with improved performance
@@ -279,8 +281,8 @@ Change the ``draw_2d()`` function to use the ``SCALE``:
 ..  code-block::
 
     def draw2d():
-        screen.update_texture(texture, image.data)
-        screen.draw_texture_ex(texture, (0,0), 0, SCALE, WHITE)
+        update_texture(texture, image.data)
+        draw_texture_ex(texture, (0,0), 0, SCALE, WHITE)
 
 Run the program and experiment with different ``SCALE`` values.
 

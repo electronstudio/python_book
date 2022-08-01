@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>12. Tutorial: Fractals &mdash; Learn to code with Python and Raylib  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -93,7 +94,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="tutorial-fractals">
+  <section id="tutorial-fractals">
 <h1><span class="section-number">12. </span>Tutorial: Fractals<a class="headerlink" href="#tutorial-fractals" title="Permalink to this headline"></a></h1>
 <blockquote class="epigraph">
 <div><p>In mathematics, a fractal is a subset of Euclidean space with a fractal dimension that strictly exceeds its topological dimension.</p>
@@ -113,7 +114,7 @@ clouds, seashells, hurricanes, etc.</p>
 <li><p>You can zoom in forever and always find new details, yet you don’t have to write any extra code.</p></li>
 </ul>
 <p>We are going to write a program to draw one fractal in particular, the Mandelbrot set.</p>
-<div class="section" id="mandelbrot-set">
+<section id="mandelbrot-set">
 <h2><span class="section-number">12.1. </span>Mandelbrot set<a class="headerlink" href="#mandelbrot-set" title="Permalink to this headline"></a></h2>
 <p>We are going to skip through the maths so we can get straight to coding, but if you would like to understand complex numbers,
 <a class="reference external" href="https://youtu.be/NGMRB4O922I">watch this video</a> or ask your maths teacher.</p>
@@ -150,13 +151,15 @@ pixel or a white pixel.</p>
                         <span class="p">(</span><span class="n">IM_START</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">/</span> <span class="n">HEIGHT</span><span class="p">)</span> <span class="o">*</span> <span class="n">IM_HEIGHT</span><span class="p">))</span>
             <span class="n">m</span> <span class="o">=</span> <span class="n">mandelbrot</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
             <span class="n">color</span> <span class="o">=</span> <span class="n">BLACK</span> <span class="k">if</span> <span class="n">m</span> <span class="o">==</span> <span class="n">MAX_ITER</span> <span class="k">else</span> <span class="n">WHITE</span>
-            <span class="n">screen</span><span class="o">.</span><span class="n">draw_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+            <span class="n">draw_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/Mandelset_hires.png"><img alt="Complex plain" src="../_images/Mandelset_hires.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12.1 </span><span class="caption-text">Complex plain</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 12.1 </span><span class="caption-text">Complex plain</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>A Mandlebrot is drawn in the <em>complex plain</em>.  This means that the axes are not labelled <em>x</em> and <em>y</em>.  Instead we call
 the horizontal axis <em>RE</em> (for ‘real’) and the vertical axis <em>IM</em> (for ‘imaginary’).  These terms come from the maths
 of complex numbers.  So we define some constants to specify the left, right, top and bottom limits of the graph:</p>
@@ -207,8 +210,8 @@ of complex numbers.  So we define some constants to specify the left, right, top
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="shades-of-grey">
+</section>
+<section id="shades-of-grey">
 <h2><span class="section-number">12.2. </span>Shades of Grey<a class="headerlink" href="#shades-of-grey" title="Permalink to this headline"></a></h2>
 <p>The reason we returned the number of iterations is that for a point <em>outside</em> of the Mandlebrot set, this number
 tells us how far outside it is.  So instead of just plotting black and white for <em>in</em> or <em>out</em> we can plot shades of grey.</p>
@@ -221,12 +224,12 @@ tells us how far outside it is.  So instead of just plotting black and white for
             <span class="n">m</span> <span class="o">=</span> <span class="n">mandelbrot</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 <span class="hll">            <span class="n">i</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="mi">255</span> <span class="o">*</span> <span class="n">m</span> <span class="o">/</span> <span class="n">MAX_ITER</span><span class="p">)</span>
 </span><span class="hll">            <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
-</span>            <span class="n">screen</span><span class="o">.</span><span class="n">draw_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+</span>            <span class="n">draw_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Modify your <code class="docutils literal notranslate"><span class="pre">draw2d()</span></code> function and run.</p>
-</div>
-<div class="section" id="colours">
+</section>
+<section id="colours">
 <h2><span class="section-number">12.3. </span>Colours<a class="headerlink" href="#colours" title="Permalink to this headline"></a></h2>
 <p>In the previous function we created an <em>RGB</em> <code class="docutils literal notranslate"><span class="pre">color</span></code> where the red, green and blue values were the all same, i.e. a shade of grey.</p>
 <p><em>RGB</em> is the most common colour space, but it is not only one.  The <em>HSV</em> colour space is useful because one single value, the <em>hue</em>,
@@ -240,17 +243,17 @@ can be changed to produce completely different colours.</p>
 <span class="hll">            <span class="n">hue</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">255</span> <span class="o">*</span> <span class="n">m</span> <span class="o">/</span> <span class="n">MAX_ITER</span><span class="p">)</span>
 </span><span class="hll">            <span class="n">saturation</span> <span class="o">=</span> <span class="mi">255</span>
 </span><span class="hll">            <span class="n">value</span> <span class="o">=</span> <span class="mi">255</span> <span class="k">if</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="n">MAX_ITER</span> <span class="k">else</span> <span class="mi">0</span>
-</span><span class="hll">            <span class="n">color</span> <span class="o">=</span> <span class="n">screen</span><span class="o">.</span><span class="n">color_from_hsv</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="n">saturation</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-</span>            <span class="n">screen</span><span class="o">.</span><span class="n">draw_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+</span><span class="hll">            <span class="n">color</span> <span class="o">=</span> <span class="n">color_from_hsv</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="n">saturation</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span>            <span class="n">draw_pixel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Modify your <code class="docutils literal notranslate"><span class="pre">draw2d()</span></code> function and run.</p>
-</div>
-<div class="section" id="zooming-in">
+</section>
+<section id="zooming-in">
 <h2><span class="section-number">12.4. </span>Zooming in<a class="headerlink" href="#zooming-in" title="Permalink to this headline"></a></h2>
 <p>Lets introduce a new variable, <em>zoom</em>.  We will multiply our co-ordinates by this factor to enable zooming.</p>
 <p>We will also add an <code class="docutils literal notranslate"><span class="pre">update</span></code> function.  This is called automatically and will handle input.  You can now
-hold down the space and enter to zoom in and out, and hold the cursor keys to move around.</p>
+hold down the <strong>space</strong> and <strong>enter</strong> keys to zoom in and out, and hold the <strong>cursor</strong> keys to move around.</p>
 <div class="literal-block-wrapper docutils container" id="code-mandelbrot2">
 <div class="code-block-caption"><span class="caption-number">Program 12.2 </span><span class="caption-text">Mandlebrot set with colour and zooming</span><a class="headerlink" href="#code-mandelbrot2" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
@@ -313,10 +316,10 @@ hold down the space and enter to zoom in and out, and hold the cursor keys to mo
 <p>This is the complete program.  Modify yours to match, or enter it again, and run it.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Zooming may be slow and you may have to hold for a long time.  We will try to improve this next.</p>
+<p>Zooming will be slow and you may have to <strong>hold keys down</strong> for a long time before anything happens!  We will try to improve this next.</p>
 </div>
-</div>
-<div class="section" id="performance">
+</section>
+<section id="performance">
 <h2><span class="section-number">12.5. </span>Performance<a class="headerlink" href="#performance" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">draw2d()</span></code> function is called automatically, up to 60 times per second, and every time it is called we plot
 a new fractal.  This is very inefficient, because we are re-plotting the fractal even when it has not changed at all.</p>
@@ -332,10 +335,10 @@ an <code class="docutils literal notranslate"><span class="pre">image</span></co
             <span class="n">saturation</span> <span class="o">=</span> <span class="mi">255</span>
             <span class="n">value</span> <span class="o">=</span> <span class="mi">255</span> <span class="k">if</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="n">MAX_ITER</span> <span class="k">else</span> <span class="mi">0</span>
             <span class="n">color</span> <span class="o">=</span> <span class="n">pyray</span><span class="o">.</span><span class="n">color_from_hsv</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="n">saturation</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-            <span class="n">screen</span><span class="o">.</span><span class="n">image_draw_pixel</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+            <span class="n">image_draw_pixel</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
 
 
-<span class="n">image</span> <span class="o">=</span> <span class="n">screen</span><span class="o">.</span><span class="n">gen_image_color</span><span class="p">(</span><span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">gen_image_color</span><span class="p">(</span><span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
 <span class="n">plot_image</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -344,15 +347,15 @@ a <code class="docutils literal notranslate"><span class="pre">texture</span></c
 function which RLZero calls automatically after initialization.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">texture</span>
-    <span class="n">texture</span> <span class="o">=</span> <span class="n">screen</span><span class="o">.</span><span class="n">load_texture_from_image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">set_texture_filter</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="n">screen</span><span class="o">.</span><span class="n">TEXTURE_FILTER_BILINEAR</span><span class="p">)</span>
+    <span class="n">texture</span> <span class="o">=</span> <span class="n">load_texture_from_image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="n">set_texture_filter</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="n">TEXTURE_FILTER_BILINEAR</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now our <code class="docutils literal notranslate"><span class="pre">draw2d()</span></code> function only has to update the <code class="docutils literal notranslate"><span class="pre">texture</span></code> based on the latest <code class="docutils literal notranslate"><span class="pre">image</span></code> and draw it to the screen, which
 is much faster than re-plotting the whole thing.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw2d</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">update_texture</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw_texture_ex</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+    <span class="n">update_texture</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">draw_texture_ex</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Finally, we must remember to re-plot the image if the user presses any keys:</p>
@@ -378,6 +381,7 @@ is much faster than re-plotting the whole thing.</p>
         <span class="n">plot_image</span><span class="p">()</span>
 </pre></div>
 </div>
+<p>Complete program:</p>
 <div class="literal-block-wrapper docutils container" id="code-mandelbrot3">
 <div class="code-block-caption"><span class="caption-number">Program 12.3 </span><span class="caption-text">Mandlebrot set with improved performance</span><a class="headerlink" href="#code-mandelbrot3" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">rlzero</span> <span class="kn">import</span> <span class="o">*</span>
@@ -456,8 +460,8 @@ is much faster than re-plotting the whole thing.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="quality-setting">
+</section>
+<section id="quality-setting">
 <h2><span class="section-number">12.6. </span>Quality setting<a class="headerlink" href="#quality-setting" title="Permalink to this headline"></a></h2>
 <p>It would be nice if we could make the window bigger so we can see the fractal more easily, but depending on the speed
 of your computer you may already find even the small window is very slow.</p>
@@ -479,13 +483,13 @@ draw the texture to the screen.</p>
 </div>
 <p>Change the <code class="docutils literal notranslate"><span class="pre">draw_2d()</span></code> function to use the <code class="docutils literal notranslate"><span class="pre">SCALE</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw2d</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">update_texture</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw_texture_ex</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SCALE</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+    <span class="n">update_texture</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">draw_texture_ex</span><span class="p">(</span><span class="n">texture</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">SCALE</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Run the program and experiment with different <code class="docutils literal notranslate"><span class="pre">SCALE</span></code> values.</p>
-</div>
-<div class="section" id="further-improvements">
+</section>
+<section id="further-improvements">
 <h2><span class="section-number">12.7. </span>Further improvements<a class="headerlink" href="#further-improvements" title="Permalink to this headline"></a></h2>
 <p>If you have ever used a fractal viewer program before, you will probably notice that it is faster than the simple one we have written.
 How could we make ours faster?</p>
@@ -496,8 +500,8 @@ How could we make ours faster?</p>
 <li><p>When zooming in, first scale-up the existing image to generate a low quality zoomed image, then plot a higher quality one later.</p></li>
 <li><p>Begin plotting with a low resolution image and then replace it with a higher resolution one later.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

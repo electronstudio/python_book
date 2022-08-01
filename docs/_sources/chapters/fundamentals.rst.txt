@@ -129,7 +129,12 @@ in the same variable.
 
 .. topic:: Exercise
 
-   What will :numref:`mod_variables` print?  Change the numbers in the program.  Use a division `/` operation.  Then ask your friend to predict what the new program will print.  Was he right?
+   What do you think :numref:`mod_variables` will print?  Run it and see if your prediction is correct.
+
+.. topic:: Exercise
+
+   Change the numbers in the program.
+   Use a division `/` operation on the variable.  Then ask your friend to predict what the new program will print.  Was he right?
 
 
 You will often see this used for counting:
@@ -204,7 +209,7 @@ You could write it like this:
 .. code:: python
 
    sunny = True
-   if sunny==True:
+   if sunny == True:
        print("Let's go to the park")
 
 but that would be redundant because ``if`` always tests if the boolean
@@ -638,12 +643,12 @@ for the addition.
 Functions
 ---------
 
-You may have seen specially named functions that are called by Pygame:
+You will meet specially named functions that are called by RLZero such as
 ``draw()`` and ``update()``. However, you can define a function named
 whatever you like and call it yourself.
 
 Functions are useful for many reasons. The simplest is that they make
-your program look more organized. They also enable you re-use code
+your program look more organized. They also enable you to re-use code
 without needing to copy it and risk making mistakes. When your programs
 get longer they enable you to create *abstractions* so you only have to
 think about what function you want to call and don’t need to remember
@@ -683,7 +688,7 @@ block of code following the ``if`` statement (and optionally blocks
 after the ``elif`` and ``else``. )
 
 Many languages use ``{}`` or ``()`` to delimit a block. However Python
-is unusual: each block begins with ``:`` and then all the lines of the
+is unusual: each block begins with a colon ``:`` and then all the lines of the
 block are *indented* by the same amount of whitespace (tabs or spaces).
 The block ends when the indentation ends.
 

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>9. Tutorial: Maze game &mdash; Learn to code with Python and Raylib  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -93,17 +94,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="tutorial-maze-game">
+  <section id="tutorial-maze-game">
 <h1><span class="section-number">9. </span>Tutorial: Maze game<a class="headerlink" href="#tutorial-maze-game" title="Permalink to this headline"></a></h1>
 <p>In this chapter we will build a maze game together, step by step. The
 Python we will use is quite simple: mostly just conditionals and loops.
 The technique of creating a tilemap is common in games and after seeing
 it here you should be able to incorporate it into your own projects.</p>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/mazegame.png"><img alt="Maze game" src="../_images/mazegame.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Maze game</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</div>
-<div class="section" id="tilemap">
+<figcaption>
+<p><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Maze game</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="tilemap">
 <h2><span class="section-number">9.1. </span>Tilemap<a class="headerlink" href="#tilemap" title="Permalink to this headline"></a></h2>
 <p>A tilemap uses a small number of images (the tiles) and draws them many
 times to build a much larger game level (the map). This saves you from
@@ -154,10 +157,12 @@ change the size of the array you will need to change the <code class="docutils l
 <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> values too. The numbers in the <code class="docutils literal notranslate"><span class="pre">maze</span></code> array refers to
 elements in the <code class="docutils literal notranslate"><span class="pre">tiles</span></code> array. So <code class="docutils literal notranslate"><span class="pre">0</span></code> means <code class="docutils literal notranslate"><span class="pre">empty</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>
 means <code class="docutils literal notranslate"><span class="pre">wall</span></code>, etc.</p>
-<div class="figure align-default" id="id2">
+<figure class="align-default" id="id2">
 <img alt="Tile grid" src="../_images/maze2.png" />
-<p class="caption"><span class="caption-number">Fig. 9.2 </span><span class="caption-text">Tile grid</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 9.2 </span><span class="caption-text">Tile grid</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>To draw the maze we use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop within another <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. The
 outer loop iterates over the rows and the inner loop iterates over the
 columns, i.e. the elements of the row.</p>
@@ -177,8 +182,8 @@ columns, i.e. the elements of the row.</p>
 <p class="topic-title">Advanced</p>
 <p>Make the maze bigger.</p>
 </div>
-</div>
-<div class="section" id="moving-the-player">
+</section>
+<section id="moving-the-player">
 <h2><span class="section-number">9.2. </span>Moving the player<a class="headerlink" href="#moving-the-player" title="Permalink to this headline"></a></h2>
 <p>Add this code to the <em>end</em> of the program:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_key_down</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
@@ -204,8 +209,8 @@ pressed is passed to the function in the <code class="docutils literal notransla
 <p class="topic-title">Exercise</p>
 <p>Run the program and move the player.  Are there any problems with the movement?</p>
 </div>
-</div>
-<div class="section" id="restricting-where-the-player-can-move">
+</section>
+<section id="restricting-where-the-player-can-move">
 <h2><span class="section-number">9.3. </span>Restricting where the player can move<a class="headerlink" href="#restricting-where-the-player-can-move" title="Permalink to this headline"></a></h2>
 <p>Delete the last two lines of the program and replace them with this
 modified version:</p>
@@ -226,8 +231,8 @@ modified version:</p>
 <p class="topic-title">Exercise</p>
 <p>Check that the game ends when the player reaches the goal.</p>
 </div>
-</div>
-<div class="section" id="animate-the-movement-of-the-player">
+</section>
+<section id="animate-the-movement-of-the-player">
 <h2><span class="section-number">9.4. </span>Animate the movement of the player<a class="headerlink" href="#animate-the-movement-of-the-player" title="Permalink to this headline"></a></h2>
 <p>First, the alien Actor is bit too big. Draw a new image of size 64×64
 pixels and save it as <code class="docutils literal notranslate"><span class="pre">player.png</span></code> in the <code class="docutils literal notranslate"><span class="pre">images</span></code> folder. In the
@@ -258,8 +263,8 @@ these lines of the program:</p>
 <p class="topic-title">Exercise</p>
 <p>Verify the player image has changed and moves smoothly.</p>
 </div>
-</div>
-<div class="section" id="create-an-enemy">
+</section>
+<section id="create-an-enemy">
 <h2><span class="section-number">9.5. </span>Create an enemy<a class="headerlink" href="#create-an-enemy" title="Permalink to this headline"></a></h2>
 <p>We will create a simple enemy that moves up and down. Add this code near
 the top just <em>above</em> the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> function.</p>
@@ -306,8 +311,8 @@ wall.</p>
 enemy and player when a key is pressed.  Define a new function called <cite>update()</cite> and move the collisions detection there
 so that is called every frame.</p>
 </div>
-</div>
-<div class="section" id="a-locked-door-and-a-key">
+</section>
+<section id="a-locked-door-and-a-key">
 <h2><span class="section-number">9.6. </span>A locked door and a key<a class="headerlink" href="#a-locked-door-and-a-key" title="Permalink to this headline"></a></h2>
 <p>We will add two new tiles to the game. Draw images <code class="docutils literal notranslate"><span class="pre">door.png</span></code> and
 <code class="docutils literal notranslate"><span class="pre">key.png</span></code> and save them in <code class="docutils literal notranslate"><span class="pre">images</span></code> folder.</p>
@@ -354,8 +359,8 @@ are modifying a <em>global</em> variable inside a function we must declare it.</
     <span class="n">maze</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># 0 is &#39;empty&#39; tile</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="finished-game">
+</section>
+<section id="finished-game">
 <h2><span class="section-number">9.7. </span>Finished game<a class="headerlink" href="#finished-game" title="Permalink to this headline"></a></h2>
 <p>Here is the finished game with all the changes included:</p>
 <div class="literal-block-wrapper docutils container" id="code-maze7">
@@ -442,8 +447,8 @@ are modifying a <em>global</em> variable inside a function we must declare it.</
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="ideas-for-extension">
+</section>
+<section id="ideas-for-extension">
 <h2><span class="section-number">9.8. </span>Ideas for extension<a class="headerlink" href="#ideas-for-extension" title="Permalink to this headline"></a></h2>
 <p>However that is not the end! There are many things you could add to this
 game.</p>
@@ -456,8 +461,8 @@ game.</p>
 <li><p>Add more types of tile to the map: water, rock, brick, etc.</p></li>
 <li><p>Change the player image depending on the direction they are moving.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

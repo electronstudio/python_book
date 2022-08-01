@@ -5,7 +5,7 @@ Sockets
 -------
 
 A socket connects a program on one computer to a program running on another computer.  One program writes data into its socket.  The data may be raw bytes, or any
-of the datatypes we have seen (e.g. integer, string, etc.)The data travels across the network.  The program
+of the datatypes we have seen (e.g. integer, string, etc.) The data travels across the network.  The program
 on the other computer reads the data from its socket.
 
 Connecting a socket is a bit like making a phone call.  The program that is waiting to receive the call is the *server*.  The program

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2. Python Fundamentals &mdash; Learn to code with Python and Raylib  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -119,13 +120,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="python-fundamentals">
+  <section id="python-fundamentals">
 <h1><span class="section-number">2. </span>Python Fundamentals<a class="headerlink" href="#python-fundamentals" title="Permalink to this headline"></a></h1>
 <p>There are some exercises here. Each exercise will ask you to write a
 program. The solution is often on the following page - do not turn the
 page until you have attempted your own solution! Save each program in a
 separate file.</p>
-<div class="section" id="the-repl">
+<section id="the-repl">
 <h2><span class="section-number">2.1. </span>The REPL<a class="headerlink" href="#the-repl" title="Permalink to this headline"></a></h2>
 <p>REPL stands for <em>Read Evaluate Print Loop</em>. In Mu you access it via the
 <code class="docutils literal notranslate"><span class="pre">REPL</span></code> button. It appears at the bottom of the window. It’s a special
@@ -134,12 +135,14 @@ immediately (no need to click <code class="docutils literal notranslate"><span c
 to type <code class="docutils literal notranslate"><span class="pre">print()</span></code>). It’s useful for doing calculations and trying
 things out, but it won’t save what you type, so you will only want to
 use it for very short programs.</p>
-<div class="figure align-default" id="id6">
+<figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/repl.png"><img alt="../_images/repl.png" src="../_images/repl.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The REPL</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
-</div>
-</div>
-<div class="section" id="arithmetic-operators">
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The REPL</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="arithmetic-operators">
 <h2><span class="section-number">2.2. </span>Arithmetic operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline"></a></h2>
 <p>Python understands several operators from maths. You can use them in
 your programs, or just enter these examples at the REPL to use Python as
@@ -183,8 +186,8 @@ a calculator, as in the screenshot above.</p>
 </table>
 <p>There are some more advanced operators in
 <a class="reference internal" href="#code-shortcuts"><span class="std std-numref">Program 2.18</span></a>.</p>
-</div>
-<div class="section" id="variables">
+</section>
+<section id="variables">
 <h2><span class="section-number">2.3. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline"></a></h2>
 <p>A <em>variable</em> is a place in the computer’s memory where data is stored.
 You can name a variable whatever you like; you should try to make the
@@ -250,7 +253,12 @@ in the same variable.</p>
 </div>
 <div class="topic">
 <p class="topic-title">Exercise</p>
-<p>What will <a class="reference internal" href="#mod-variables"><span class="std std-numref">Program 2.4</span></a> print?  Change the numbers in the program.  Use a division <cite>/</cite> operation.  Then ask your friend to predict what the new program will print.  Was he right?</p>
+<p>What do you think <a class="reference internal" href="#mod-variables"><span class="std std-numref">Program 2.4</span></a> will print?  Run it and see if your prediction is correct.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Exercise</p>
+<p>Change the numbers in the program.
+Use a division <cite>/</cite> operation on the variable.  Then ask your friend to predict what the new program will print.  Was he right?</p>
 </div>
 <p>You will often see this used for counting:</p>
 <div class="literal-block-wrapper docutils container" id="counting">
@@ -269,8 +277,8 @@ in the same variable.</p>
 </div>
 <p>See <a class="reference internal" href="#code-shortcuts"><span class="std std-numref">Program 2.18</span></a> for a quicker way of
 writing this.</p>
-</div>
-<div class="section" id="input">
+</section>
+<section id="input">
 <h2><span class="section-number">2.4. </span>Input<a class="headerlink" href="#input" title="Permalink to this headline"></a></h2>
 <p><a class="reference internal" href="#code-fruits"><span class="std std-numref">Program 2.2</span></a> is not very useful if the number
 of apples changes. This would require the <em>programmer</em> to change the
@@ -296,8 +304,8 @@ convert the string to a number.</p>
 <p class="topic-title">Exercise</p>
 <p>Copy <a class="reference internal" href="#code-fruits"><span class="std std-numref">Program 2.2</span></a> but use <cite>input()</cite> to ask the user to enter the number of apples and pears.</p>
 </div>
-</div>
-<div class="section" id="booleans">
+</section>
+<section id="booleans">
 <h2><span class="section-number">2.5. </span>Booleans<a class="headerlink" href="#booleans" title="Permalink to this headline"></a></h2>
 <p>A <em>boolean</em> is another type of variable that is not a string or a
 number. It can have only two possible values: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. In
@@ -313,7 +321,7 @@ statement, the indented code block is only run if the boolean is
 </div>
 <p>You could write it like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sunny</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">if</span> <span class="n">sunny</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">sunny</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Let&#39;s go to the park&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -328,8 +336,8 @@ indented code block under <code class="docutils literal notranslate"><span class
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We must stay at home&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="comparison-operators">
+</section>
+<section id="comparison-operators">
 <h2><span class="section-number">2.6. </span>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline"></a></h2>
 <p>A comparison operator takes two things (e.g. numbers, strings, variables),
 compares them, and then returns a <em>boolean</em> <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
@@ -383,8 +391,8 @@ compares them, and then returns a <em>boolean</em> <code class="docutils literal
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="boolean-logic">
+</section>
+<section id="boolean-logic">
 <h2><span class="section-number">2.7. </span>Boolean logic<a class="headerlink" href="#boolean-logic" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span></code> operators operate on booleans and return
 new boolean values.</p>
@@ -405,7 +413,7 @@ new boolean values.</p>
 </div>
 </div>
 <p>Change the values of <cite>a</cite> and <cite>b</cite> in <a class="reference internal" href="#code-logic"><span class="std std-numref">Program 2.8</span></a> and see what output is printed by different combinations of <cite>True</cite> and <cite>False</cite>.</p>
-<div class="section" id="or">
+<section id="or">
 <h3><span class="section-number">2.7.1. </span>Or<a class="headerlink" href="#or" title="Permalink to this headline"></a></h3>
 <p>Only people older than 12 or taller than 150cm are allowed to ride the
 rollercoaster. This program checks whether people are allowed to ride.</p>
@@ -443,8 +451,8 @@ is <code class="docutils literal notranslate"><span class="pre">True</span></cod
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;YOU MAY NOT RIDE, GO AWAY!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="and">
+</section>
+<section id="and">
 <h3><span class="section-number">2.7.2. </span>And<a class="headerlink" href="#and" title="Permalink to this headline"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">and</span></code> operator is <code class="docutils literal notranslate"><span class="pre">True</span></code> if both of its operands is true. Try
 this example:</p>
@@ -474,8 +482,8 @@ this example:</p>
 ensures it is calculated first and the result of that calculation is
 then used in the <code class="docutils literal notranslate"><span class="pre">and</span></code> expression. This is the same way you use the
 BODMAS rule to decide the order of operations in maths.</p>
-</div>
-<div class="section" id="not">
+</section>
+<section id="not">
 <h3><span class="section-number">2.7.3. </span>Not<a class="headerlink" href="#not" title="Permalink to this headline"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">not</span></code> operator is <code class="docutils literal notranslate"><span class="pre">True</span></code> if its operand is <code class="docutils literal notranslate"><span class="pre">False</span></code>. If its
 operand is <code class="docutils literal notranslate"><span class="pre">False</span></code> then it is <code class="docutils literal notranslate"><span class="pre">True</span></code>. Try this example:</p>
@@ -515,9 +523,9 @@ operand is <code class="docutils literal notranslate"><span class="pre">False</s
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;YOU MAY NOT RIDE, GO AWAY!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="for-loops">
+</section>
+</section>
+<section id="for-loops">
 <h2><span class="section-number">2.8. </span>For loops<a class="headerlink" href="#for-loops" title="Permalink to this headline"></a></h2>
 <p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop repeats a block of code a number of times. A variable is
 created which we can use to find the current number within the loop.
@@ -532,7 +540,7 @@ Run this program:</p>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="nested-loops">
+<section id="nested-loops">
 <h3><span class="section-number">2.8.1. </span>Nested loops<a class="headerlink" href="#nested-loops" title="Permalink to this headline"></a></h3>
 <p>It is often useful to put one loop inside another loop.</p>
 <div class="literal-block-wrapper docutils container" id="code-for-loop">
@@ -547,8 +555,8 @@ Run this program:</p>
 <p class="topic-title">Exercise</p>
 <p>Write a program which prints out the 12 times table.</p>
 </div>
-</div>
-<div class="section" id="incrementing-a-variable-in-a-loop">
+</section>
+<section id="incrementing-a-variable-in-a-loop">
 <h3><span class="section-number">2.8.2. </span>Incrementing a variable in a loop<a class="headerlink" href="#incrementing-a-variable-in-a-loop" title="Permalink to this headline"></a></h3>
 <p>A baker has three customers. He asks them each how many cakes they want
 so he knows how many he must bake. He writes this program.</p>
@@ -607,9 +615,9 @@ called <cite>c</cite>. Change the loop so it works for <cite>c</cite> customers 
 <p class="topic-title">Exercise</p>
 <p>If a customer orders 12 cakes, he gets an extra cake for free.  Use an <cite>if</cite> statement to check <cite>cakes &gt; 12</cite>. If so, add one more cake.</p>
 </div>
-</div>
-</div>
-<div class="section" id="array-lists">
+</section>
+</section>
+<section id="array-lists">
 <h2><span class="section-number">2.9. </span>Array lists<a class="headerlink" href="#array-lists" title="Permalink to this headline"></a></h2>
 <p>Variables can be stored together in a <em>list</em>. Most languages call this
 an <em>array</em> so try to remember that word also. <a class="footnote-reference brackets" href="#id5" id="id2">1</a></p>
@@ -632,7 +640,7 @@ an <em>array</em> so try to remember that word also. <a class="footnote-referenc
 </pre></div>
 </div>
 </div>
-<div class="section" id="looping-over-lists">
+<section id="looping-over-lists">
 <h3><span class="section-number">2.9.1. </span>Looping over lists<a class="headerlink" href="#looping-over-lists" title="Permalink to this headline"></a></h3>
 <p>Rather than the user typing in data, your program might be supplied with
 data in a list. Here is a list of prices - a shopping list. Note we
@@ -715,15 +723,15 @@ If it is, multiply the price by 0.8 to reduce it before you add it to the total.
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="functions">
+</section>
+</section>
+<section id="functions">
 <h2><span class="section-number">2.10. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
-<p>You may have seen specially named functions that are called by Pygame:
+<p>You will meet specially named functions that are called by RLZero such as
 <code class="docutils literal notranslate"><span class="pre">draw()</span></code> and <code class="docutils literal notranslate"><span class="pre">update()</span></code>. However, you can define a function named
 whatever you like and call it yourself.</p>
 <p>Functions are useful for many reasons. The simplest is that they make
-your program look more organized. They also enable you re-use code
+your program look more organized. They also enable you to re-use code
 without needing to copy it and risk making mistakes. When your programs
 get longer they enable you to create <em>abstractions</em> so you only have to
 think about what function you want to call and don’t need to remember
@@ -744,8 +752,8 @@ the details of the code inside the function.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="shortcuts">
+</section>
+<section id="shortcuts">
 <span id="id3"></span><h2><span class="section-number">2.11. </span>Shortcuts<a class="headerlink" href="#shortcuts" title="Permalink to this headline"></a></h2>
 <p>Here are quicker ways of doing basic things. You may have noticed some
 of these being used already.</p>
@@ -788,8 +796,8 @@ of these being used already.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="indentation">
+</section>
+<section id="indentation">
 <h2><span class="section-number">2.12. </span>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline"></a></h2>
 <p>Code is arranged in <em>blocks</em>. For example, a <em>function</em> consists of a
 one line declaration followed by a block of several lines of code.
@@ -797,7 +805,7 @@ Similarly, all the lines of a loop form one block. A <em>conditional</em> has a
 block of code following the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement (and optionally blocks
 after the <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>. )</p>
 <p>Many languages use <code class="docutils literal notranslate"><span class="pre">{}</span></code> or <code class="docutils literal notranslate"><span class="pre">()</span></code> to delimit a block. However Python
-is unusual: each block begins with <code class="docutils literal notranslate"><span class="pre">:</span></code> and then all the lines of the
+is unusual: each block begins with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> and then all the lines of the
 block are <em>indented</em> by the same amount of whitespace (tabs or spaces).
 The block ends when the indentation ends.</p>
 <p>Blocks can be <em>nested</em> inside other blocks.</p>
@@ -816,8 +824,8 @@ The block ends when the indentation ends.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="global-variables">
+</section>
+<section id="global-variables">
 <h2><span class="section-number">2.13. </span>Global variables<a class="headerlink" href="#global-variables" title="Permalink to this headline"></a></h2>
 <p>A variable defined inside a function has <em>local scope</em>: it cannot be
 used outside of the function. If you want to use the same variable in
@@ -839,8 +847,8 @@ with the <code class="docutils literal notranslate"><span class="pre">global</sp
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="dictionaries">
+</section>
+<section id="dictionaries">
 <h2><span class="section-number">2.14. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline"></a></h2>
 <p>A dictionary (called a <em>HashMap</em> in some languages) stores pairs of
 values. You can use the first value to look-up the second, just like how
@@ -857,7 +865,7 @@ dictionary of the ages of my friends:</p>
 <p class="topic-title">Exercise</p>
 <p>Change the program so it contains 5 of your friends’ ages.</p>
 </div>
-<div class="section" id="id4">
+<section id="id4">
 <h3><span class="section-number">2.14.1. </span>Counting<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
 <p>Here is a loop that prints out all the ages:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">friends</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;richard&#39;</span><span class="p">:</span> <span class="mi">96</span><span class="p">,</span> <span class="s1">&#39;john&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;paul&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
@@ -889,8 +897,8 @@ dictionary of the ages of my friends:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;friends older than 10:&quot;</span><span class="p">,</span><span class="n">count</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="combining-tests">
+</section>
+<section id="combining-tests">
 <h3><span class="section-number">2.14.2. </span>Combining tests<a class="headerlink" href="#combining-tests" title="Permalink to this headline"></a></h3>
 <div class="topic">
 <p class="topic-title">Exercise</p>
@@ -905,8 +913,8 @@ dictionary of the ages of my friends:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;friends age 11 to 13 :&quot;</span><span class="p">,</span><span class="n">count</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="finding">
+</section>
+<section id="finding">
 <h3><span class="section-number">2.14.3. </span>Finding<a class="headerlink" href="#finding" title="Permalink to this headline"></a></h3>
 <p>We make a variable <code class="docutils literal notranslate"><span class="pre">oldest</span></code> that will contain the oldest age in the
 list.</p>
@@ -935,8 +943,8 @@ list.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;youngest age&quot;</span><span class="p">,</span> <span class="n">youngest</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="finding-names">
+</section>
+<section id="finding-names">
 <h3><span class="section-number">2.14.4. </span>Finding names<a class="headerlink" href="#finding-names" title="Permalink to this headline"></a></h3>
 <div class="topic">
 <p class="topic-title">Exercise</p>
@@ -957,8 +965,8 @@ list.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;youngest friend&quot;</span><span class="p">,</span> <span class="n">youngname</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="find-the-average">
+</section>
+<section id="find-the-average">
 <h3><span class="section-number">2.14.5. </span>Find the average<a class="headerlink" href="#find-the-average" title="Permalink to this headline"></a></h3>
 <div class="topic">
 <p class="topic-title">Exercise</p>
@@ -973,9 +981,9 @@ list.</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;average age is &quot;</span><span class="p">,</span> <span class="n">average</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="bugs">
+</section>
+</section>
+<section id="bugs">
 <h2><span class="section-number">2.15. </span>Bugs<a class="headerlink" href="#bugs" title="Permalink to this headline"></a></h2>
 <p>Fixing bugs can feel frustrating but all programmers must wrestle with
 them. The simplest (but still annoying!) are <em>syntax errors</em>. The
@@ -985,11 +993,10 @@ single wrong letter or space will prevent them from working.</p>
 <p>A particular issue in Python is that <em>indentation</em> must be correct.</p>
 <div class="literal-block-wrapper docutils container" id="code-bug1">
 <div class="code-block-caption"><span class="caption-number">Program 2.21 </span><span class="caption-text">Buggy program</span><a class="headerlink" href="#code-bug1" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>
-<span class="linenos">2</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="linenos">3</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">11</span>
-<span class="linenos">4</span><span class="n">z</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="linenos">2</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="linenos">3</span><span class="n">z</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -999,11 +1006,10 @@ single wrong letter or space will prevent them from working.</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="code-bug2">
 <div class="code-block-caption"><span class="caption-number">Program 2.22 </span><span class="caption-text">More bugs</span><a class="headerlink" href="#code-bug2" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>
-<span class="linenos">2</span><span class="k">def</span> <span class="nf">myfunction</span><span class="p">:</span>
-<span class="linenos">3</span>    <span class="nb">print</span> <span class="s2">&quot;hello&quot;</span>
-<span class="linenos">4</span>
-<span class="linenos">5</span><span class="n">myfunction</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">myfunction</span><span class="p">:</span>
+<span class="linenos">2</span>    <span class="nb">print</span> <span class="s2">&quot;hello&quot;</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="n">myfunction</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1017,8 +1023,8 @@ single wrong letter or space will prevent them from working.</p>
 concern the beginner.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

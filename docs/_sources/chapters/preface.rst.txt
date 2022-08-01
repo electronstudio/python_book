@@ -38,14 +38,14 @@ complete* and *introduces only one or two new concepts*.
    mostly through *doing* and observing the output of each program
    rather than memorizing. To this end the *order* of the programs
    within each chapter has been carefully selected. The chapter ordering
-   is more loose and it is possible to skip back and forth between
+   is looser and it is possible to skip back and forth between
    chapters. If the text quizzes or the Python fundamentals are boring
    the students, skip ahead to the graphical games, then come back to
    the earlier examples when necessary.
 
 This is a practical approach, and so the programs are the core of it.  In the first
 edition they were all of it.  In this edition explanatory text has been added,
-but for those who don't the patience to read, this is can be skipped.  The
+but for those who don't have the patience to read, this is can be skipped.  The
 code cannot.
 
 Following each program are some ideas for how students can modify the
@@ -53,7 +53,7 @@ program. Hopefully they will go further and modify these programs into
 their own unique games! The difficulty of these suggestions varies, to
 accommodate students of different age and ability.
 
-This book may be suitable for self-teaching by a motivated learner, but
+This book is suitable for self-teaching by a motivated learner, but
 does not attempt to be comprehensive or give detailed explanations
 because it is intended to be used in a class with an instructor who will
 fill in the gaps as needed by the students.

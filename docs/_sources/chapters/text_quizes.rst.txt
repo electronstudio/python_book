@@ -2,8 +2,8 @@ Text-based quiz games
 =====================
 
 These programs can be entered using any text editor, but I suggest using
-`the Mu editor <https://codewith.mu/>`__ because it comes with Python,
-Pygame Zero and other libraries all pre-installed in one easy download.
+`the Mu editor <https://codewith.mu/>`__ because it comes with Python
+and  libraries all pre-installed in one easy download.
 
 Hello, world
 ------------
@@ -111,7 +111,7 @@ Guessing game with a loop
 -------------------------
 
 This ``while`` loop goes round and round forever … or until the player
-gets a correct answer, and then it ``break``s out of the loop. Note
+gets a correct answer, and then it ``breaks`` out of the loop. Note
 that everything in the loop is indented.
 
 

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3D Games &mdash; Learn to code with Python and Raylib  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -81,7 +82,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="d-games">
+  <section id="d-games">
 <h1>3D Games<a class="headerlink" href="#d-games" title="Permalink to this headline"></a></h1>
 <p>The author has created a library similar to Pygame Zero but for creating
 3d games: <em>richlib</em>. It is still experimental and subject to change. The
@@ -106,7 +107,7 @@ something like this:</p>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="cubes-and-spheres">
+<section id="cubes-and-spheres">
 <h2>Cubes and spheres<a class="headerlink" href="#cubes-and-spheres" title="Permalink to this headline"></a></h2>
 <p>Much like Pygame draws rectangles and circles, Richlib draws cubes and
 spheres. Note if using Mu you must be in <code class="docutils literal notranslate"><span class="pre">Python3</span></code> mode, not
@@ -155,8 +156,8 @@ spheres. Note if using Mu you must be in <code class="docutils literal notransla
 <p class="topic-title">Exercise</p>
 <p>Make sure you understand the 3d (x,y,z) co-ordinate system.</p>
 </div>
-</div>
-<div class="section" id="moving-cubes">
+</section>
+<section id="moving-cubes">
 <h2>Moving cubes<a class="headerlink" href="#moving-cubes" title="Permalink to this headline"></a></h2>
 <p>Just like in Pygame, the <code class="docutils literal notranslate"><span class="pre">update()</span></code> function is called for us and is
 where we make things move.</p>
@@ -203,8 +204,8 @@ where we make things move.</p>
 <p class="topic-title">Advanced</p>
 <p>Make two different boxes with different colours.</p>
 </div>
-</div>
-<div class="section" id="actors">
+</section>
+<section id="actors">
 <h2>Actors<a class="headerlink" href="#actors" title="Permalink to this headline"></a></h2>
 <p>Actors are similar to cubes but they load and display a complete 3d
 model. The following 3d objects are currently built-in:</p>
@@ -259,8 +260,8 @@ file.</p>
 <p class="topic-title">Advanced</p>
 <p>Try to create an .obj file using <a class="reference external" href="https://www.leocad.org/">https://www.leocad.org/</a> or <a class="reference external" href="https://www.blender.org/">https://www.blender.org/</a></p>
 </div>
-</div>
-<div class="section" id="keyboard-input">
+</section>
+<section id="keyboard-input">
 <h2>Keyboard input<a class="headerlink" href="#keyboard-input" title="Permalink to this headline"></a></h2>
 <div class="literal-block-wrapper docutils container" id="code-rl-keyboard-input">
 <div class="code-block-caption"><span class="caption-text">Keyboard input</span><a class="headerlink" href="#code-rl-keyboard-input" title="Permalink to this code"></a></div>
@@ -305,8 +306,8 @@ file.</p>
 <p class="topic-title">Advanced</p>
 <p>Make alien wrap around when he moves off the edge of the screen.</p>
 </div>
-</div>
-<div class="section" id="controller-input">
+</section>
+<section id="controller-input">
 <h2>Controller input<a class="headerlink" href="#controller-input" title="Permalink to this headline"></a></h2>
 <p>Richlib has a game controller API that is a bit different from Pygame’s.
 This will require a game controller connected to work.</p>
@@ -352,8 +353,8 @@ This will require a game controller connected to work.</p>
 <p class="topic-title">Exercise</p>
 <p>Make the alien move up/down and forward/back as well as left/right.</p>
 </div>
-</div>
-<div class="section" id="d-collisions">
+</section>
+<section id="d-collisions">
 <h2>3d collisions<a class="headerlink" href="#d-collisions" title="Permalink to this headline"></a></h2>
 <div class="literal-block-wrapper docutils container" id="code-rl-collisions">
 <div class="code-block-caption"><span class="caption-text">3d collisions</span><a class="headerlink" href="#code-rl-collisions" title="Permalink to this code"></a></div>
@@ -410,8 +411,8 @@ This will require a game controller connected to work.</p>
 <p class="topic-title">Advanced</p>
 <p>Print the number of times the box hits the alien (the score).</p>
 </div>
-</div>
-<div class="section" id="mouse-input">
+</section>
+<section id="mouse-input">
 <h2>Mouse input<a class="headerlink" href="#mouse-input" title="Permalink to this headline"></a></h2>
 <p>We can get the mouse position in the 3d world and also test if mouse
 buttons are pressed.</p>
@@ -455,8 +456,8 @@ buttons are pressed.</p>
 <p class="topic-title">Exercise</p>
 <p>Make the cube change colour when the mouse button is held down.</p>
 </div>
-</div>
-<div class="section" id="mouse-collisions">
+</section>
+<section id="mouse-collisions">
 <h2>Mouse collisions<a class="headerlink" href="#mouse-collisions" title="Permalink to this headline"></a></h2>
 <p>We can check if the mouse pointer is touching a 3d object.</p>
 <div class="literal-block-wrapper docutils container" id="code-rl-mouse-collisions">
@@ -511,8 +512,8 @@ buttons are pressed.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="sound-effects">
+</section>
+<section id="sound-effects">
 <h2>Sound effects<a class="headerlink" href="#sound-effects" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">eep</span></code> sound is built-in. Other sounds must be provided as <code class="docutils literal notranslate"><span class="pre">wav</span></code>
 files. Click the mouse to play the sound.</p>
@@ -554,8 +555,8 @@ files. Click the mouse to play the sound.</p>
 <p class="topic-title">Exercise</p>
 <p>Record your own sound effect with the Audacity software and play it in your program.</p>
 </div>
-</div>
-<div class="section" id="displaying-text">
+</section>
+<section id="displaying-text">
 <h2>Displaying text<a class="headerlink" href="#displaying-text" title="Permalink to this headline"></a></h2>
 <p>Simple game where you press the space bar as fast as you can. It
 displays score on screen.</p>
@@ -607,8 +608,8 @@ function not the normal <code class="docutils literal notranslate"><span class="
 <p class="topic-title">Exercise</p>
 <p>Add a score to one of your other programs and display it.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>7. More advanced games &mdash; Learn to code with Python and Raylib  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -91,11 +92,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="more-advanced-games">
+  <section id="more-advanced-games">
 <h1><span class="section-number">7. </span>More advanced games<a class="headerlink" href="#more-advanced-games" title="Permalink to this headline"></a></h1>
 <p>These games demonstrate some essential building blocks you will need to
 make more advanced games of your own.</p>
-<div class="section" id="lists">
+<section id="lists">
 <h2><span class="section-number">7.1. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline"></a></h2>
 <p>We introduced lists in <a class="reference internal" href="fundamentals.html#code-arrays"><span class="std std-numref">Program 2.12</span></a>. In this
 game, we create an empty list <code class="docutils literal notranslate"><span class="pre">[]</span></code> and use a loop to fill it with
@@ -136,8 +137,8 @@ list. When the mouse is clicked we add a new alien to the list.</p>
 and add a list of bullets that move up the screen.  When the player presses the spacebar to shoot,
 add a new bullet to the list.</p>
 </div>
-</div>
-<div class="section" id="timed-callbacks">
+</section>
+<section id="timed-callbacks">
 <h2><span class="section-number">7.2. </span>Timed callbacks<a class="headerlink" href="#timed-callbacks" title="Permalink to this headline"></a></h2>
 <p>So far we have been using certain functions as <em>callbacks</em>: <code class="docutils literal notranslate"><span class="pre">update()</span></code>, <code class="docutils literal notranslate"><span class="pre">draw()</span></code> etc.  These are called automatically
 for us by RLZero every frame.  However, you can also create your own callbacks, and ask RLZero to call them back
@@ -188,8 +189,8 @@ from inside a callback function.</p>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="callbacks-for-animation">
+</section>
+<section id="callbacks-for-animation">
 <h2><span class="section-number">7.3. </span>Callbacks for animation<a class="headerlink" href="#callbacks-for-animation" title="Permalink to this headline"></a></h2>
 <p>Instead of using the <em>Animation</em> class, in this program we define our own function for animation
 and then ask RLzero to <em>call it back</em> every 0.2 seconds. Most of this
@@ -241,8 +242,8 @@ code is from <a class="reference internal" href="simple_games.html#code-collisio
 <p class="topic-title">Advanced</p>
 <p>Draw your own animation, e.g. a man walking left which plays when the left key is pressed</p>
 </div>
-</div>
-<div class="section" id="simple-physics">
+</section>
+<section id="simple-physics">
 <h2><span class="section-number">7.4. </span>Simple physics<a class="headerlink" href="#simple-physics" title="Permalink to this headline"></a></h2>
 <p>Here we draw a ball and move it, like we did in
 <a class="reference internal" href="graphics.html#code-moving-boxes"><span class="std std-numref">Program 4.3</span></a>. But instead of moving it
@@ -283,8 +284,8 @@ of the screen.</p>
 <p class="topic-title">Advanced</p>
 <p>Make the ball move faster by increasing its velocity each time it hits the sides.</p>
 </div>
-</div>
-<div class="section" id="bat-and-ball-game">
+</section>
+<section id="bat-and-ball-game">
 <h2><span class="section-number">7.5. </span>Bat and ball game<a class="headerlink" href="#bat-and-ball-game" title="Permalink to this headline"></a></h2>
 <p><em>Pong</em> is the classic bat and ball game.</p>
 <div class="literal-block-wrapper docutils container" id="code-pong">
@@ -335,8 +336,8 @@ of the screen.</p>
 <p class="topic-title">Advanced</p>
 <p>Add bricks (Rectangles) that disappear when the ball hits them.</p>
 </div>
-</div>
-<div class="section" id="timer">
+</section>
+<section id="timer">
 <h2><span class="section-number">7.6. </span>Timer<a class="headerlink" href="#timer" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">update()</span></code> and <code class="docutils literal notranslate"><span class="pre">draw()</span></code> functions are called by RLZero many
 times every second. Each time <code class="docutils literal notranslate"><span class="pre">draw()</span></code> is called we say it draws one
@@ -378,8 +379,8 @@ since the last frame in a parameter to our update function. We use this
 <p class="topic-title">Advanced</p>
 <p>Add a timer to <a class="reference internal" href="#code-arrays2"><span class="std std-numref">Program 7.1</span></a> that deletes one of the aliens when the timer runs out, then starts the timer again.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
