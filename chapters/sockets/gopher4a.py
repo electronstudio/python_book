@@ -2,7 +2,9 @@ import socket
 
 server = "gopher.floodgap.com"
 port = 70
+path = "/gopher/proxy"
 sock = socket.create_connection((server, port))
+sock.send(path.encode())
 sock.send(b"\r\n")
 
 for line in sock.makefile().readlines():
@@ -14,4 +16,3 @@ for line in sock.makefile().readlines():
         print(line)
 
 sock.close()
-

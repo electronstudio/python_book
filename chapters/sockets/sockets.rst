@@ -31,7 +31,7 @@ Enter and run the server program:
    :name: code-server
    :linenos:
 
-After creating the socket, we *bind()* it to an *internet address*.  **0.0.0.0** is a special address that means "any address belonging
+When creating the socket, we *bind* it to an *internet address*.  **0.0.0.0** is a special address that means "any address belonging
 to this computer".  We also give a *port number*, **65439**.  This can be (almost) any number, but it must match on the client
 and server.
 
